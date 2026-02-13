@@ -1,0 +1,28 @@
+.section {
+  background: linear-gradient(180deg, rgba(236, 245, 255, 0.86), rgba(246, 251, 255, 0.98));
+  border-block: 1px solid color-mix(in srgb, var(--silver-200) 62%, #ffffff 38%);
+}
+
+.inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.headingWrap {
+  max-width: 820px;
+  text-align: center;
+}
+
+.title {
+  margin-top: 0.35rem;
+}
+
+.subtitle {
+  color: var(--text-body);
+  font-size: 1rem;
+  line-height: 1.72;
+  margin: 0.7rem auto 0;
+  max-width: 60ch;
+}

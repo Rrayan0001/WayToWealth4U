@@ -1,0 +1,146 @@
+.section {
+  background: linear-gradient(152deg, rgba(255, 250, 241, 0.95), rgba(244, 234, 216, 0.88));
+  border: 1px solid color-mix(in srgb, var(--silver-200) 60%, #ffffff 40%);
+  border-radius: 1.6rem;
+  box-shadow: var(--shadow-large);
+  display: grid;
+  gap: 0.9rem;
+  overflow: hidden;
+  padding: clamp(1rem, 2.6vw, 1.55rem);
+  position: relative;
+}
+
+.section::before {
+  background: radial-gradient(circle at 84% 16%, rgba(221, 168, 76, 0.18), transparent 36%),
+    radial-gradient(circle at 16% 84%, rgba(122, 136, 156, 0.16), transparent 40%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.content,
+.marqueeViewport,
+.loopGrid {
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--gold-700);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.36rem;
+  text-transform: uppercase;
+}
+
+.content h2 {
+  color: var(--gold-900);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.35rem);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.content p {
+  color: var(--text-body);
+  font-size: clamp(0.94rem, 1.65vw, 1.08rem);
+  line-height: 1.7;
+  margin-inline: auto;
+  max-width: 62ch;
+}
+
+.marqueeViewport {
+  border-block: 1px solid color-mix(in srgb, var(--silver-200) 54%, #ffffff 46%);
+  overflow: hidden;
+  padding-block: 0.1rem;
+}
+
+.marqueeTrack {
+  animation: marqueeX 26s linear infinite;
+  display: inline-flex;
+  gap: 0.5rem;
+  min-width: max-content;
+}
+
+.marqueeTrack span {
+  align-items: center;
+  background: rgba(255, 251, 243, 0.92);
+  border: 1px solid color-mix(in srgb, var(--silver-200) 56%, #ffffff 44%);
+  border-radius: 999px;
+  color: var(--gold-800);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0.48rem 0;
+  padding: 0.42rem 0.84rem;
+  text-transform: uppercase;
+}
+
+.loopGrid {
+  display: grid;
+  gap: 0.82rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.loopCard {
+  backdrop-filter: blur(5px);
+  background: linear-gradient(150deg, rgba(255, 252, 246, 0.92), rgba(247, 239, 224, 0.84));
+  border: 1px solid color-mix(in srgb, var(--silver-200) 60%, #ffffff 40%);
+  border-radius: 0.95rem;
+  min-height: 112px;
+  padding: 0.82rem 0.92rem;
+}
+
+.loopCard h3 {
+  color: var(--gold-900);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.06rem;
+  margin-bottom: 0.18rem;
+}
+
+.loopCard p {
+  color: var(--text-body);
+  font-size: 0.97rem;
+  line-height: 1.62;
+}
+
+.loopCard:last-child {
+  grid-column: 1 / -1;
+}
+
+@keyframes marqueeX {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 900px) {
+  .loopGrid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  .loopCard:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeTrack {
+    animation: none;
+  }
+}

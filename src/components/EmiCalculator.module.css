@@ -1,0 +1,76 @@
+.shell {
+  background: linear-gradient(135deg, rgba(248, 252, 255, 0.92), rgba(232, 241, 252, 0.76));
+  border: 1px solid color-mix(in srgb, var(--silver-200) 70%, #ffffff 30%);
+  border-radius: 1.4rem;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 1.1rem;
+  padding: 1.25rem;
+}
+
+.inputs {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.inputs label {
+  color: var(--text-body);
+  display: grid;
+  font-size: 0.86rem;
+  font-weight: 700;
+  gap: 0.35rem;
+}
+
+.inputs input {
+  appearance: textfield;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid color-mix(in srgb, var(--silver-200) 64%, #ffffff 36%);
+  border-radius: 0.78rem;
+  color: var(--text-body);
+  font: inherit;
+  padding: 0.68rem 0.72rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.inputs input:focus-visible {
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(120, 169, 217, 0.24);
+  outline: none;
+}
+
+.metrics {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metricCard {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid color-mix(in srgb, var(--gold-300) 42%, #ffffff 58%);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.metricCard h4 {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.45rem;
+  text-transform: uppercase;
+}
+
+.metricCard p {
+  color: var(--gold-900);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.7rem);
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .inputs,
+  .metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

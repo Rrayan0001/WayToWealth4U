@@ -1,0 +1,31 @@
+.heading {
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+.primary {
+  background: linear-gradient(135deg, #1f3f67 0%, #4f7eae 45%, #8fb3d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.08;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.secondary {
+  color: #4b78a7;
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sm {
+  font-size: clamp(0.78rem, 1.1vw, 0.88rem);
+}
+
+.xl {
+  font-size: clamp(1.8rem, 4.1vw, 3rem);
+}

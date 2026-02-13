@@ -1,0 +1,132 @@
+.logoImage {
+  filter: saturate(0.62) hue-rotate(150deg) brightness(1.02);
+  height: auto;
+  max-width: min(250px, 46vw);
+  object-fit: contain;
+  width: 100%;
+}
+
+.brand {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.72rem;
+}
+
+.compact {
+  gap: 0.5rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.22rem;
+  height: 2.15rem;
+  position: relative;
+  width: 3.2rem;
+}
+
+.barOne,
+.barTwo,
+.barThree {
+  border-radius: 0.44rem 0.44rem 0.22rem 0.22rem;
+  box-shadow: 0 8px 14px rgba(120, 169, 217, 0.32);
+  display: block;
+  width: 0.55rem;
+}
+
+.barOne {
+  background: linear-gradient(180deg, #edf5ff, #7eaad5);
+  height: 1.02rem;
+}
+
+.barTwo {
+  background: linear-gradient(180deg, #e7f1ff, #6e9ecf);
+  height: 1.38rem;
+}
+
+.barThree {
+  background: linear-gradient(180deg, #dceafb, #5f8fbe);
+  height: 1.77rem;
+}
+
+.arrow {
+  border-top: 0.26rem solid #95a7bd;
+  border-right: 0.22rem solid #95a7bd;
+  border-radius: 0.22rem;
+  height: 1.25rem;
+  position: absolute;
+  right: -0.05rem;
+  top: 0.35rem;
+  transform: rotate(15deg);
+  width: 1.3rem;
+}
+
+.arrow::after {
+  border-left: 0.38rem solid transparent;
+  border-top: 0.52rem solid #95a7bd;
+  content: "";
+  position: absolute;
+  right: -0.26rem;
+  top: -0.2rem;
+  transform: rotate(12deg);
+}
+
+.starOne,
+.starTwo {
+  color: #7eaad5;
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  text-shadow: 0 0 10px rgba(126, 170, 213, 0.52);
+}
+
+.starOne {
+  right: 0.5rem;
+  top: 0.02rem;
+}
+
+.starTwo {
+  right: 0.1rem;
+  top: 0.38rem;
+}
+
+.wordmark {
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-family: var(--font-heading), Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 1;
+}
+
+.wordSilver,
+.wordGold {
+  display: inline-block;
+  margin-right: 0.22rem;
+}
+
+.wordSilver {
+  background: linear-gradient(180deg, #eef2f4, #8e97a0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.wordGold {
+  background: linear-gradient(180deg, #dceafb, #5f8fbe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 420px) {
+  .wordmark {
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 2.8rem;
+  }
+}

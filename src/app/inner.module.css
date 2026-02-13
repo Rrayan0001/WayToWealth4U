@@ -1,0 +1,118 @@
+.page {
+  display: grid;
+  gap: 2.4rem;
+  padding-top: 1rem;
+}
+
+.hero {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.9), rgba(231, 240, 251, 0.7));
+  border: 1px solid color-mix(in srgb, var(--silver-200) 62%, #ffffff 38%);
+  border-radius: 1.6rem;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.2rem, 4vw, 2.2rem);
+}
+
+.hero h1 {
+  color: var(--gold-900);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0.35rem 0;
+}
+
+.hero p {
+  color: var(--text-body);
+  font-size: clamp(0.98rem, 2vw, 1.08rem);
+  line-height: 1.75;
+  max-width: 66ch;
+}
+
+.gridTwo {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gridThree {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.86), rgba(230, 240, 252, 0.66));
+  border: 1px solid color-mix(in srgb, var(--silver-200) 64%, #ffffff 36%);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow-soft);
+  padding: 1rem;
+}
+
+.card h2,
+.card h3 {
+  color: var(--gold-900);
+  font-family: var(--font-heading), Georgia, serif;
+  margin-bottom: 0.45rem;
+}
+
+.card p {
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.list {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+}
+
+.list li {
+  color: var(--text-body);
+  line-height: 1.64;
+}
+
+.list li::before {
+  color: var(--gold-700);
+  content: "* ";
+}
+
+.highlight {
+  background: linear-gradient(150deg, rgba(237, 245, 255, 0.82), rgba(223, 236, 250, 0.66));
+  border: 1px solid color-mix(in srgb, var(--gold-300) 56%, #ffffff 44%);
+  border-radius: 1rem;
+  color: var(--gold-900);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 0.9rem;
+}
+
+.ctaBox {
+  align-items: center;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.86), rgba(230, 240, 252, 0.7));
+  border: 1px solid color-mix(in srgb, var(--gold-300) 54%, #ffffff 46%);
+  border-radius: 1.4rem;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 0.7rem;
+  justify-items: start;
+  padding: 1.2rem;
+}
+
+.ctaBox h2 {
+  color: var(--gold-900);
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+.ctaBox p {
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .gridTwo,
+  .gridThree {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
