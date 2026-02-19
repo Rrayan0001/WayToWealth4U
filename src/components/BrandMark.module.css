@@ -1,5 +1,5 @@
 .logoImage {
-  filter: saturate(0.62) hue-rotate(150deg) brightness(1.02);
+  filter: saturate(0.7) hue-rotate(332deg) brightness(0.92);
   height: auto;
   max-width: min(250px, 46vw);
   object-fit: contain;
@@ -29,29 +29,29 @@
 .barTwo,
 .barThree {
   border-radius: 0.44rem 0.44rem 0.22rem 0.22rem;
-  box-shadow: 0 8px 14px rgba(120, 169, 217, 0.32);
+  box-shadow: 0 8px 14px rgba(151, 115, 61, 0.24);
   display: block;
   width: 0.55rem;
 }
 
 .barOne {
-  background: linear-gradient(180deg, #edf5ff, #7eaad5);
+  background: linear-gradient(180deg, #f7ecd8, #b48a49);
   height: 1.02rem;
 }
 
 .barTwo {
-  background: linear-gradient(180deg, #e7f1ff, #6e9ecf);
+  background: linear-gradient(180deg, #f6e7ce, #a67a3e);
   height: 1.38rem;
 }
 
 .barThree {
-  background: linear-gradient(180deg, #dceafb, #5f8fbe);
+  background: linear-gradient(180deg, #f0debf, #946b34);
   height: 1.77rem;
 }
 
 .arrow {
-  border-top: 0.26rem solid #95a7bd;
-  border-right: 0.22rem solid #95a7bd;
+  border-top: 0.26rem solid #8f6a36;
+  border-right: 0.22rem solid #8f6a36;
   border-radius: 0.22rem;
   height: 1.25rem;
   position: absolute;
@@ -63,7 +63,7 @@
 
 .arrow::after {
   border-left: 0.38rem solid transparent;
-  border-top: 0.52rem solid #95a7bd;
+  border-top: 0.52rem solid #8f6a36;
   content: "";
   position: absolute;
   right: -0.26rem;
@@ -73,12 +73,12 @@
 
 .starOne,
 .starTwo {
-  color: #7eaad5;
+  color: #ba8e4d;
   font-size: 0.66rem;
   font-weight: 700;
   line-height: 1;
   position: absolute;
-  text-shadow: 0 0 10px rgba(126, 170, 213, 0.52);
+  text-shadow: 0 0 10px rgba(193, 151, 85, 0.42);
 }
 
 .starOne {
@@ -108,14 +108,14 @@
 }
 
 .wordSilver {
-  background: linear-gradient(180deg, #eef2f4, #8e97a0);
+  background: linear-gradient(180deg, #4f4a43, #17130f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .wordGold {
-  background: linear-gradient(180deg, #dceafb, #5f8fbe);
+  background: linear-gradient(180deg, #f0debf, #8f6a36);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

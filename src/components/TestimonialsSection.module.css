@@ -1,0 +1,144 @@
+.section {
+  background: linear-gradient(156deg, rgba(255, 255, 255, 0.97), rgba(248, 244, 237, 0.92));
+  border: 1px solid color-mix(in srgb, var(--silver-200) 78%, #ffffff 22%);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  position: relative;
+}
+
+.section::before,
+.section::after {
+  background: rgba(196, 185, 170, 0.12);
+  clip-path: polygon(25% 6%, 75% 6%, 96% 50%, 75% 94%, 25% 94%, 4% 50%);
+  content: "";
+  position: absolute;
+  z-index: 0;
+}
+
+.section::before {
+  height: 220px;
+  left: -94px;
+  top: 46px;
+  width: 220px;
+}
+
+.section::after {
+  bottom: -36px;
+  height: 280px;
+  right: -120px;
+  width: 280px;
+}
+
+.heading {
+  margin-inline: auto;
+  max-width: 700px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.heading h2 {
+  color: var(--text-body);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.14;
+  margin-top: 0.3rem;
+}
+
+.heading p {
+  color: var(--text-muted);
+  line-height: 1.72;
+  margin-top: 0.65rem;
+}
+
+.columnsWrap {
+  border-top: 1px solid color-mix(in srgb, var(--silver-200) 74%, #ffffff 26%);
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  mask-image: linear-gradient(to bottom, transparent, #000 13%, #000 86%, transparent);
+  max-height: 700px;
+  overflow: hidden;
+  padding-top: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+.column {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.columnTrack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid color-mix(in srgb, var(--silver-200) 76%, #ffffff 24%);
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(20, 15, 10, 0.06);
+  display: grid;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.quote {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  line-height: 1.66;
+}
+
+.person {
+  align-items: center;
+  display: flex;
+  gap: 0.62rem;
+}
+
+.avatar {
+  background: #fff8ec;
+  border: 1px solid color-mix(in srgb, var(--gold-300) 62%, #ffffff 38%);
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 44px;
+  width: 44px;
+}
+
+.name {
+  color: var(--text-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.role {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.16rem;
+}
+
+.hideOnTablet {
+  display: none;
+}
+
+.hideOnMobile {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .hideOnTablet {
+    display: block;
+  }
+}
+
+@media (min-width: 1040px) {
+  .hideOnMobile {
+    display: block;
+  }
+}

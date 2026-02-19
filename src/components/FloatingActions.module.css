@@ -41,13 +41,13 @@
 }
 
 .ai {
-  background: linear-gradient(135deg, #fff3da 5%, #edcd92 48%, #bc8432 100%);
-  border-color: color-mix(in srgb, var(--gold-500) 45%, #ffffff 55%);
-  color: #3e2a10;
+  background: linear-gradient(135deg, #17130e 5%, #251d13 62%, #322617 100%);
+  border-color: color-mix(in srgb, var(--gold-500) 46%, #17130e 54%);
+  color: #f2dfbf;
 }
 
 .overlay {
-  background: rgba(21, 18, 12, 0.22);
+  background: rgba(17, 14, 10, 0.18);
   border: 0;
   inset: 0;
   position: fixed;
@@ -55,8 +55,8 @@
 }
 
 .agentPopup {
-  background: linear-gradient(148deg, rgba(255, 248, 236, 0.98), rgba(247, 233, 205, 0.95));
-  border: 1px solid color-mix(in srgb, var(--gold-500) 45%, #ffffff 55%);
+  background: linear-gradient(148deg, rgba(255, 255, 255, 0.98), rgba(248, 243, 234, 0.94));
+  border: 1px solid color-mix(in srgb, var(--gold-300) 54%, #ffffff 46%);
   border-radius: 1rem;
   box-shadow: var(--shadow-large);
   bottom: 5.1rem;
@@ -74,14 +74,14 @@
 }
 
 .agentHeader h2 {
-  color: var(--gold-900);
+  color: var(--text-body);
   font-family: var(--font-heading), Georgia, serif;
   font-size: 1.1rem;
 }
 
 .closePopup {
   background: rgba(255, 255, 255, 0.78);
-  border: 1px solid color-mix(in srgb, var(--silver-200) 70%, #ffffff 30%);
+  border: 1px solid color-mix(in srgb, var(--silver-200) 74%, #ffffff 26%);
   border-radius: 999px;
   color: var(--text-body);
   cursor: pointer;

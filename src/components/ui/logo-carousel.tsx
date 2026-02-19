@@ -1,6 +1,7 @@
 "use client";
 
-import { memo, useEffect, useMemo, useState, type SVGProps } from "react";
+import { memo, useEffect, useState, type SVGProps } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 import styles from "./logo-carousel.module.css";
 
@@ -32,11 +33,11 @@ function shuffleArray<T>(array: T[]): T[] {
   return shuffled;
 }
 
-function distributeLogos(allLogos: CarouselLogo[], columnCount: number): CarouselLogo[][] {
-  const shuffled = shuffleArray(allLogos);
+function distributeLogos(allLogos: CarouselLogo[], columnCount: number, shuffle: boolean): CarouselLogo[][] {
+  const selectedLogos = shuffle ? shuffleArray(allLogos) : allLogos;
   const columns: CarouselLogo[][] = Array.from({ length: columnCount }, () => []);
 
-  shuffled.forEach((logo, index) => {
+  selectedLogos.forEach((logo, index) => {
     columns[index % columnCount].push(logo);
   });
 
@@ -44,7 +45,11 @@ function distributeLogos(allLogos: CarouselLogo[], columnCount: number): Carouse
 
   columns.forEach((column) => {
     while (column.length < maxLength) {
-      column.push(shuffled[Math.floor(Math.random() * shuffled.length)]);
+      if (shuffle) {
+        column.push(selectedLogos[Math.floor(Math.random() * selectedLogos.length)]);
+      } else {
+        column.push(selectedLogos[column.length % selectedLogos.length]);
+      }
     }
   });
 
@@ -52,6 +57,7 @@ function distributeLogos(allLogos: CarouselLogo[], columnCount: number): Carouse
 }
 
 const LogoColumn = memo(function LogoColumn({ logos, index, currentTime }: LogoColumnProps) {
+  const reduceMotion = useReducedMotion();
   const cycleInterval = 2000;
   const columnDelay = index * 220;
   const adjustedTime = (currentTime + columnDelay) % (cycleInterval * logos.length);
@@ -60,21 +66,58 @@ const LogoColumn = memo(function LogoColumn({ logos, index, currentTime }: LogoC
   const CurrentLogoIcon = currentLogo.img;
 
   return (
-    <article className={styles.card} aria-label={currentLogo.name}>
+    <motion.article
+      className={styles.card}
+      aria-label={currentLogo.name}
+      initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : {
+              delay: index * 0.08,
+              duration: 0.46,
+              ease: [0.22, 1, 0.36, 1],
+            }
+      }
+    >
       <div className={styles.logoSlot}>
-        <div key={`${currentLogo.id}-${currentIndex}-${index}`} className={styles.logoSwap}>
-          <CurrentLogoIcon className={styles.logo} />
-        </div>
+        <AnimatePresence initial={false} mode="wait">
+          <motion.div
+            key={`${currentLogo.id}-${currentIndex}-${index}`}
+            className={styles.logoSwap}
+            initial={reduceMotion ? { opacity: 1 } : { y: "12%", opacity: 0, filter: "blur(8px)" }}
+            animate={reduceMotion ? { opacity: 1 } : { y: "0%", opacity: 1, filter: "blur(0px)" }}
+            exit={reduceMotion ? { opacity: 0 } : { y: "-18%", opacity: 0, filter: "blur(6px)" }}
+            transition={
+              reduceMotion
+                ? { duration: 0.01 }
+                : {
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 22,
+                    mass: 1,
+                    bounce: 0.2,
+                    duration: 0.5,
+                  }
+            }
+          >
+            <CurrentLogoIcon className={styles.logo} />
+          </motion.div>
+        </AnimatePresence>
       </div>
       <p>{currentLogo.name}</p>
-    </article>
+    </motion.article>
   );
 });
 
 export function LogoCarousel({ columnCount = 4, logos }: LogoCarouselProps) {
   const [currentTime, setCurrentTime] = useState(0);
+  const [logoSets, setLogoSets] = useState<CarouselLogo[][]>(() => distributeLogos(logos, columnCount, false));
 
-  const logoSets = useMemo(() => distributeLogos(logos, columnCount), [logos, columnCount]);
+  useEffect(() => {
+    setLogoSets(distributeLogos(logos, columnCount, true));
+  }, [logos, columnCount]);
 
   useEffect(() => {
     const interval = window.setInterval(() => {

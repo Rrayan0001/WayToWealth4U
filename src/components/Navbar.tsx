@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "./Navbar.module.css";
 
@@ -13,19 +13,40 @@ const links = [
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
-  { href: "/my-office", label: "My Office" },
-];
-
-const homeAnchors = [
-  { href: "/#emi-calculator", label: "EMI" },
-  { href: "/#process", label: "Process" },
 ];
 
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const closeMenu = () => setOpen(false);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const handlePointerDown = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node;
+      if (navRef.current?.contains(target)) return;
+      if (menuButtonRef.current?.contains(target)) return;
+      closeMenu();
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    document.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [open]);
 
   return (
     <header className={styles.header}>
@@ -51,19 +72,11 @@ export function Navbar() {
           </span>
         </Link>
 
-        <button
-          type="button"
-          className={styles.menuButton}
-          onClick={() => setOpen((current) => !current)}
-          aria-expanded={open}
-          aria-label="Toggle navigation"
+        <nav
+          ref={navRef}
+          className={`${styles.nav} ${open ? styles.navOpen : ""}`.trim()}
+          aria-label="Main navigation"
         >
-          <span />
-          <span />
-          <span />
-        </button>
-
-        <nav className={`${styles.nav} ${open ? styles.navOpen : ""}`.trim()} aria-label="Main navigation">
           {links.map((link) => {
             const active = pathname === link.href;
 
@@ -78,19 +91,24 @@ export function Navbar() {
               </Link>
             );
           })}
-
-          <div className={styles.anchorSet}>
-            {homeAnchors.map((anchor) => (
-              <Link key={anchor.href} href={anchor.href} className={styles.anchorLink} onClick={closeMenu}>
-                {anchor.label}
-              </Link>
-            ))}
-          </div>
-
-          <Link href="/contact" className="button buttonPrimary" onClick={closeMenu}>
-            Apply Now
-          </Link>
         </nav>
+
+        <Link href="/contact" className={`${styles.desktopApply} button buttonPrimary`.trim()}>
+          Apply Now
+        </Link>
+
+        <button
+          ref={menuButtonRef}
+          type="button"
+          className={styles.menuButton}
+          onClick={() => setOpen((current) => !current)}
+          aria-expanded={open}
+          aria-label="Toggle navigation"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
     </header>
   );

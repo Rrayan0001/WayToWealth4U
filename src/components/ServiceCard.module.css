@@ -1,5 +1,5 @@
 .card {
-  border: 1px solid rgba(255, 255, 255, 0.36);
+  border: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
   border-radius: 1.28rem;
   box-shadow: var(--shadow-soft);
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .card::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0));
   content: "";
   height: 44%;
   left: 0;
@@ -22,25 +22,25 @@
 
 .card:hover,
 .card:focus-within {
-  border-color: rgba(242, 214, 164, 0.68);
-  box-shadow: 0 18px 32px rgba(25, 21, 16, 0.2);
+  border-color: color-mix(in srgb, var(--gold-300) 68%, #ffffff 32%);
+  box-shadow: 0 18px 32px rgba(20, 16, 10, 0.14);
   transform: translateY(-4px);
 }
 
 .gold {
-  background: linear-gradient(148deg, #fff5de 0%, #f5deae 55%, #e0b36d 100%);
+  background: linear-gradient(148deg, #fffefb 0%, #faf2df 58%, #f0dfbd 100%);
 }
 
 .slate {
-  background: linear-gradient(148deg, #f6f8fc 0%, #dae2ee 62%, #b2c1d8 100%);
+  background: linear-gradient(148deg, #ffffff 0%, #f3f1ec 62%, #e5dfd3 100%);
 }
 
 .ivory {
-  background: linear-gradient(148deg, #fff8ea 0%, #f1e7d2 58%, #dec9a4 100%);
+  background: linear-gradient(148deg, #fffefc 0%, #f7f2e6 58%, #ead9b6 100%);
 }
 
 .blue {
-  background: linear-gradient(148deg, #edf6ff 0%, #cee1f6 57%, #9ebee3 100%);
+  background: linear-gradient(148deg, #ffffff 0%, #f6f2ea 57%, #e9d9bc 100%);
 }
 
 .body {
@@ -53,14 +53,14 @@
 }
 
 .body h3 {
-  color: #32210f;
+  color: var(--text-body);
   font-family: var(--font-heading), "Segoe UI", sans-serif;
   font-size: 1.28rem;
   line-height: 1.2;
 }
 
 .body p {
-  color: rgba(50, 44, 36, 0.95);
+  color: color-mix(in srgb, var(--text-body) 90%, #ffffff 10%);
   font-size: 0.96rem;
   line-height: 1.56;
 }
@@ -74,19 +74,19 @@
 }
 
 .body li {
-  color: rgba(49, 45, 38, 0.95);
+  color: color-mix(in srgb, var(--text-body) 88%, #ffffff 12%);
   font-size: 0.92rem;
   line-height: 1.46;
 }
 
 .body li::before {
-  color: #a46f27;
+  color: var(--gold-700);
   content: "- ";
 }
 
 .link {
   align-items: center;
-  color: #2e2114;
+  color: var(--gold-800);
   display: inline-flex;
   font-size: 0.78rem;
   font-weight: 800;
@@ -109,7 +109,7 @@
 
 .illustration {
   bottom: -10px;
-  filter: drop-shadow(0 10px 16px rgba(24, 28, 36, 0.2));
+  filter: drop-shadow(0 10px 16px rgba(22, 17, 10, 0.16));
   height: 170px;
   object-fit: contain;
   pointer-events: none;
@@ -124,7 +124,7 @@
 
 .card:hover .illustration,
 .card:focus-within .illustration {
-  filter: drop-shadow(0 14px 24px rgba(18, 24, 34, 0.3));
+  filter: drop-shadow(0 14px 24px rgba(22, 17, 10, 0.2));
   transform: translate3d(3px, -2px, 0) rotate(1deg) scale(1.06);
 }
 

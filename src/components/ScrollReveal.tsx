@@ -8,9 +8,15 @@ type ScrollRevealProps = {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  variant?: "fade-up" | "pop" | "slide-right" | "slide-left";
 };
 
-export function ScrollReveal({ children, className = "", delay = 0 }: ScrollRevealProps) {
+export function ScrollReveal({
+  children,
+  className = "",
+  delay = 0,
+  variant = "fade-up",
+}: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -28,7 +34,7 @@ export function ScrollReveal({ children, className = "", delay = 0 }: ScrollReve
           observer.disconnect();
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0.15 },
     );
 
     observer.observe(target);
@@ -36,10 +42,23 @@ export function ScrollReveal({ children, className = "", delay = 0 }: ScrollReve
     return () => observer.disconnect();
   }, []);
 
+  const getVariantClass = () => {
+    switch (variant) {
+      case "pop":
+        return styles.pop;
+      case "slide-right":
+        return styles.slideRight;
+      case "slide-left":
+        return styles.slideLeft;
+      default:
+        return styles.reveal;
+    }
+  };
+
   return (
     <div
       ref={ref}
-      className={`${styles.reveal} ${visible ? styles.visible : ""} ${className}`.trim()}
+      className={`${getVariantClass()} ${visible ? styles.visible : ""} ${className}`.trim()}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}

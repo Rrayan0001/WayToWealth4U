@@ -4,18 +4,18 @@
 }
 
 .primary {
-  background: linear-gradient(135deg, #1f3f67 0%, #4f7eae 45%, #8fb3d8 100%);
+  background: linear-gradient(135deg, #181510 0%, #4c3820 54%, #9a733c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-weight: 800;
   letter-spacing: 0.01em;
   line-height: 1.08;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.32);
 }
 
 .secondary {
-  color: #4b78a7;
+  color: var(--text-muted);
   font-family: var(--font-body), "Segoe UI", sans-serif;
   font-weight: 800;
   letter-spacing: 0.12em;

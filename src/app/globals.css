@@ -1,26 +1,26 @@
 :root {
-  --surface-plain: #f7f3ea;
-  --surface-alt: #efe8dc;
+  --surface-plain: #ffffff;
+  --surface-alt: #fbfbfb;
 
-  --gold-900: #3f2a11;
-  --gold-800: #6c4719;
-  --gold-700: #946326;
-  --gold-600: #bb8333;
-  --gold-500: #dda84c;
-  --gold-300: #f2dab0;
+  --gold-900: #5d5448;
+  --gold-800: #756b5e;
+  --gold-700: #8d8477;
+  --gold-600: #a79d90;
+  --gold-500: #c4b9aa;
+  --gold-300: #ece6de;
 
-  --silver-300: #d9cfbe;
-  --silver-200: #c8bca8;
-  --silver-100: #f6f1e8;
+  --silver-300: #dfdcd7;
+  --silver-200: #d2cdc5;
+  --silver-100: #f5f3ef;
 
-  --wood-500: #7a889c;
-  --wood-300: #bac4d3;
+  --wood-500: #73706a;
+  --wood-300: #c9c5bd;
 
-  --text-body: #32363f;
-  --text-muted: #686d78;
+  --text-body: #161411;
+  --text-muted: #66625c;
 
-  --shadow-soft: 0 10px 26px rgba(45, 33, 18, 0.12);
-  --shadow-large: 0 20px 44px rgba(31, 24, 16, 0.18);
+  --shadow-soft: 0 12px 28px rgba(20, 16, 10, 0.08);
+  --shadow-large: 0 22px 48px rgba(18, 14, 8, 0.14);
 }
 
 * {
@@ -40,9 +40,8 @@ html {
 }
 
 body {
-  background: radial-gradient(circle at 12% 10%, #fdf1d9 0%, transparent 42%),
-    radial-gradient(circle at 88% 4%, rgba(126, 149, 183, 0.18), transparent 32%),
-    linear-gradient(180deg, var(--surface-plain), #f1ebdf 45%, #ece5d8 100%);
+  background: radial-gradient(circle at 10% 8%, rgba(196, 185, 170, 0.08), transparent 34%),
+    linear-gradient(180deg, var(--surface-plain), var(--surface-alt) 62%, #f8f8f8 100%);
   color: var(--text-body);
   font-family: var(--font-body), "Segoe UI", Tahoma, sans-serif;
   min-height: 100vh;
@@ -72,7 +71,7 @@ main {
 
 .skipLink {
   background: #ffffff;
-  border: 1px solid var(--silver-200);
+  border: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
   border-radius: 0.7rem;
   left: 1rem;
   padding: 0.55rem 0.75rem;
@@ -95,7 +94,7 @@ main {
 
 .sectionHeader h2,
 .sectionTitle {
-  color: var(--gold-900);
+  color: var(--text-body);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.5rem, 4vw, 2.4rem);
   line-height: 1.18;
@@ -139,21 +138,21 @@ main {
 }
 
 .buttonPrimary {
-  background: linear-gradient(132deg, #f9e9c7 0%, var(--gold-500) 58%, #a66f27 100%);
-  border-color: color-mix(in srgb, var(--gold-800) 48%, #ffffff 52%);
+  background: #12100d;
+  border-color: color-mix(in srgb, var(--silver-200) 55%, #12100d 45%);
   box-shadow: var(--shadow-soft);
-  color: #2f200c;
+  color: #f8f4ec;
 }
 
 .buttonGhost {
-  background: rgba(255, 249, 238, 0.88);
-  border-color: color-mix(in srgb, var(--silver-200) 62%, #ffffff 38%);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: color-mix(in srgb, var(--silver-200) 68%, #ffffff 32%);
   color: var(--text-body);
 }
 
 .panelCard {
-  background: linear-gradient(152deg, rgba(255, 250, 241, 0.9), rgba(243, 233, 214, 0.72));
-  border: 1px solid color-mix(in srgb, var(--silver-200) 64%, #ffffff 36%);
+  background: linear-gradient(154deg, rgba(255, 255, 255, 0.96), rgba(248, 245, 239, 0.88));
+  border: 1px solid color-mix(in srgb, var(--silver-200) 70%, #ffffff 30%);
   border-radius: 1rem;
   box-shadow: var(--shadow-soft);
   min-height: 100%;
@@ -161,7 +160,7 @@ main {
 }
 
 .panelCard h3 {
-  color: var(--gold-900);
+  color: var(--text-body);
   font-family: var(--font-heading), Georgia, serif;
   font-size: 1.2rem;
   margin-bottom: 0.35rem;
@@ -188,7 +187,7 @@ main {
 .formGrid input,
 .formGrid textarea {
   background: rgba(255, 255, 255, 0.95);
-  border: 1px solid color-mix(in srgb, var(--silver-200) 64%, #ffffff 36%);
+  border: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
   border-radius: 0.75rem;
   color: var(--text-body);
   font: inherit;
@@ -198,8 +197,8 @@ main {
 
 .formGrid input:focus-visible,
 .formGrid textarea:focus-visible {
-  border-color: var(--gold-500);
-  box-shadow: 0 0 0 3px rgba(221, 168, 76, 0.24);
+  border-color: var(--gold-700);
+  box-shadow: 0 0 0 3px rgba(141, 132, 119, 0.16);
   outline: none;
 }
 

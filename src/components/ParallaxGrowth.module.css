@@ -1,22 +1,18 @@
 .section {
-  background: linear-gradient(152deg, rgba(255, 250, 241, 0.95), rgba(244, 234, 216, 0.88));
-  border: 1px solid color-mix(in srgb, var(--silver-200) 60%, #ffffff 40%);
-  border-radius: 1.6rem;
-  box-shadow: var(--shadow-large);
+  background: none;
+  border: 0;
+  border-block: 1px solid color-mix(in srgb, var(--silver-200) 80%, #ffffff 20%);
+  border-radius: 0;
+  box-shadow: none;
   display: grid;
   gap: 0.9rem;
-  overflow: hidden;
-  padding: clamp(1rem, 2.6vw, 1.55rem);
+  overflow: visible;
+  padding-block: clamp(0.85rem, 1.9vw, 1.15rem);
   position: relative;
 }
 
 .section::before {
-  background: radial-gradient(circle at 84% 16%, rgba(221, 168, 76, 0.18), transparent 36%),
-    radial-gradient(circle at 16% 84%, rgba(122, 136, 156, 0.16), transparent 40%);
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
+  content: none;
 }
 
 .content,
@@ -27,8 +23,10 @@
 }
 
 .content {
+  border-bottom: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
   margin: 0 auto;
   max-width: 900px;
+  padding-bottom: 0.82rem;
   text-align: center;
 }
 
@@ -42,7 +40,7 @@
 }
 
 .content h2 {
-  color: var(--gold-900);
+  color: var(--text-body);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.6rem, 3.5vw, 2.35rem);
   font-weight: 700;
@@ -58,7 +56,7 @@
 }
 
 .marqueeViewport {
-  border-block: 1px solid color-mix(in srgb, var(--silver-200) 54%, #ffffff 46%);
+  border-bottom: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
   overflow: hidden;
   padding-block: 0.1rem;
 }
@@ -72,37 +70,51 @@
 
 .marqueeTrack span {
   align-items: center;
-  background: rgba(255, 251, 243, 0.92);
-  border: 1px solid color-mix(in srgb, var(--silver-200) 56%, #ffffff 44%);
-  border-radius: 999px;
+  background: none;
+  border: 0;
+  border-radius: 0;
   color: var(--gold-800);
   display: inline-flex;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  margin: 0.48rem 0;
-  padding: 0.42rem 0.84rem;
+  margin: 0.46rem 0;
+  padding: 0.42rem 0.18rem;
   text-transform: uppercase;
 }
 
+.marqueeTrack span::after {
+  color: color-mix(in srgb, var(--gold-500) 88%, #ffffff 12%);
+  content: "•";
+  margin-inline: 0.7rem 0.2rem;
+}
+
 .loopGrid {
+  background: none;
+  border: 0;
+  border-radius: 0;
   display: grid;
-  gap: 0.82rem;
+  gap: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: 1fr;
+  overflow: visible;
 }
 
 .loopCard {
-  backdrop-filter: blur(5px);
-  background: linear-gradient(150deg, rgba(255, 252, 246, 0.92), rgba(247, 239, 224, 0.84));
-  border: 1px solid color-mix(in srgb, var(--silver-200) 60%, #ffffff 40%);
-  border-radius: 0.95rem;
+  backdrop-filter: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
   min-height: 112px;
-  padding: 0.82rem 0.92rem;
+  padding: 0.95rem 1rem;
+}
+
+.loopCard:nth-child(odd):not(:last-child) {
+  border-right: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
 }
 
 .loopCard h3 {
-  color: var(--gold-900);
+  color: var(--text-body);
   font-family: var(--font-heading), Georgia, serif;
   font-size: 1.06rem;
   margin-bottom: 0.18rem;
@@ -115,6 +127,7 @@
 }
 
 .loopCard:last-child {
+  border-bottom: 0;
   grid-column: 1 / -1;
 }
 
@@ -132,6 +145,10 @@
   .loopGrid {
     grid-template-columns: minmax(0, 1fr);
     grid-auto-rows: auto;
+  }
+
+  .loopCard {
+    border-right: 0;
   }
 
   .loopCard:last-child {

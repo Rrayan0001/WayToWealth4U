@@ -2,7 +2,6 @@
 
 import React, { type SVGProps } from "react";
 
-import { GradientHeading } from "@/components/ui/gradient-heading";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 
 import styles from "./WorkedWith.module.css";
@@ -147,12 +146,8 @@ export function WorkedWith() {
     <section id="introduction" className={`sectionBlock ${styles.section}`}>
       <div className={`${styles.inner} container`}>
         <div className={styles.headingWrap}>
-          <GradientHeading variant="secondary" size="sm">
-            Trusted Financial Partners
-          </GradientHeading>
-          <GradientHeading size="xl" className={styles.title}>
-            We Work With Leading Banks
-          </GradientHeading>
+          <p className={styles.eyebrow}>Trusted Financial Partners</p>
+          <h2 className={styles.title}>We Work With Leading Banks</h2>
           <p className={styles.subtitle}>
             Partnered with India&apos;s top financial institutions to bring you the best loan solutions
           </p>

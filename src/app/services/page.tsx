@@ -27,11 +27,22 @@ export default function ServicesPage() {
           <ScrollReveal key={service.title} className={styles.card} delay={index * 100}>
             <h2>{service.title}</h2>
             <p>{service.description}</p>
-            <ul className={styles.list}>
-              {service.points.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
+            {service.subServices ? (
+              <div className={styles.subServicesGrid}>
+                {service.subServices.map((sub) => (
+                  <div key={sub.title} className={styles.subServiceItem}>
+                    <h3>{sub.title}</h3>
+                    <p>{sub.description}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ul className={styles.list}>
+                {service.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            )}
           </ScrollReveal>
         ))}
       </section>
