@@ -1,6 +1,9 @@
 .section {
-  background: linear-gradient(156deg, rgba(255, 255, 255, 0.97), rgba(248, 244, 237, 0.92));
-  border: 1px solid color-mix(in srgb, var(--silver-200) 78%, #ffffff 22%);
+  background:
+    radial-gradient(circle at 14% 18%, rgba(20, 122, 70, 0.12), transparent 24%),
+    radial-gradient(circle at 86% 82%, rgba(214, 169, 44, 0.14), transparent 28%),
+    linear-gradient(156deg, rgba(255, 255, 255, 0.97), rgba(239, 247, 238, 0.94));
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
   border-radius: 1.2rem;
   overflow: hidden;
   padding: clamp(1rem, 2.4vw, 1.5rem);
@@ -9,7 +12,7 @@
 
 .section::before,
 .section::after {
-  background: rgba(196, 185, 170, 0.12);
+  background: linear-gradient(145deg, rgba(20, 122, 70, 0.1), rgba(214, 169, 44, 0.14));
   clip-path: polygon(25% 6%, 75% 6%, 96% 50%, 75% 94%, 25% 94%, 4% 50%);
   content: "";
   position: absolute;
@@ -39,11 +42,11 @@
 }
 
 .heading h2 {
-  color: var(--text-body);
+  color: var(--emerald-950);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   line-height: 1.14;
-  margin-top: 0.3rem;
+  margin-top: 0.32rem;
 }
 
 .heading p {
@@ -53,7 +56,7 @@
 }
 
 .columnsWrap {
-  border-top: 1px solid color-mix(in srgb, var(--silver-200) 74%, #ffffff 26%);
+  border-top: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
   display: flex;
   gap: 0.85rem;
   margin-top: 1rem;
@@ -78,10 +81,10 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid color-mix(in srgb, var(--silver-200) 76%, #ffffff 24%);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
   border-radius: 1rem;
-  box-shadow: 0 12px 24px rgba(20, 15, 10, 0.06);
+  box-shadow: 0 12px 28px rgba(6, 39, 24, 0.07);
   display: grid;
   gap: 0.85rem;
   padding: 1rem;
@@ -90,7 +93,7 @@
 .quote {
   color: var(--text-body);
   font-size: 0.95rem;
-  line-height: 1.66;
+  line-height: 1.68;
 }
 
 .person {
@@ -100,8 +103,8 @@
 }
 
 .avatar {
-  background: #fff8ec;
-  border: 1px solid color-mix(in srgb, var(--gold-300) 62%, #ffffff 38%);
+  background: linear-gradient(145deg, rgba(20, 122, 70, 0.08), rgba(214, 169, 44, 0.14));
+  border: 1px solid color-mix(in srgb, var(--gold-300) 48%, var(--emerald-200) 52%);
   border-radius: 50%;
   flex-shrink: 0;
   height: 44px;
@@ -109,7 +112,7 @@
 }
 
 .name {
-  color: var(--text-body);
+  color: var(--emerald-950);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.01em;

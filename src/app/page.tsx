@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { EmiCalculator } from "@/components/EmiCalculator";
 import { FeatureTicker } from "@/components/FeatureTicker";
+import { HeroSection } from "@/components/HeroSection";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -12,14 +13,14 @@ import { processSteps, serviceItems, testimonialItems } from "@/lib/siteData";
 import styles from "./page.module.css";
 
 const tickerItems = [
-  "Fast Loan Delivery",
-  "Easy Returns Support",
-  "Genuine Advisory Access",
+  "Growth-Led Loan Structuring",
+  "Gold-Standard Credit Guidance",
+  "Trusted Advisory Access",
   "Home Loans",
   "Business Loans",
   "Certified Guidance",
-  "Up To 70% Savings",
-  "Low Processing Time",
+  "Long-Term Wealth Planning",
+  "Fast Documentation Support",
 ];
 
 const secondaryTickerItems = [
@@ -63,107 +64,7 @@ const serviceCardMeta = {
 export default function Home() {
   return (
     <div className={styles.page}>
-      <section className={styles.showcase}>
-        <div className={styles.showcasePanel}>
-          <div className={styles.showcaseContent}>
-            <ScrollReveal className={styles.showcaseLeft} variant="pop">
-              <p className={styles.tagline}>Way2Wealth4U Premium Financial Studio</p>
-              <h1>WE CREATE AWESOME WEALTH DESIGN.</h1>
-              <p className={styles.showcaseLead}>
-                Premium loan strategy, credit optimization, and market education crafted for confident, upward
-                financial movement.
-              </p>
-
-              <div className={styles.showcaseCtas}>
-                <Link href="/contact" className="button buttonPrimary">
-                  Apply Now
-                </Link>
-                <Link href="/#services" className="button buttonGhost">
-                  Learn More
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          <div className={styles.bottomRow}>
-            <div className={styles.reviewPill}>
-              <span className={styles.reviewBrand}>W</span>
-              <div className={styles.reviewContent}>
-                <div className={styles.reviewStars}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4"
-                    style={{ width: "14px", height: "14px" }}
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4"
-                    style={{ width: "14px", height: "14px" }}
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4"
-                    style={{ width: "14px", height: "14px" }}
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4"
-                    style={{ width: "14px", height: "14px" }}
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-4 h-4"
-                    style={{ width: "14px", height: "14px" }}
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <p className={styles.reviewText}>
-                  4.9/5 <span>from 40+ Clients</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div >
-      </section >
+      <HeroSection />
 
       <FeatureTicker items={tickerItems} durationSeconds={32} />
 
@@ -188,11 +89,11 @@ export default function Home() {
       <WorkedWith />
       <FeatureTicker items={secondaryTickerItems} durationSeconds={36} reverse />
 
-      <section id="services" className="sectionBlock">
+      <section id="services" className={styles.servicesSection}>
         <div className="container">
-          <header className="sectionHeader">
-            <p className="eyebrow">Core Services</p>
-            <h2>Strategic Financial Solutions</h2>
+          <header className={styles.servicesHeader}>
+            <h2 className={styles.servicesTitle}>Strategic Financial Solutions</h2>
+            <div className={styles.servicesDivider} />
           </header>
           <div className={styles.servicesGrid}>
             {serviceItems.map((service, index) => (
@@ -227,7 +128,7 @@ export default function Home() {
       <TestimonialsSection testimonials={testimonialItems} />
 
       <div className="container">
-        <hr style={{ border: 'none', borderTop: '1px solid color-mix(in srgb, var(--gold-300) 30%, transparent)' }} />
+        <hr style={{ border: "none", borderTop: "1px solid color-mix(in srgb, var(--emerald-200) 38%, transparent)" }} />
       </div>
 
       <section id="contact-cta" className="sectionBlock">
@@ -235,9 +136,9 @@ export default function Home() {
           <div className={styles.contactSection}>
             <div className={styles.contactInfo}>
               <p className="eyebrow">Contact</p>
-              <h2>Let Us Know How We Can Help</h2>
+              <h2>Tell WealthRise Capitals What You Need</h2>
               <p className={styles.contactDesc}>
-                We&apos;re here to help and answer any question you might have. We look forward to hearing from you!
+                Share your goals and we&apos;ll help you map the right loan, credit, or market-growth strategy.
               </p>
               <ul className={styles.contactMethods}>
                 <li>
@@ -246,7 +147,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                     </svg>
                   </span>
-                  <span>hello@way2wealth4u.com</span>
+                  <span>Advisory Inbox</span>
                 </li>
                 <li>
                   <span className={styles.contactIcon}>
@@ -263,7 +164,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                   </span>
-                  <span>Way2Wealth4U Advisory Desk, Financial District, India</span>
+                  <span>WealthRise Capitals Advisory Desk, Financial District, India</span>
                 </li>
               </ul>
             </div>
@@ -285,7 +186,7 @@ export default function Home() {
                 <textarea id="contact-message" rows={4} placeholder="Tell us your goals" required />
               </div>
               <button type="submit" className="button buttonPrimary" style={{ width: '100%', justifyContent: 'center' }}>
-                Submit Request
+                Send Inquiry
               </button>
             </form>
           </div>

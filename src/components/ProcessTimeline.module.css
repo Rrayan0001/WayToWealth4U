@@ -23,7 +23,7 @@
 }
 
 .eyebrow {
-  color: var(--gold-700);
+  color: var(--emerald-700);
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.09em;
@@ -31,7 +31,7 @@
 }
 
 .header h2 {
-  color: var(--text-body);
+  color: var(--emerald-950);
   font-family: var(--font-heading), "Segoe UI", sans-serif;
   font-size: clamp(1.45rem, 4vw, 2.35rem);
   line-height: 1.14;
@@ -57,9 +57,9 @@
   color: inherit;
   cursor: pointer;
   display: flex;
+  flex: 0 0 clamp(130px, 14vw, 170px);
   flex-direction: column;
   gap: 0.6rem;
-  flex: 0 0 clamp(130px, 14vw, 170px);
   justify-content: flex-start;
   padding: 0;
   position: relative;
@@ -75,7 +75,7 @@
 }
 
 .nodeWrap:focus-visible .node {
-  box-shadow: 0 0 0 3px rgba(193, 151, 85, 0.3);
+  box-shadow: 0 0 0 3px rgba(214, 169, 44, 0.24);
 }
 
 .nodeWrapActive {
@@ -97,16 +97,16 @@
 
 .nodeAuraActive {
   animation: auraPulse 1.6s infinite;
-  background: rgba(193, 151, 85, 0.38);
+  background: rgba(20, 122, 70, 0.28);
   opacity: 1;
 }
 
 .node {
   align-items: center;
-  background: transparent;
-  border: 2px solid color-mix(in srgb, var(--silver-200) 82%, #ffffff 18%);
+  background: rgba(255, 255, 255, 0.62);
+  border: 2px solid color-mix(in srgb, var(--emerald-200) 74%, #ffffff 26%);
   border-radius: 999px;
-  color: #766b59;
+  color: var(--emerald-800);
   display: inline-flex;
   height: 58px;
   justify-content: center;
@@ -116,35 +116,36 @@
 }
 
 .nodeActive {
-  background: rgba(185, 143, 80, 0.18);
-  border-color: #d7b885;
-  box-shadow: 0 0 0 1px rgba(193, 151, 85, 0.2), 0 8px 16px rgba(20, 16, 10, 0.1);
-  color: #6f4d23;
-  transform: none;
+  background: linear-gradient(145deg, rgba(20, 122, 70, 0.14), rgba(214, 169, 44, 0.2));
+  border-color: color-mix(in srgb, var(--gold-300) 58%, var(--emerald-200) 42%);
+  box-shadow:
+    0 0 0 1px rgba(20, 122, 70, 0.12),
+    0 12px 22px rgba(6, 39, 24, 0.1);
+  color: var(--emerald-950);
 }
 
 .nodeCompleted {
-  background: rgba(235, 227, 213, 0.4);
-  border-color: #c8b9a1;
-  color: #5d5447;
+  background: rgba(20, 122, 70, 0.08);
+  border-color: rgba(20, 122, 70, 0.18);
+  color: var(--emerald-700);
 }
 
 .nodeIcon {
   fill: none;
+  height: 24px;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2;
-  height: 24px;
   width: 24px;
 }
 
 .badge {
   align-items: center;
   background: #ffffff;
-  border: 1px solid #d1c4ae;
+  border: 1px solid color-mix(in srgb, var(--gold-300) 56%, #ffffff 44%);
   border-radius: 999px;
-  color: #624a2a;
+  color: var(--gold-900);
   display: inline-flex;
   font-size: 0.62rem;
   font-weight: 800;
@@ -170,7 +171,7 @@
 }
 
 .lineWrap {
-  background: #dfd7c9;
+  background: rgba(20, 122, 70, 0.14);
   border-radius: 999px;
   display: block;
   flex: 1 1 clamp(44px, 8vw, 160px);
@@ -182,7 +183,7 @@
 }
 
 .lineFill {
-  background: linear-gradient(90deg, #b98f50, #e3c291);
+  background: linear-gradient(90deg, var(--emerald-700), var(--gold-600));
   height: 100%;
   inset: 0;
   position: absolute;
@@ -207,25 +208,23 @@
 
 .detailCard {
   align-items: flex-start;
-  backdrop-filter: none;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.82), rgba(239, 247, 238, 0.72));
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  border-radius: 1.35rem;
+  box-shadow: var(--shadow-soft);
   display: grid;
   gap: 0.95rem;
   grid-template-columns: auto 1fr;
   margin: 0 auto;
   max-width: 900px;
-  padding: 0;
+  padding: 1.05rem;
   position: relative;
-  transition: none;
   width: 100%;
   z-index: 2;
 }
 
 .detailCard:hover {
-  box-shadow: none;
+  box-shadow: var(--shadow-soft);
   transform: none;
 }
 
@@ -235,10 +234,10 @@
 }
 
 .mobileCard {
-  background: #ffffff;
-  border: 1px solid color-mix(in srgb, var(--silver-200) 76%, #ffffff 24%);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
   border-radius: 1rem;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 24px rgba(6, 39, 24, 0.06);
   display: grid;
   gap: 0.6rem;
   grid-template-columns: auto 1fr;
@@ -247,10 +246,10 @@
 
 .mobileIconWrap {
   align-items: center;
-  background: rgba(196, 185, 170, 0.14);
-  border: 1px solid rgba(196, 185, 170, 0.26);
+  background: linear-gradient(145deg, rgba(20, 122, 70, 0.1), rgba(214, 169, 44, 0.16));
+  border: 1px solid rgba(20, 122, 70, 0.14);
   border-radius: 0.9rem;
-  color: #5a5147;
+  color: var(--emerald-800);
   display: inline-flex;
   height: 52px;
   justify-content: center;
@@ -260,19 +259,19 @@
 
 .mobileIcon {
   fill: none;
+  height: 28px;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.9;
-  height: 28px;
   width: 28px;
 }
 
 .mobileBadge {
   background: #ffffff;
-  border: 1px solid color-mix(in srgb, var(--silver-200) 70%, #ffffff 30%);
+  border: 1px solid color-mix(in srgb, var(--gold-300) 56%, #ffffff 44%);
   border-radius: 999px;
-  color: var(--text-body);
+  color: var(--gold-900);
   display: inline-flex;
   font-size: 0.72rem;
   font-weight: 800;
@@ -289,7 +288,7 @@
 }
 
 .mobileBody h3 {
-  color: var(--text-body);
+  color: var(--emerald-950);
   font-size: 1.02rem;
   font-weight: 800;
   margin: 0.15rem 0 0.25rem;
@@ -302,10 +301,10 @@
 
 .detailIconWrap {
   align-items: center;
-  background: rgba(193, 151, 85, 0.12);
-  border: 1px solid rgba(193, 151, 85, 0.26);
+  background: linear-gradient(145deg, rgba(20, 122, 70, 0.12), rgba(214, 169, 44, 0.16));
+  border: 1px solid rgba(20, 122, 70, 0.16);
   border-radius: 1rem;
-  color: #704f24;
+  color: var(--emerald-800);
   display: inline-flex;
   height: 62px;
   justify-content: center;
@@ -314,11 +313,11 @@
 
 .detailIcon {
   fill: none;
+  height: 31px;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.9;
-  height: 31px;
   width: 31px;
 }
 
@@ -343,7 +342,7 @@
 }
 
 .detailBody h3 {
-  color: var(--text-body);
+  color: var(--emerald-950);
   font-size: clamp(1.15rem, 2vw, 1.55rem);
   font-weight: 800;
   margin-bottom: 0.4rem;
@@ -368,7 +367,7 @@
 }
 
 .dot {
-  background: #d8d0c0;
+  background: rgba(20, 122, 70, 0.16);
   border-radius: 999px;
   display: inline-block;
   height: 4px;
@@ -377,7 +376,7 @@
 }
 
 .dotActive {
-  background: #b98f50;
+  background: linear-gradient(90deg, var(--emerald-700), var(--gold-600));
   width: 30px;
 }
 
@@ -419,98 +418,15 @@
     gap: 0.5rem;
     justify-content: space-between;
   }
-
-  .nodeWrap {
-    flex-basis: 100px;
-  }
-
-  .nodeLabel {
-    font-size: 0.78rem;
-    max-width: 98px;
-  }
-
-  .lineWrap {
-    flex-basis: clamp(24px, 5vw, 80px);
-    min-width: 22px;
-  }
 }
 
-@media (max-width: 760px) {
-  .flowRow {
-    gap: 0.72rem;
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding: 0.1rem 0.25rem 0.5rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .flowRow::-webkit-scrollbar {
-    display: none;
-  }
-
-  .lineWrap {
-    display: none;
-  }
-
-  .nodeWrap {
-    flex: 0 0 110px;
-    scroll-snap-align: start;
-  }
-}
-
-@media (max-width: 680px) {
+@media (max-width: 720px) {
   .detailCard {
-    gap: 0.78rem;
-    grid-template-columns: 56px 1fr;
-  }
-
-  .detailFooter {
-    justify-content: center;
-    margin-top: 0.75rem;
-  }
-
-  .progressDots {
-    justify-content: center;
-    width: 100%;
-  }
-}
-
-@media (max-width: 520px) {
-  .header h2 {
-    font-size: clamp(1.32rem, 9vw, 2rem);
-  }
-
-  .nodeWrap {
-    flex-basis: 102px;
-  }
-
-  .node {
-    height: 54px;
-    width: 54px;
-  }
-
-  .nodeIcon {
-    height: 21px;
-    width: 21px;
-  }
-
-  .badge {
-    height: 20px;
-    width: 20px;
-  }
-
-  .detailCard {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .detailIconWrap {
-    height: 54px;
-    width: 54px;
-  }
-
-  .detailMetaRow {
-    align-items: center;
-    flex-direction: row;
+    height: 56px;
+    width: 56px;
   }
 }

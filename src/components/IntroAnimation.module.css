@@ -1,0 +1,113 @@
+/* ===== DARK OVERLAY ===== */
+.overlay {
+    align-items: center;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(214, 169, 44, 0.08), transparent 60%),
+        linear-gradient(180deg, #040a07 0%, #020604 100%);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    transition-property: clip-path;
+    will-change: clip-path;
+    z-index: 99998;
+}
+
+/* ===== AMBIENT GLOW ===== */
+.ambientGlow {
+    background: radial-gradient(circle at center,
+            rgba(214, 169, 44, 0.12) 0%,
+            rgba(56, 199, 115, 0.04) 40%,
+            transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    height: 70vh;
+    position: absolute;
+    width: 70vw;
+}
+
+/* ===== GRID LINES (architectural reveal) ===== */
+.gridLine {
+    background: rgba(220, 198, 106, 0.08);
+    position: absolute;
+    transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.gridV1 {
+    height: 0;
+    left: 33%;
+    top: 0;
+    width: 1px;
+}
+
+.gridV2 {
+    height: 0;
+    right: 33%;
+    top: 0;
+    width: 1px;
+}
+
+.gridH1 {
+    height: 1px;
+    left: 0;
+    top: 50%;
+    width: 0;
+}
+
+.gridAnimate.gridV1,
+.gridAnimate.gridV2 {
+    height: 100%;
+}
+
+.gridAnimate.gridH1 {
+    width: 100%;
+}
+
+/* ===== LOGO CONTAINER ===== */
+.logoContainer {
+    pointer-events: none;
+    position: fixed;
+    transform-origin: top left;
+    transition-property: top, left, transform, opacity;
+    will-change: top, left, transform, opacity;
+    z-index: 99999;
+}
+
+.logoInner {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.logoIcon {
+    height: auto;
+    width: clamp(60px, 10vw, 100px);
+}
+
+.logoText {
+    height: auto;
+    width: clamp(180px, 28vw, 320px);
+}
+
+/* ===== SUBTITLE ===== */
+.subtitleWrapper {
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    text-align: center;
+    top: 62%;
+    transition-property: transform, opacity;
+    width: 100%;
+    will-change: transform, opacity;
+    z-index: 99999;
+}
+
+.subtitleText {
+    color: rgba(220, 198, 106, 0.85);
+    font-size: clamp(0.72rem, 1.6vw, 1rem);
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    padding-left: 0.3em;
+    text-shadow: 0 0 30px rgba(214, 169, 44, 0.15);
+}

@@ -1,7 +1,9 @@
 .shell {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 243, 234, 0.88));
-  border: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
-  border-radius: 1.4rem;
+  background:
+    radial-gradient(circle at 86% 18%, rgba(214, 169, 44, 0.16), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(239, 247, 238, 0.9));
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  border-radius: 1.45rem;
   box-shadow: var(--shadow-soft);
   display: grid;
   gap: 1.1rem;
@@ -24,18 +26,18 @@
 
 .inputs input {
   appearance: textfield;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
-  border-radius: 0.78rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
+  border-radius: 0.8rem;
   color: var(--text-body);
   font: inherit;
-  padding: 0.68rem 0.72rem;
+  padding: 0.7rem 0.74rem;
   transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .inputs input:focus-visible {
-  border-color: var(--gold-600);
-  box-shadow: 0 0 0 3px rgba(193, 151, 85, 0.2);
+  border-color: var(--emerald-600);
+  box-shadow: 0 0 0 3px rgba(214, 169, 44, 0.2);
   outline: none;
 }
 
@@ -46,8 +48,8 @@
 }
 
 .metricCard {
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid color-mix(in srgb, var(--gold-300) 44%, #ffffff 56%);
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid color-mix(in srgb, var(--gold-300) 48%, var(--emerald-200) 52%);
   border-radius: 1rem;
   padding: 1rem;
 }
@@ -62,7 +64,7 @@
 }
 
 .metricCard p {
-  color: var(--text-body);
+  color: var(--emerald-950);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.15rem, 2.2vw, 1.7rem);
   font-weight: 700;

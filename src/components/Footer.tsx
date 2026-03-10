@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+
+import { BrandMark } from "@/components/BrandMark";
 
 import styles from "./Footer.module.css";
 
@@ -10,9 +11,8 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`${styles.inner} container`}>
         <div className={`${styles.column} ${styles.brandColumn}`}>
-          <Link href="/" className={styles.brandLink} aria-label="WayToWealth4U home">
-            <Image src="/nav-logo-icon.png" alt="" width={570} height={438} className={styles.brandIcon} priority={false} />
-            <Image src="/nav-logo-text.png" alt="WayToWealth4U" width={1337} height={186} className={styles.brandText} priority={false} />
+          <Link href="/" className={styles.brandLink} aria-label="WealthRise Capitals home">
+            <BrandMark className={styles.brandMark} />
           </Link>
 
           <p className={styles.brandTextBlock}>
@@ -23,7 +23,7 @@ export function Footer() {
 
         <div className={styles.column}>
           <h3>Contact</h3>
-          <a href="mailto:hello@way2wealth4u.com">hello@way2wealth4u.com</a>
+          <a href="mailto:hello@way2wealth4u.com">Advisory Inbox</a>
           <a href="tel:+919000000000">+91 90000 00000</a>
           <p>Financial District, India</p>
         </div>
@@ -52,7 +52,7 @@ export function Footer() {
 
       <div className={styles.bottom}>
         <div className="container">
-          <p>&copy; {year} Way2Wealth4U.com. All rights reserved.</p>
+          <p>&copy; {year} WealthRise Capitals. All rights reserved.</p>
         </div>
       </div>
     </footer>

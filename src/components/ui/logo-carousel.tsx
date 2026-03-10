@@ -1,14 +1,16 @@
 "use client";
 
-import { memo, useEffect, useState, type SVGProps } from "react";
+import { memo, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 import styles from "./logo-carousel.module.css";
 
+import Image from "next/image";
+
 export type CarouselLogo = {
   name: string;
   id: number;
-  img: (props: SVGProps<SVGSVGElement>) => React.JSX.Element;
+  img: string;
 };
 
 type LogoCarouselProps = {
@@ -58,12 +60,11 @@ function distributeLogos(allLogos: CarouselLogo[], columnCount: number, shuffle:
 
 const LogoColumn = memo(function LogoColumn({ logos, index, currentTime }: LogoColumnProps) {
   const reduceMotion = useReducedMotion();
-  const cycleInterval = 2000;
-  const columnDelay = index * 220;
+  const cycleInterval = 3500;
+  const columnDelay = index * 300;
   const adjustedTime = (currentTime + columnDelay) % (cycleInterval * logos.length);
   const currentIndex = Math.floor(adjustedTime / cycleInterval);
   const currentLogo = logos[currentIndex];
-  const CurrentLogoIcon = currentLogo.img;
 
   return (
     <motion.article
@@ -75,38 +76,33 @@ const LogoColumn = memo(function LogoColumn({ logos, index, currentTime }: LogoC
         reduceMotion
           ? { duration: 0 }
           : {
-              delay: index * 0.08,
-              duration: 0.46,
-              ease: [0.22, 1, 0.36, 1],
-            }
+            delay: index * 0.08,
+            duration: 0.46,
+            ease: [0.22, 1, 0.36, 1],
+          }
       }
     >
       <div className={styles.logoSlot}>
-        <AnimatePresence initial={false} mode="wait">
+        <AnimatePresence initial={false}>
           <motion.div
             key={`${currentLogo.id}-${currentIndex}-${index}`}
             className={styles.logoSwap}
-            initial={reduceMotion ? { opacity: 1 } : { y: "12%", opacity: 0, filter: "blur(8px)" }}
-            animate={reduceMotion ? { opacity: 1 } : { y: "0%", opacity: 1, filter: "blur(0px)" }}
-            exit={reduceMotion ? { opacity: 0 } : { y: "-18%", opacity: 0, filter: "blur(6px)" }}
-            transition={
-              reduceMotion
-                ? { duration: 0.01 }
-                : {
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 22,
-                    mass: 1,
-                    bounce: 0.2,
-                    duration: 0.5,
-                  }
-            }
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
           >
-            <CurrentLogoIcon className={styles.logo} />
+            <Image
+              src={currentLogo.img}
+              alt={currentLogo.name}
+              width={200}
+              height={60}
+              className={styles.logo}
+            />
+            <span className={styles.bankName}>{currentLogo.name}</span>
           </motion.div>
         </AnimatePresence>
       </div>
-      <p>{currentLogo.name}</p>
     </motion.article>
   );
 });

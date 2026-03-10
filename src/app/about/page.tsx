@@ -3,23 +3,36 @@ import Link from "next/link";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-import styles from "../inner.module.css";
+import styles from "./about.module.css";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn about Way2Wealth4U's mission, values, and premium advisory methodology.",
+  description: "Learn about WealthRise Capitals' mission, values, and strategic advisory methodology.",
 };
 
 export default function AboutPage() {
   return (
     <div className={`${styles.page} container`}>
       <section className={styles.hero}>
-        <p className="eyebrow">About Way2Wealth4U</p>
-        <h1>We Design Financial Growth With Precision</h1>
-        <p>
-          Way2Wealth4U is a premium consultancy focused on helping professionals, families, and businesses make
-          high-quality financial decisions with confidence.
-        </p>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroCopy}>
+            <p className={styles.heroEyebrow}>About WealthRise Capitals</p>
+            <h1>We Design Financial Growth With Precision</h1>
+            <p className={styles.heroLead}>
+              WealthRise Capitals is a strategic advisory firm focused on helping professionals, families, and
+              businesses make high-quality financial decisions with confidence.
+            </p>
+          </div>
+
+          <div className={styles.heroPanel}>
+            <p className={styles.panelEyebrow}>Why Clients Choose Us</p>
+            <ul className={styles.heroList}>
+              <li>Clear loan structuring aligned to affordability and long-term growth</li>
+              <li>Integrated guidance across loans, credit, and market education</li>
+              <li>Transparent execution support from first discussion to final outcome</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section className={styles.gridTwo}>
@@ -40,6 +53,11 @@ export default function AboutPage() {
             <li>Continuous monitoring for sustained growth momentum</li>
           </ul>
         </ScrollReveal>
+      </section>
+
+      <section className={styles.valuesIntro}>
+        <p className={styles.sectionEyebrow}>What Defines Us</p>
+        <h2>Advisory Built On Clarity, Discipline, And Momentum</h2>
       </section>
 
       <section className={styles.gridThree}>

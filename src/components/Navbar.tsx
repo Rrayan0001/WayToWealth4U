@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+
+import { BrandMark } from "@/components/BrandMark";
 
 import styles from "./Navbar.module.css";
 
@@ -18,6 +19,7 @@ const links = [
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -48,28 +50,34 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const timeoutId = window.setTimeout(closeMenu, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    // Check initial scroll position
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isHome = pathname === "/";
+  const isScrolled = scrolled || !isHome;
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`.trim()}>
+      {open ? <button type="button" className={styles.backdrop} onClick={closeMenu} aria-hidden /> : null}
+
       <div className={`${styles.inner} container`}>
-        <Link href="/" className={styles.brandLink} aria-label="WayToWealth4U home">
-          <span className={styles.brandVisual}>
-            <Image
-              src="/nav-logo-icon.png"
-              alt=""
-              width={570}
-              height={438}
-              priority
-              className={styles.navLogoIcon}
-            />
-            <Image
-              src="/nav-logo-text.png"
-              alt=""
-              width={1337}
-              height={186}
-              priority
-              className={styles.navLogoText}
-            />
-          </span>
+        <Link href="/" className={styles.brandLink} aria-label="WealthRise Capitals home">
+          <BrandMark compact className={styles.brandMark} />
         </Link>
 
         <nav
@@ -77,33 +85,36 @@ export function Navbar() {
           className={`${styles.nav} ${open ? styles.navOpen : ""}`.trim()}
           aria-label="Main navigation"
         >
-          {links.map((link) => {
-            const active = pathname === link.href;
+          <div className={styles.navKicker}>
+            <span>Menu</span>
+            <small>Explore WealthRise Capitals</small>
+          </div>
 
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`${styles.navLink} ${active ? styles.active : ""}`.trim()}
-                onClick={closeMenu}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+          <div className={styles.navList}>
+            {links.map((link) => {
+              const active = pathname === link.href;
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`${styles.navLink} ${active ? styles.active : ""}`.trim()}
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
         </nav>
-
-        <Link href="/contact" className={`${styles.desktopApply} button buttonPrimary`.trim()}>
-          Apply Now
-        </Link>
 
         <button
           ref={menuButtonRef}
           type="button"
-          className={styles.menuButton}
+          className={`${styles.menuButton} ${open ? styles.menuButtonOpen : ""}`.trim()}
           onClick={() => setOpen((current) => !current)}
           aria-expanded={open}
-          aria-label="Toggle navigation"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
         >
           <span />
           <span />

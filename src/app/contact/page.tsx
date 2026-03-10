@@ -1,34 +1,63 @@
 import type { Metadata } from "next";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { officeSnapshot } from "@/lib/siteData";
 
-import styles from "../inner.module.css";
+import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Way2Wealth4U for consultation, applications, and advisory support.",
+  description: "Get in touch with WealthRise Capitals for consultation, applications, and advisory support.",
 };
 
 export default function ContactPage() {
   return (
     <div className={`${styles.page} container`}>
       <section className={styles.hero}>
-        <p className="eyebrow">Contact</p>
-        <h1>Let&apos;s Build Your Growth Plan</h1>
-        <p>
-          Reach out for loan guidance, card recommendations, stock market classes, or a full financial strategy review.
-        </p>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroCopy}>
+            <p className={styles.heroEyebrow}>Contact</p>
+            <h1>Let&apos;s Build Your Growth Plan</h1>
+            <p className={styles.heroLead}>
+              Reach out for loan guidance, card recommendations, stock market classes, or a full financial strategy
+              review.
+            </p>
+          </div>
+
+          <div className={styles.heroPanel}>
+            <p className={styles.panelEyebrow}>Availability</p>
+            <ul className={styles.hoursList}>
+              {officeSnapshot.hours.map((hour) => (
+                <li key={hour}>{hour}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section className={styles.gridTwo}>
-        <article className={styles.card}>
+        <ScrollReveal className={styles.card}>
           <h2>Direct Contact</h2>
-          <ul className={styles.list}>
-            <li>Email: hello@way2wealth4u.com</li>
-            <li>Phone: +91 90000 00000</li>
-            <li>WhatsApp support available on working days</li>
-          </ul>
-        </article>
+          <div className={styles.contactStack}>
+            <div className={styles.contactItem}>
+              <span className={styles.contactLabel}>Email</span>
+              <a href={`mailto:${officeSnapshot.email}`}>{officeSnapshot.email}</a>
+            </div>
+            <div className={styles.contactItem}>
+              <span className={styles.contactLabel}>Phone</span>
+              <a href={`tel:${officeSnapshot.phone.replace(/\s+/g, "")}`}>{officeSnapshot.phone}</a>
+            </div>
+            <div className={styles.contactItem}>
+              <span className={styles.contactLabel}>Location</span>
+              <p>{officeSnapshot.address}</p>
+            </div>
+            <div className={styles.contactItem}>
+              <span className={styles.contactLabel}>Support</span>
+              <p>WhatsApp assistance is available during working hours for faster coordination.</p>
+            </div>
+          </div>
+        </ScrollReveal>
 
-        <form className={styles.card} aria-label="Contact inquiry form">
+        <ScrollReveal className={styles.card} delay={100}>
           <h2>Quick Inquiry</h2>
           <div className="formGrid">
             <label>
@@ -51,7 +80,7 @@ export default function ContactPage() {
               Submit Request
             </button>
           </div>
-        </form>
+        </ScrollReveal>
       </section>
 
       <section id="ai-assistant" className={styles.ctaBox}>

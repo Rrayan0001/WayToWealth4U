@@ -29,10 +29,6 @@ export const serviceItems: ServiceItem[] = [
       "Education Loan",
       "OD Loan",
       "New Car Purchase & Refinance",
-      "Home Loan (Purchase & Construction)",
-      "Loan Against Property (LAP)",
-      "Project & Machinery Loans",
-      "MSME Loans",
     ],
     subServices: [
       {
@@ -116,7 +112,7 @@ export const processSteps: ProcessStep[] = [
   {
     title: "Strategy Blueprint",
     description:
-      "Our advisors design a metal-grade financial blueprint with tailored products, timelines, and risk boundaries.",
+      "Our advisors design a growth-led financial blueprint with tailored products, timelines, and risk boundaries.",
   },
   {
     title: "Execution",
@@ -209,7 +205,7 @@ export const testimonialItems: TestimonialItem[] = [
 ];
 
 export const officeSnapshot = {
-  address: "Way2Wealth4U Advisory Desk, Financial District, India",
+  address: "WealthRise Capitals Advisory Desk, Financial District, India",
   phone: "+91 90000 00000",
   email: "hello@way2wealth4u.com",
   hours: [

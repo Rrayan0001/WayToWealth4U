@@ -88,7 +88,7 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
           </GradientHeading>
           <h2 id="testimonials-title">What Our Clients Say</h2>
           <p>
-            Real feedback from people who trusted Way2Wealth4U for loans, credit strategy, and long-term financial
+            Real feedback from people who trusted WealthRise Capitals for loans, credit strategy, and long-term financial
             planning.
           </p>
         </motion.div>

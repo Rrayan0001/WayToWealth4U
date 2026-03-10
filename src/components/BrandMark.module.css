@@ -1,132 +1,66 @@
-.logoImage {
-  filter: saturate(0.7) hue-rotate(332deg) brightness(0.92);
-  height: auto;
-  max-width: min(250px, 46vw);
-  object-fit: contain;
-  width: 100%;
-}
-
 .brand {
+  --brand-symbol-width: 5rem;
+  --brand-word-size: clamp(1rem, 1.25vw, 1.22rem);
   align-items: center;
   display: inline-flex;
-  gap: 0.72rem;
+  gap: 0.78rem;
+  min-width: 0;
+  width: fit-content;
 }
 
 .compact {
-  gap: 0.5rem;
+  --brand-symbol-width: 4.3rem;
+  --brand-word-size: 0.98rem;
+  gap: 0.62rem;
 }
 
-.icon {
+.symbol {
   display: inline-flex;
-  align-items: flex-end;
-  gap: 0.22rem;
-  height: 2.15rem;
-  position: relative;
-  width: 3.2rem;
+  flex-shrink: 0;
+  width: var(--brand-symbol-width);
 }
 
-.barOne,
-.barTwo,
-.barThree {
-  border-radius: 0.44rem 0.44rem 0.22rem 0.22rem;
-  box-shadow: 0 8px 14px rgba(151, 115, 61, 0.24);
+.symbolImage {
   display: block;
-  width: 0.55rem;
-}
-
-.barOne {
-  background: linear-gradient(180deg, #f7ecd8, #b48a49);
-  height: 1.02rem;
-}
-
-.barTwo {
-  background: linear-gradient(180deg, #f6e7ce, #a67a3e);
-  height: 1.38rem;
-}
-
-.barThree {
-  background: linear-gradient(180deg, #f0debf, #946b34);
-  height: 1.77rem;
-}
-
-.arrow {
-  border-top: 0.26rem solid #8f6a36;
-  border-right: 0.22rem solid #8f6a36;
-  border-radius: 0.22rem;
-  height: 1.25rem;
-  position: absolute;
-  right: -0.05rem;
-  top: 0.35rem;
-  transform: rotate(15deg);
-  width: 1.3rem;
-}
-
-.arrow::after {
-  border-left: 0.38rem solid transparent;
-  border-top: 0.52rem solid #8f6a36;
-  content: "";
-  position: absolute;
-  right: -0.26rem;
-  top: -0.2rem;
-  transform: rotate(12deg);
-}
-
-.starOne,
-.starTwo {
-  color: #ba8e4d;
-  font-size: 0.66rem;
-  font-weight: 700;
-  line-height: 1;
-  position: absolute;
-  text-shadow: 0 0 10px rgba(193, 151, 85, 0.42);
-}
-
-.starOne {
-  right: 0.5rem;
-  top: 0.02rem;
-}
-
-.starTwo {
-  right: 0.1rem;
-  top: 0.38rem;
+  filter: drop-shadow(0 8px 18px rgba(6, 39, 24, 0.12));
+  height: auto;
+  user-select: none;
+  width: 100%;
 }
 
 .wordmark {
   display: inline-flex;
-  flex-wrap: wrap;
-  font-family: var(--font-heading), Georgia, "Times New Roman", serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.015em;
+  flex-wrap: nowrap;
+  gap: 0.22rem;
   line-height: 1;
+  white-space: nowrap;
 }
 
-.wordSilver,
-.wordGold {
-  display: inline-block;
-  margin-right: 0.22rem;
+.wordmarkImage {
+  display: block;
+  height: auto;
+  user-select: none;
+  width: clamp(8rem, 12vw, 12rem);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
 
-.wordSilver {
-  background: linear-gradient(180deg, #4f4a43, #17130f);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.iconOnly {
+  --brand-icon-width: var(--brand-symbol-width);
+  gap: 0;
+  width: var(--brand-icon-width);
 }
 
-.wordGold {
-  background: linear-gradient(180deg, #f0debf, #8f6a36);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.iconOnly .symbol {
+  width: 100%;
 }
 
-@media (max-width: 420px) {
-  .wordmark {
-    font-size: 1rem;
+@media (max-width: 540px) {
+  .brand {
+    gap: 0.52rem;
   }
 
-  .icon {
-    width: 2.8rem;
+  .brand:not(.iconOnly) {
+    --brand-symbol-width: 3.9rem;
+    --brand-word-size: 0.9rem;
   }
 }

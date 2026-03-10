@@ -37,16 +37,16 @@ export function FloatingActions() {
       {isAgentOpen ? (
         <section id={popupId} className={styles.agentPopup} role="dialog" aria-modal="true" aria-labelledby={headingId}>
           <div className={styles.agentHeader}>
-            <h2 id={headingId}>AI Agent</h2>
+            <h2 id={headingId}>Growth Assistant</h2>
             <button type="button" className={styles.closePopup} onClick={() => setIsAgentOpen(false)} aria-label="Close AI agent popup">
               ×
             </button>
           </div>
           <p>
-            Ask your question and get guided support for loans, cards, and growth planning through our AI assistant flow.
+            Ask your question and get guided support for loans, cards, and growth planning through the WealthRise assistant.
           </p>
           <Link href="/contact#ai-assistant" className="button buttonPrimary" onClick={() => setIsAgentOpen(false)}>
-            Open AI Assistant
+            Open Assistant
           </Link>
         </section>
       ) : null}

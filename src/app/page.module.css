@@ -8,47 +8,36 @@
 }
 
 .showcasePanel {
-  background-image: url("/hero-bg.png");
-  background-position: right center;
-  background-size: cover;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(31, 153, 89, 0.22), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(214, 169, 44, 0.26), transparent 28%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(239, 247, 238, 0.94));
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   min-height: calc(100svh - 76px);
   overflow: hidden;
   position: relative;
   width: 100%;
 }
 
-.processSection {
-  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8), rgba(249, 245, 237, 0.4));
-  border-bottom: 1px solid rgba(196, 185, 170, 0.2);
-  border-top: 1px solid rgba(196, 185, 170, 0.2);
-  margin: 4rem 0;
-  padding: 5rem 0;
-  position: relative;
-}
-
-.processSection::before {
-  background: radial-gradient(circle at 50% 50%, rgba(196, 185, 170, 0.06), transparent 60%);
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
-}
-
 .showcasePanel::before {
-  background: none;
+  background:
+    linear-gradient(rgba(10, 59, 36, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 59, 36, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
   content: "";
   inset: 0;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 82%);
   pointer-events: none;
   position: absolute;
   z-index: 1;
 }
 
 .showcasePanel::after {
-  background: none;
+  background:
+    radial-gradient(circle at 72% 32%, rgba(255, 255, 255, 0.62), transparent 30%),
+    radial-gradient(circle at 86% 72%, rgba(20, 122, 70, 0.1), transparent 18%);
   content: "";
   inset: 0;
   pointer-events: none;
@@ -60,7 +49,7 @@
   display: grid;
   gap: 0;
   grid-template-columns: minmax(0, 1fr);
-  padding: 0 clamp(1.5rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
+  padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
   position: relative;
   z-index: 3;
 }
@@ -68,46 +57,49 @@
 .showcaseLeft {
   display: grid;
   gap: 1.2rem;
-  max-width: 780px;
+  max-width: 760px;
 }
 
 .tagline {
   align-items: center;
-  color: var(--gold-700);
+  color: var(--emerald-700);
   display: inline-flex;
   font-size: 0.82rem;
-  font-weight: 700;
-  gap: 0.6rem;
-  letter-spacing: 0.18em;
+  font-weight: 800;
+  gap: 0.68rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 .tagline::before {
-  background: var(--gold-600);
+  background: linear-gradient(90deg, var(--emerald-600), var(--gold-600));
+  border-radius: 999px;
   content: "";
   display: inline-block;
-  height: 1px;
-  width: 32px;
+  height: 2px;
+  width: 44px;
 }
 
 .showcaseLeft h1 {
-  color: var(--text-body);
+  background: linear-gradient(135deg, var(--emerald-950) 0%, var(--emerald-700) 52%, var(--gold-700) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-family: var(--font-heading), "Segoe UI", sans-serif;
-  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  font-size: clamp(2.9rem, 7vw, 5.7rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.02;
-  max-width: 14ch;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  max-width: 11ch;
+  text-wrap: balance;
 }
 
 .showcaseLead {
   color: var(--text-muted);
   font-size: clamp(1rem, 1.8vw, 1.15rem);
-  font-weight: 500;
-  line-height: 1.72;
-  max-width: 50ch;
-  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  line-height: 1.74;
+  max-width: 52ch;
 }
 
 .showcaseCtas {
@@ -117,74 +109,25 @@
   padding-top: 0.4rem;
 }
 
-.showcaseCtas .button:first-child,
 .showcase .buttonPrimary {
-  background: var(--text-body);
-  border-color: var(--text-body);
-  color: #fff;
+  background: linear-gradient(135deg, var(--emerald-900), var(--emerald-700) 72%, color-mix(in srgb, var(--gold-600) 22%, var(--emerald-700) 78%));
+  border-color: color-mix(in srgb, var(--gold-600) 32%, var(--emerald-900) 68%);
 }
 
-.showcaseCtas .button:first-child:hover,
-.showcase .buttonPrimary:hover {
-  background: #26221c;
-  box-shadow: 0 8px 28px rgba(22, 18, 14, 0.2);
+.showcase .buttonPrimary:hover,
+.showcase .buttonPrimary:focus-visible {
+  box-shadow: 0 22px 42px rgba(10, 59, 36, 0.24);
 }
 
 .showcase .buttonGhost {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-color: var(--silver-200);
-  color: var(--text-body);
+  background: rgba(255, 255, 255, 0.68);
+  border-color: color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
+  color: var(--emerald-900);
 }
 
-.showcase .buttonGhost:hover {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: var(--silver-200);
-  color: var(--text-body);
-}
-
-.scrollHint {
-  align-items: center;
-  display: inline-flex;
-  gap: 0.62rem;
-  margin-top: 0.6rem;
-  width: fit-content;
-}
-
-.scrollHint span {
-  align-items: center;
-  animation: scrollBounce 2s ease-in-out infinite;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 999px;
-  color: var(--gold-500);
-  display: inline-flex;
-  font-size: 1.2rem;
-  height: 48px;
-  justify-content: center;
-  width: 48px;
-}
-
-@keyframes scrollBounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(6px);
-  }
-}
-
-.scrollHint p {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+.showcase .buttonGhost:hover,
+.showcase .buttonGhost:focus-visible {
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .bottomRow {
@@ -192,34 +135,28 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1.4rem clamp(1.5rem, 4vw, 3rem) 1.6rem;
+  padding: 0 clamp(1.5rem, 4vw, 3rem) 2rem;
   position: relative;
   z-index: 3;
 }
 
 .reviewPill {
   align-items: center;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(196, 185, 170, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 62%, var(--gold-300) 38%);
   border-radius: 999px;
+  box-shadow: var(--shadow-soft);
   display: inline-flex;
-  gap: 0.75rem;
-  padding: 0.45rem 1rem 0.45rem 0.5rem;
+  gap: 0.8rem;
+  padding: 0.48rem 1rem 0.48rem 0.5rem;
 }
 
 .reviewBrand {
-  align-items: center;
-  background: var(--gold-600);
-  border-radius: 50%;
-  color: #fff;
   display: inline-flex;
-  font-size: 0.82rem;
-  font-weight: 800;
-  height: 30px;
-  justify-content: center;
-  width: 30px;
+  flex-shrink: 0;
+  --brand-icon-width: 42px;
 }
 
 .reviewContent {
@@ -239,13 +176,13 @@
 .reviewText {
   color: var(--text-body);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .reviewText span {
   color: var(--text-muted);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .calculatorGrid {
@@ -277,10 +214,72 @@
   transform: translateY(0.17rem);
 }
 
+.servicesSection {
+  background-image:
+    linear-gradient(to bottom, rgba(6, 15, 9, 0.95) 0%, rgba(6, 15, 9, 0.4) 40%, rgba(6, 15, 9, 0.6) 100%),
+    url("/services-bg.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicesSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  pointer-events: none;
+}
+
+.servicesHeader {
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.servicesTitle {
+  background: linear-gradient(90deg, #8ede81 0%, #dcc66a 35%, #d39c12 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.servicesDivider {
+  background: linear-gradient(90deg, rgba(230, 200, 100, 1) 0%, rgba(214, 169, 44, 0.6) 15%, rgba(56, 199, 115, 0.15) 50%, transparent 100%);
+  height: 1px;
+  margin-top: 1.2rem;
+  position: relative;
+  width: 100%;
+}
+
+.servicesDivider::before {
+  background: radial-gradient(ellipse at center, rgba(255, 235, 160, 0.9) 0%, rgba(214, 169, 44, 0.4) 30%, transparent 70%);
+  content: "";
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+}
+
 .servicesGrid {
   display: grid;
-  gap: 1.1rem;
+  gap: 1.25rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  position: relative;
+  z-index: 1;
 }
 
 .servicesGrid>* {
@@ -292,9 +291,39 @@
   height: 100%;
 }
 
+@media (max-width: 900px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.processSection {
+  background:
+    radial-gradient(circle at 16% 24%, rgba(20, 122, 70, 0.08), transparent 26%),
+    radial-gradient(circle at 84% 38%, rgba(214, 169, 44, 0.12), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.46), rgba(241, 248, 239, 0.76));
+  border-bottom: 1px solid color-mix(in srgb, var(--emerald-200) 62%, #ffffff 38%);
+  border-top: 1px solid color-mix(in srgb, var(--emerald-200) 62%, #ffffff 38%);
+  margin: 4rem 0;
+  padding: 5rem 0;
+  position: relative;
+}
+
+.processSection::before {
+  background: radial-gradient(circle at 50% 50%, rgba(20, 122, 70, 0.08), transparent 60%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
 .contactSection {
-  background: linear-gradient(134deg, rgba(255, 255, 255, 0.96), rgba(249, 245, 237, 0.92));
-  border: 1px solid color-mix(in srgb, var(--gold-300) 44%, #ffffff 56%);
+  background:
+    radial-gradient(circle at 80% 18%, rgba(214, 169, 44, 0.18), transparent 26%),
+    radial-gradient(circle at 18% 24%, rgba(20, 122, 70, 0.12), transparent 28%),
+    linear-gradient(134deg, rgba(255, 255, 255, 0.96), rgba(238, 247, 238, 0.94));
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 68%, #ffffff 32%);
   border-radius: 1.6rem;
   box-shadow: var(--shadow-large);
   display: flex;
@@ -308,7 +337,7 @@
 }
 
 .contactInfo h2 {
-  color: var(--text-body);
+  color: var(--emerald-950);
   font-family: var(--font-heading), "Segoe UI", sans-serif;
   font-size: clamp(1.4rem, 4vw, 2rem);
   line-height: 1.15;
@@ -342,71 +371,65 @@
 
 .contactIcon {
   align-items: center;
-  background: rgba(196, 185, 170, 0.14);
-  border: 1px solid rgba(196, 185, 170, 0.22);
+  background: linear-gradient(145deg, rgba(20, 122, 70, 0.12), rgba(214, 169, 44, 0.18));
+  border: 1px solid rgba(20, 122, 70, 0.16);
   border-radius: 50%;
-  color: var(--gold-700);
+  color: var(--emerald-700);
   display: inline-flex;
   flex-shrink: 0;
-  height: 40px;
+  height: 42px;
   justify-content: center;
-  width: 40px;
+  width: 42px;
 }
 
 .contactForm {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid color-mix(in srgb, var(--silver-200) 72%, #ffffff 28%);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
   border-radius: 1.2rem;
   display: grid;
   flex: 1;
-  gap: 0.9rem;
+  gap: 0.95rem;
   min-width: 0;
   padding: clamp(1rem, 2.5vw, 1.6rem);
 }
 
 .formField {
   display: grid;
-  gap: 0.3rem;
+  gap: 0.32rem;
 }
 
 .formField label {
   color: var(--text-body);
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .formField input,
 .formField textarea {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid color-mix(in srgb, var(--silver-200) 80%, #ffffff 20%);
-  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 78%, #ffffff 22%);
+  border-radius: 0.7rem;
   color: var(--text-body);
   font-family: inherit;
   font-size: 0.92rem;
   outline: none;
-  padding: 0.6rem 0.8rem;
-  transition: border-color 200ms ease, box-shadow 200ms ease;
+  padding: 0.68rem 0.82rem;
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
   width: 100%;
 }
 
 .formField input:focus,
 .formField textarea:focus {
-  border-color: var(--gold-700);
-  box-shadow: 0 0 0 3px rgba(141, 132, 119, 0.14);
+  background: rgba(255, 255, 255, 0.96);
+  border-color: var(--emerald-600);
+  box-shadow: 0 0 0 3px rgba(214, 169, 44, 0.16);
 }
 
 .formField textarea {
   resize: vertical;
 }
 
-@media (max-width: 1100px) {
-  .bottomRow {
-    max-width: 100%;
-  }
-}
-
 @media (max-width: 980px) {
-
   .contactSection {
     flex-direction: column;
   }
@@ -418,8 +441,6 @@
 
   .showcasePanel {
     min-height: calc(100svh - 76px);
-    background-position: center center;
-    background-size: cover;
   }
 
   .servicesGrid {
@@ -429,19 +450,18 @@
 
 @media (max-width: 720px) {
   .showcasePanel {
-    min-height: calc(100svh - 64px);
     justify-content: flex-start;
-    background-position: center 60%;
+    min-height: calc(100svh - 64px);
   }
 
   .showcaseContent {
-    padding-top: clamp(2rem, 6vw, 3.5rem);
+    padding-top: clamp(2.4rem, 7vw, 3.6rem);
     padding-bottom: 0;
   }
 
   .showcaseLeft h1 {
-    font-size: clamp(2rem, 9vw, 3rem);
-    line-height: 1.08;
+    font-size: clamp(2.15rem, 9vw, 3.25rem);
+    line-height: 1.03;
   }
 
   .showcaseLead {
@@ -454,14 +474,11 @@
 
   .reviewPill {
     gap: 0.5rem;
-    padding: 0.35rem 0.8rem 0.35rem 0.4rem;
-    background: rgba(255, 255, 255, 0.85);
+    padding: 0.38rem 0.8rem 0.38rem 0.4rem;
   }
 
   .reviewBrand {
-    height: 26px;
-    width: 26px;
-    font-size: 0.72rem;
+    --brand-icon-width: 34px;
   }
 
   .reviewText {
@@ -475,25 +492,20 @@
 
 @media (max-width: 480px) {
   .showcaseLeft h1 {
-    font-size: clamp(1.75rem, 8vw, 2.4rem);
-  }
-
-  .showcasePanel {
-    background-position: center 65%;
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
   }
 
   .showcaseCtas {
     flex-direction: column;
   }
 
-  .showcaseCtas .button:first-child,
   .showcase .buttonPrimary,
   .showcase .buttonGhost {
-    width: 100%;
     justify-content: center;
+    width: 100%;
   }
 
   .bottomRow {
-    padding: 1rem clamp(1rem, 3vw, 1.5rem);
+    padding: 0 clamp(1rem, 3vw, 1.5rem) 1.2rem;
   }
 }
