@@ -182,6 +182,10 @@ export default function Home() {
                 <input id="contact-service" type="text" placeholder="Loan / Credit / Market Classes" />
               </div>
               <div className={styles.formField}>
+                <label htmlFor="contact-amount">Amount Required</label>
+                <input id="contact-amount" type="text" placeholder="e.g. ₹50,00,000" />
+              </div>
+              <div className={styles.formField}>
                 <label htmlFor="contact-message">Message</label>
                 <textarea id="contact-message" rows={4} placeholder="Tell us your goals" required />
               </div>

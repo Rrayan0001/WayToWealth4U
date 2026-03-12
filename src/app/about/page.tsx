@@ -55,6 +55,25 @@ export default function AboutPage() {
         </ScrollReveal>
       </section>
 
+      <section className={styles.gridTwo}>
+        <ScrollReveal className={styles.card}>
+          <h2>Our Vision</h2>
+          <p>
+            To be the most trusted financial architect for ambitious individuals and growing businesses across India, transforming everyday potential into generational prosperity.
+          </p>
+          <p className={styles.highlight}>Guided by foresight. Delivered with precision.</p>
+        </ScrollReveal>
+
+        <ScrollReveal className={styles.card} delay={120}>
+          <h2>Our Goal</h2>
+          <ul className={styles.list}>
+            <li>Empower 10,000+ clients with structured capital solutions by 2030</li>
+            <li>Eliminate financial friction through technology and transparent advisory</li>
+            <li>Build a legacy of educated, strategy-driven investors and homeowners</li>
+          </ul>
+        </ScrollReveal>
+      </section>
+
       <section className={styles.valuesIntro}>
         <p className={styles.sectionEyebrow}>What Defines Us</p>
         <h2>Advisory Built On Clarity, Discipline, And Momentum</h2>

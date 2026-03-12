@@ -81,13 +81,13 @@ export function IntroAnimation() {
                         ? {
                             top: "22px",
                             left: "clamp(1.5rem, 5vw, 4rem)",
-                            transform: "translate(0, 0) scale(0.45)",
+                            transform: "scale(0.45)",
                             opacity: 0,
                         }
                         : {
-                            top: "50%",
+                            top: "45%",
                             left: "50%",
-                            transform: `translate(-67.5%, -67.5%) scale(1.35)`,
+                            transform: `translate(-50%, -50%) scale(1.35)`,
                             opacity: 1,
                         }),
                 } as React.CSSProperties}

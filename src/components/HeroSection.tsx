@@ -8,8 +8,8 @@ import { useEffect, useRef } from "react";
 import styles from "./HeroSection.module.css";
 
 const stats = [
-    { value: "12+", label: "Banking Partners", color: "gold" },
-    { value: "10+", label: "Loan Programs", color: "white" },
+    { value: "50+", label: "Banking Partners", color: "gold" },
+    { value: "200+", label: "Loan Processed", color: "white" },
     { value: "40+", label: "Clients Guided", color: "white" },
 ];
 

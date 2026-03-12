@@ -19,7 +19,7 @@
   align-items: start;
   display: grid;
   gap: 3rem;
-  grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr));
   padding-block: 4.6rem 2.9rem;
 }
 
@@ -28,12 +28,22 @@
 }
 
 .brandLink {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   width: fit-content;
 }
 
 .brandMark {
   transform: translateY(1px);
+}
+
+.tagline {
+  color: rgba(220, 198, 106, 0.9);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .brandTextBlock {
@@ -79,6 +89,22 @@
   transform: translateX(4px);
 }
 
+.iconLink {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.iconLink svg {
+  color: rgba(56, 199, 115, 0.85);
+  transition: transform 250ms ease, color 250ms ease;
+}
+
+.iconLink:hover svg {
+  color: rgba(214, 169, 44, 0.95);
+  transform: scale(1.1);
+}
+
 .column p {
   opacity: 0.94;
 }
@@ -108,5 +134,71 @@
 
   .column h3 {
     font-size: 1.08rem;
+  }
+}
+
+/* ===== FUTURISTIC MAP ===== */
+.mapContainer {
+  border: 1px solid rgba(56, 199, 115, 0.15);
+  border-radius: 6px;
+  height: 140px;
+  margin-top: 1rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.mapFrame {
+  border: 0;
+  filter: invert(100%) hue-rotate(180deg) grayscale(80%) contrast(150%) sepia(30%) hue-rotate(-20deg);
+  height: 100%;
+  opacity: 0.75;
+  pointer-events: none; /* Prevent scrolling trap */
+  transition: opacity 0.4s ease, filter 0.4s ease;
+  width: 100%;
+}
+
+.mapOverlay {
+  background: radial-gradient(circle at center, transparent 40%, rgba(2, 6, 4, 0.9) 100%);
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.mapRadarPing {
+  animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  background: rgba(56, 199, 115, 0.5);
+  border: 1px solid rgba(56, 199, 115, 0.8);
+  border-radius: 50%;
+  height: 20px;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  z-index: 3;
+}
+
+.mapRadarPing::after {
+  background: #38c773;
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
   }
 }
