@@ -262,4 +262,10 @@
   .heroLead {
     font-size: 0.96rem;
   }
+
+  .snapshotTime,
+  .outcome {
+    font-size: 0.9rem;
+    padding: 0.76rem 0.82rem;
+  }
 }

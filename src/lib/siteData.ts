@@ -3,6 +3,7 @@ export type ServiceItem = {
   description: string;
   points: string[];
   subServices?: { title: string; description: string }[];
+  href?: string;
 };
 
 export type ProcessStep = {
@@ -17,89 +18,66 @@ export type TestimonialItem = {
   role: string;
 };
 
+export type HeroStatItem = {
+  value: string;
+  label: string;
+  color?: "gold" | "white";
+};
+
+export const heroStats: HeroStatItem[] = [
+  { value: "50+", label: "Banking Partners", color: "gold" },
+  { value: "200+", label: "Loan Processed", color: "white" },
+  { value: "40+", label: "Clients Guided", color: "white" },
+];
+
 export const serviceItems: ServiceItem[] = [
   {
-    title: "Loans",
-    description:
-      "Comprehensive lending solutions tailored to your personal and business aspirations.",
-    points: [
-      "Personal Loan",
-      "Business Loan (Secured & Unsecured)",
-      "Doctor Loan",
-      "Education Loan",
-      "OD Loan",
-      "New Car Purchase & Refinance",
-    ],
-    subServices: [
-      {
-        title: "Personal Loan",
-        description:
-          "Quick and flexible funding for your immediate personal needs with competitive interest rates and easy repayment options.",
-      },
-      {
-        title: "Business Loan (Secured & Un-secured)",
-        description:
-          "Fuel your business growth with capital solutions that cater to both collateral-backed and collateral-free requirements.",
-      },
-      {
-        title: "Doctor Loan",
-        description:
-          "Exclusive financing designed for medical professionals to set up clinics, purchase equipment, or expand practice.",
-      },
-      {
-        title: "Education Loan",
-        description:
-          "Invest in your future with education loans that cover tuition and living expenses for domestic and international studies.",
-      },
-      {
-        title: "OD Loan",
-        description:
-          "Manage your cash flow efficiently with Overdraft facilities that offer liquidity against your assets or securities.",
-      },
-      {
-        title: "New Car Purchase Loan & Re-Finance Car Loan",
-        description:
-          "Drive home your dream car with attractive loan offers, or reduce your current EMI burden through smart refinancing options.",
-      },
-      {
-        title: "Home Loan (Plot Purchase and Construction)",
-        description:
-          "Realize your dream home with loans covering plot purchase, construction, and renovation needs.",
-      },
-      {
-        title: "Loan Against Property (LAP) or Mortgage Loan",
-        description:
-          "Unlock the value of your property to fund major expenses or business expansion with lower interest rates.",
-      },
-      {
-        title: "Projects Loans, Machinery Loans",
-        description:
-          "Specialized funding for large-scale projects and industrial machinery acquisition to scale your operations.",
-      },
-      {
-        title: "MSME Loans",
-        description:
-          "Dedicated support for Micro, Small, and Medium Enterprises to boost working capital and drive business development.",
-      },
-    ],
+    title: "Home Loan",
+    description: "Your dream home awaits. Explore our range of home loan products designed to help you purchase or build your ideal home with flexible repayment options.",
+    points: ["Purchase Plot", "Construction", "Renovation"],
+    href: "/services/home-loan",
+  },
+  {
+    title: "Loan Against Property",
+    description: "Unlock the value of your property with tailored loan solutions. Use your residential or commercial property as collateral to access funds.",
+    points: ["Business Funds", "Personal Needs", "Lower Rates"],
+    href: "/services/loan-against-property",
+  },
+  {
+    title: "Personal Loan",
+    description: "Achieve your dreams with versatile personal loan options designed to cover expenses such as medical emergencies, travel, or weddings.",
+    points: ["Quick Funding", "Flexible Repayment", "Competitive Rates"],
+    href: "/services/personal-loan",
+  },
+  {
+    title: "Business Loan",
+    description: "Boost your business growth with flexible financing options that support working capital, expansion, equipment purchases, and operations.",
+    points: ["Collateral Free", "Working Capital", "Equipment Finance"],
+    href: "/services/business-loan",
+  },
+  {
+    title: "Education Loan",
+    description: "Invest in your child’s future with specialized education loans designed to support higher education expenses including tuition and accommodation.",
+    points: ["Domestic Studies", "International Education", "Living Expenses"],
+    href: "/services/education-loan",
+  },
+  {
+    title: "Car Loan",
+    description: "Drive your dream car with quick and flexible car loan options that make purchasing a new or used vehicle easy and affordable.",
+    points: ["New Car", "Used Car", "Refinance"],
+    href: "/services/car-loan",
+  },
+  {
+    title: "Gold Loan",
+    description: "Meet your financial needs with gold loans from trusted banks by pledging your gold assets and receiving quick access to funds.",
+    points: ["High Value per Gram", "Quick Disbursal", "Trusted Banks"],
+    href: "/services/gold-loan",
   },
   {
     title: "Credit Cards",
-    description:
-      "Smart card selection and reward optimization to improve cash flow control and lifestyle leverage.",
-    points: ["Premium reward mapping", "Credit score conscious recommendations", "Annual fee optimization"],
-  },
-  {
-    title: "Stock Market Classes",
-    description:
-      "Structured training programs for disciplined long-term market participation and risk-aware strategy.",
-    points: ["Beginner to advanced tracks", "Live scenario workshops", "Portfolio behavior coaching"],
-  },
-  {
-    title: "Additional Service",
-    description:
-      "Reserved for a customized value stream based on your evolving financial roadmap and goals.",
-    points: ["Tax-ready financial records", "Retirement positioning", "Insurance alignment audits"],
+    description: "Upgrade your lifestyle with feature-packed credit cards offering rewards, cashback, travel benefits, and flexible payment options.",
+    points: ["Rewards & Cashback", "Travel Benefits", "Flexible EMI"],
+    href: "/services/credit-cards",
   },
 ];
 
@@ -207,6 +185,7 @@ export const testimonialItems: TestimonialItem[] = [
 export const officeSnapshot = {
   address: "WealthRise Capitals Advisory Desk, Financial District, India",
   phone: "+91 90000 00000",
+  whatsapp: "+91 90000 00000",
   email: "hello@way2wealth4u.com",
   hours: [
     "Monday - Friday: 9:00 AM to 7:00 PM",

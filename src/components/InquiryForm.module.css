@@ -1,0 +1,55 @@
+.form {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.32rem;
+}
+
+.field label {
+  color: var(--text-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid color-mix(in srgb, var(--emerald-200) 78%, #ffffff 22%);
+  border-radius: 0.7rem;
+  color: var(--text-body);
+  font: inherit;
+  outline: none;
+  padding: 0.68rem 0.82rem;
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+  width: 100%;
+}
+
+.field input:focus,
+.field textarea:focus {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: var(--emerald-600);
+  box-shadow: 0 0 0 3px rgba(214, 169, 44, 0.16);
+}
+
+.field textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.buttonFullWidth {
+  justify-content: center;
+  width: 100%;
+}
+
+.helperText {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.errorText {
+  color: #9c2d1f;
+}

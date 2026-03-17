@@ -12,7 +12,7 @@ export function Footer() {
       <div className={`${styles.inner} container`}>
         <div className={`${styles.column} ${styles.brandColumn}`}>
           <Link href="/" className={styles.brandLink} aria-label="WealthRise Capitals home">
-            <div style={{ transform: 'scale(1.3)', transformOrigin: 'left center', marginBottom: '1rem' }}>
+            <div className={styles.brandMarkWrap}>
               <BrandMark className={styles.brandMark} />
             </div>
             <p className={styles.tagline}>

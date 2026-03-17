@@ -5,13 +5,9 @@ import Link from "next/link";
 import { useReducedMotion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-import styles from "./HeroSection.module.css";
+import { heroStats } from "@/lib/siteData";
 
-const stats = [
-    { value: "50+", label: "Banking Partners", color: "gold" },
-    { value: "200+", label: "Loan Processed", color: "white" },
-    { value: "40+", label: "Clients Guided", color: "white" },
-];
+import styles from "./HeroSection.module.css";
 
 const expertiseAreas = [
     "Home & Business Loans",
@@ -194,7 +190,7 @@ export function HeroSection() {
 
                 {/* Boxless stat rail at bottom-right */}
                 <div className={styles.statCards}>
-                    {stats.map((stat, i) => (
+                    {heroStats.map((stat, i) => (
                         <div
                             key={stat.label}
                             className={`${styles.statCard} ${stat.color === 'gold' ? styles.statCardGold : ''}`}

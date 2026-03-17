@@ -33,6 +33,12 @@
   width: fit-content;
 }
 
+.brandMarkWrap {
+  margin-bottom: 1rem;
+  transform: scale(1.3);
+  transform-origin: left center;
+}
+
 .brandMark {
   transform: translateY(1px);
 }
@@ -132,8 +138,34 @@
     padding-block: 2.8rem 1.5rem;
   }
 
+  .brandMarkWrap {
+    margin-bottom: 0.8rem;
+    transform: scale(1.08);
+  }
+
+  .tagline {
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .brandTextBlock {
+    margin-top: 1rem;
+  }
+
   .column h3 {
     font-size: 1.08rem;
+  }
+
+  .column a {
+    width: 100%;
+  }
+
+  .iconLink {
+    align-items: flex-start;
+  }
+
+  .mapContainer {
+    height: 128px;
   }
 }
 

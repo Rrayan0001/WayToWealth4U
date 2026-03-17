@@ -3,7 +3,7 @@
   border: 1px solid color-mix(in srgb, var(--emerald-500) 28%, var(--gold-500) 18%, transparent);
   border-radius: 12px;
   display: flex;
-  min-height: 250px;
+  min-height: 180px;
   overflow: hidden;
   position: relative;
   transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
@@ -29,48 +29,28 @@
 .body {
   display: flex;
   flex-direction: column;
-  padding: 1.4rem 1.4rem 2rem 1.4rem;
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
   position: relative;
-  width: 68%;
+  width: 100%;
   z-index: 1;
 }
 
 .body h3 {
   color: #fbfaef;
   font-family: var(--font-heading), "Segoe UI", sans-serif;
-  font-size: 1.45rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.4rem;
+  padding-right: 52px;
 }
 
 .body p {
   color: rgba(230, 240, 235, 0.65);
   font-size: 0.82rem;
   line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-.body ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  list-style: none;
-  margin: 0 0 1rem 0;
-  padding: 0;
-}
-
-.body li {
-  color: rgba(240, 248, 244, 0.85);
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-
-.body li::before {
-  color: rgba(240, 248, 244, 0.85);
-  content: "- ";
-  margin-right: 0.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .link {
@@ -109,47 +89,53 @@
 }
 
 .illustration {
-  filter: drop-shadow(0 0 24px rgba(214, 169, 44, 0.45));
-  height: 140px;
+  height: 40px;
   object-fit: contain;
   pointer-events: none;
   position: absolute;
-  right: 15px;
-  top: 15px;
-  transform: rotate(-2deg);
-  transform-origin: center;
-  transition: transform 380ms ease, filter 380ms ease;
-  width: 140px;
+  right: 1.25rem;
+  top: 1.25rem;
+  width: 40px;
   z-index: 1;
-}
-
-.card:hover .illustration,
-.card:focus-within .illustration {
-  filter: drop-shadow(0 0 32px rgba(214, 169, 44, 0.65));
-  transform: translate3d(2px, -3px, 0) rotate(1deg) scale(1.05);
+  opacity: 0.85;
 }
 
 @media (max-width: 900px) {
   .body {
-    width: 65%;
+    width: 100%;
   }
 
   .illustration {
-    right: 10px;
-    height: 120px;
-    top: 20px;
-    width: 120px;
+    right: 1rem;
+    height: 36px;
+    top: 1rem;
+    width: 36px;
   }
 }
 
 @media (max-width: 580px) {
   .card {
-    min-height: 220px;
+    min-height: 200px;
   }
 
   .body {
-    padding: 1.2rem;
-    padding-bottom: 2rem;
+    padding: 1rem;
+    padding-bottom: 1.2rem;
+    width: 100%;
+  }
+
+  .body h3 {
+    font-size: 1.04rem;
+    padding-right: 0;
+  }
+
+  .body p {
+    font-size: 0.8rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .link {
+    justify-content: center;
     width: 100%;
   }
 

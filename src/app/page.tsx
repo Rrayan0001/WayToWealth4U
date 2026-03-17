@@ -1,14 +1,12 @@
-import Link from "next/link";
-
 import { EmiCalculator } from "@/components/EmiCalculator";
 import { FeatureTicker } from "@/components/FeatureTicker";
 import { HeroSection } from "@/components/HeroSection";
-import { ProcessTimeline } from "@/components/ProcessTimeline";
+import { InquiryForm } from "@/components/InquiryForm";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { WorkedWith } from "@/components/WorkedWith";
-import { processSteps, serviceItems, testimonialItems } from "@/lib/siteData";
+import { officeSnapshot, serviceItems, testimonialItems } from "@/lib/siteData";
 
 import styles from "./page.module.css";
 
@@ -35,28 +33,44 @@ const secondaryTickerItems = [
 ];
 
 const serviceCardMeta = {
-  Loans: {
-    href: "/services#loans",
-    imgSrc: "/services/loans-illustration.svg",
-    imgAlt: "Loan growth and home finance illustration",
+  "Home Loan": {
+    imgSrc: "/services/home-loan.svg",
+    imgAlt: "Home Loan",
+    variant: "ivory" as const,
+  },
+  "Loan Against Property": {
+    imgSrc: "/services/lap.svg",
+    imgAlt: "Loan Against Property",
+    variant: "blue" as const,
+  },
+  "Personal Loan": {
+    imgSrc: "/services/personal-loan.svg",
+    imgAlt: "Personal Loan",
+    variant: "slate" as const,
+  },
+  "Business Loan": {
+    imgSrc: "/services/business-loan.svg",
+    imgAlt: "Business Loan",
+    variant: "gold" as const,
+  },
+  "Education Loan": {
+    imgSrc: "/services/education.svg",
+    imgAlt: "Education Loan",
+    variant: "blue" as const,
+  },
+  "Car Loan": {
+    imgSrc: "/services/car.svg",
+    imgAlt: "Car Loan",
+    variant: "slate" as const,
+  },
+  "Gold Loan": {
+    imgSrc: "/services/gold.svg",
+    imgAlt: "Gold Loan",
     variant: "gold" as const,
   },
   "Credit Cards": {
-    href: "/services#credit-cards",
-    imgSrc: "/services/credit-cards-illustration.svg",
-    imgAlt: "Credit card rewards and optimization illustration",
-    variant: "gold" as const,
-  },
-  "Stock Market Classes": {
-    href: "/services#market-classes",
-    imgSrc: "/services/market-classes-illustration.svg",
-    imgAlt: "Market analysis and training illustration",
-    variant: "ivory" as const,
-  },
-  "Additional Service": {
-    href: "/services#additional-service",
-    imgSrc: "/services/additional-service-illustration.svg",
-    imgAlt: "Customized financial support illustration",
+    imgSrc: "/services/credit-cards.svg",
+    imgAlt: "Credit Cards",
     variant: "ivory" as const,
   },
 };
@@ -71,7 +85,6 @@ export default function Home() {
       <section id="emi-calculator" className="sectionBlock">
         <div className={`${styles.calculatorGrid} container`}>
           <ScrollReveal variant="slide-right">
-            <p className="eyebrow">Interactive Tool</p>
             <h2 className="sectionTitle">EMI Calculator</h2>
             <p className="sectionLead">
               Estimate monthly commitments instantly and align repayment strategies before applying for any loan.
@@ -92,7 +105,9 @@ export default function Home() {
       <section id="services" className={styles.servicesSection}>
         <div className="container">
           <header className={styles.servicesHeader}>
-            <h2 className={styles.servicesTitle}>Strategic Financial Solutions</h2>
+            <p className="eyebrow" style={{ color: "var(--gold-600)" }}>We Facilitate</p>
+            <h2 className={styles.servicesTitle}>Financial Products We Facilitate</h2>
+            <p className={styles.servicesSubtitle}>Wide Range of Financial Products That Suit Your Customer&apos;s Needs</p>
             <div className={styles.servicesDivider} />
           </header>
           <div className={styles.servicesGrid}>
@@ -102,7 +117,7 @@ export default function Home() {
                   title={service.title}
                   description={service.description}
                   points={service.points}
-                  href={serviceCardMeta[service.title as keyof typeof serviceCardMeta]?.href ?? "/services"}
+                  href={service.href ?? "/services"}
                   imgSrc={
                     serviceCardMeta[service.title as keyof typeof serviceCardMeta]?.imgSrc ??
                     "/services/loans-illustration.svg"
@@ -119,11 +134,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="process" className={styles.processSection}>
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <ProcessTimeline steps={processSteps} />
-        </div>
-      </section>
 
       <TestimonialsSection testimonials={testimonialItems} />
 
@@ -155,7 +165,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                     </svg>
                   </span>
-                  <span>+91 90000 00000</span>
+                  <span>{officeSnapshot.phone}</span>
                 </li>
                 <li>
                   <span className={styles.contactIcon}>
@@ -164,35 +174,16 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                   </span>
-                  <span>WealthRise Capitals Advisory Desk, Financial District, India</span>
+                  <span>{officeSnapshot.address}</span>
                 </li>
               </ul>
             </div>
-            <form className={styles.contactForm} aria-label="Contact inquiry form">
-              <div className={styles.formField}>
-                <label htmlFor="contact-name">Full Name</label>
-                <input id="contact-name" type="text" placeholder="Your name" required />
-              </div>
-              <div className={styles.formField}>
-                <label htmlFor="contact-email">Email</label>
-                <input id="contact-email" type="email" placeholder="you@example.com" required />
-              </div>
-              <div className={styles.formField}>
-                <label htmlFor="contact-service">Service Needed</label>
-                <input id="contact-service" type="text" placeholder="Loan / Credit / Market Classes" />
-              </div>
-              <div className={styles.formField}>
-                <label htmlFor="contact-amount">Amount Required</label>
-                <input id="contact-amount" type="text" placeholder="e.g. ₹50,00,000" />
-              </div>
-              <div className={styles.formField}>
-                <label htmlFor="contact-message">Message</label>
-                <textarea id="contact-message" rows={4} placeholder="Tell us your goals" required />
-              </div>
-              <button type="submit" className="button buttonPrimary" style={{ width: '100%', justifyContent: 'center' }}>
-                Send Inquiry
-              </button>
-            </form>
+            <InquiryForm
+              className={styles.contactForm}
+              source="Homepage Contact Section"
+              submitLabel="Send Inquiry"
+              buttonFullWidth
+            />
           </div>
         </div>
       </section>

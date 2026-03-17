@@ -26,21 +26,15 @@ export function ServiceCard({ title, description, points, href, imgSrc, imgAlt, 
         <h3>{title}</h3>
         <p>{description}</p>
 
-        <ul>
-          {points.map((point) => (
-            <li key={point}>{cleanPoint(point)}</li>
-          ))}
-        </ul>
-
-        <Link href={href} className={styles.link} aria-label={`Learn more about ${title}`}>
-          Learn More
+        <Link href={href} className={styles.link} aria-label={`Check Eligibility for ${title}`}>
+          Check Eligibility
           <span className={styles.arrow} aria-hidden="true">
             →
           </span>
         </Link>
       </div>
 
-      <Image src={imgSrc} alt={imgAlt} width={220} height={220} className={styles.illustration} />
+      <Image src={imgSrc} alt={imgAlt} width={56} height={56} className={styles.illustration} />
     </article>
   );
 }

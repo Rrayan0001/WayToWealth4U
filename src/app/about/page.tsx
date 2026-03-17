@@ -35,33 +35,36 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className={styles.gridTwo}>
-        <ScrollReveal className={styles.card}>
+      <section className={styles.featureGrid}>
+        <ScrollReveal className={`${styles.card} ${styles.featureCard}`}>
+          <p className={styles.featureEyebrow}>Core Purpose</p>
           <h2>Our Mission</h2>
-          <p>
+          <p className={styles.featureLead}>
             To convert financial complexity into clear action plans that protect today&apos;s stability while building
             tomorrow&apos;s wealth.
           </p>
           <p className={styles.highlight}>Trust is our first product. Performance is our ongoing commitment.</p>
         </ScrollReveal>
 
-        <ScrollReveal className={styles.card} delay={120}>
+        <ScrollReveal className={`${styles.card} ${styles.featureCard}`} delay={120}>
+          <p className={styles.featureEyebrow}>Long-Term Direction</p>
+          <h2>Our Vision</h2>
+          <p className={styles.featureLead}>
+            To be the most trusted financial architect for ambitious individuals and growing businesses across India,
+            transforming everyday potential into generational prosperity.
+          </p>
+          <p className={styles.highlight}>Guided by foresight. Delivered with precision.</p>
+        </ScrollReveal>
+      </section>
+
+      <section className={styles.gridTwo}>
+        <ScrollReveal className={styles.card}>
           <h2>Our Approach</h2>
           <ul className={styles.list}>
             <li>Client-first advisory with transparent product guidance</li>
             <li>Integrated planning across loans, credit, and investing</li>
             <li>Continuous monitoring for sustained growth momentum</li>
           </ul>
-        </ScrollReveal>
-      </section>
-
-      <section className={styles.gridTwo}>
-        <ScrollReveal className={styles.card}>
-          <h2>Our Vision</h2>
-          <p>
-            To be the most trusted financial architect for ambitious individuals and growing businesses across India, transforming everyday potential into generational prosperity.
-          </p>
-          <p className={styles.highlight}>Guided by foresight. Delivered with precision.</p>
         </ScrollReveal>
 
         <ScrollReveal className={styles.card} delay={120}>

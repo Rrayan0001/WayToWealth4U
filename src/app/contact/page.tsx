@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { InquiryForm } from "@/components/InquiryForm";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { officeSnapshot } from "@/lib/siteData";
 
@@ -59,27 +60,7 @@ export default function ContactPage() {
 
         <ScrollReveal className={styles.card} delay={100}>
           <h2>Quick Inquiry</h2>
-          <div className="formGrid">
-            <label>
-              Full Name
-              <input type="text" placeholder="Your name" />
-            </label>
-            <label>
-              Email
-              <input type="email" placeholder="you@example.com" />
-            </label>
-            <label>
-              Service Needed
-              <input type="text" placeholder="Loan / Credit / Market Classes" />
-            </label>
-            <label>
-              Message
-              <textarea rows={4} placeholder="Tell us your goals" />
-            </label>
-            <button type="button" className="button buttonPrimary">
-              Submit Request
-            </button>
-          </div>
+          <InquiryForm source="Contact Page Quick Inquiry" submitLabel="Submit Request" />
         </ScrollReveal>
       </section>
 

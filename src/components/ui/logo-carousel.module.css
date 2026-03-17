@@ -73,10 +73,48 @@
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .card,
+  .logoSlot {
+    min-height: 152px;
+  }
+
+  .logoSwap {
+    gap: 1.2rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .logo {
+    max-height: 42px;
+    max-width: 118px;
+  }
+
+  .bankName {
+    font-size: 0.84rem;
+  }
 }
 
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card,
+  .logoSlot {
+    min-height: 138px;
+  }
+
+  .logoSwap {
+    gap: 0.95rem;
+    padding: 1rem 0.95rem;
+  }
+
+  .logo {
+    max-height: 38px;
+    max-width: 110px;
+  }
+
+  .bankName {
+    font-size: 0.8rem;
   }
 }

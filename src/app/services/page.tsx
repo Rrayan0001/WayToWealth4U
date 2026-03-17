@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { processSteps, serviceItems } from "@/lib/siteData";
+import { heroStats, processSteps, serviceItems } from "@/lib/siteData";
 
 import styles from "./services.module.css";
 
@@ -11,11 +12,23 @@ export const metadata: Metadata = {
   description: "Explore loan, credit card, and market education services from WealthRise Capitals.",
 };
 
-const serviceMetrics = [
-  { value: "4", label: "Advisory Tracks" },
-  { value: "10+", label: "Loan Programs" },
-  { value: "12+", label: "Lending Partners" },
+const serviceFocus = [
+  "Retail Lending",
+  "Business Finance",
+  "Credit Cards",
+  "Education & Asset-Backed Loans",
 ];
+
+const serviceIcons: Record<string, string> = {
+  "Home Loan": "/services/home-loan.svg",
+  "Loan Against Property": "/services/lap.svg",
+  "Personal Loan": "/services/personal-loan.svg",
+  "Business Loan": "/services/business-loan.svg",
+  "Education Loan": "/services/education.svg",
+  "Car Loan": "/services/car.svg",
+  "Gold Loan": "/services/gold.svg",
+  "Credit Cards": "/services/credit-cards.svg",
+};
 
 export default function ServicesPage() {
   return (
@@ -29,18 +42,30 @@ export default function ServicesPage() {
               From loan structuring to credit strategy and stock market learning, our services are designed to move you
               from short-term decisions to long-term prosperity.
             </p>
+
+            <div className={styles.focusRail} aria-label="Service focus areas">
+              {serviceFocus.map((item) => (
+                <span key={item} className={styles.focusChip}>
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className={styles.heroPanel}>
             <p className={styles.panelEyebrow}>Coverage Snapshot</p>
             <div className={styles.metricGrid}>
-              {serviceMetrics.map((metric) => (
+              {heroStats.map((metric) => (
                 <div key={metric.label} className={styles.metricCard}>
                   <strong>{metric.value}</strong>
                   <span>{metric.label}</span>
                 </div>
               ))}
             </div>
+            <p className={styles.panelNote}>
+              Structured guidance across home, property-backed, personal, business, education, vehicle, gold, and
+              credit-card needs.
+            </p>
           </div>
         </div>
       </section>
@@ -48,11 +73,30 @@ export default function ServicesPage() {
       <section className={styles.sectionIntro}>
         <p className={styles.sectionEyebrow}>What We Cover</p>
         <h2>Structured Support Across Lending, Credit, And Financial Growth</h2>
+        <p>
+          Each service line is designed to be practical, bank-ready, and easy to act on, with transparent support from
+          evaluation to execution.
+        </p>
       </section>
 
       <section className={styles.servicesGrid}>
         {serviceItems.map((service, index) => (
           <ScrollReveal key={service.title} className={styles.card} delay={index * 100}>
+            <div className={styles.cardTop}>
+              <div className={styles.cardIconWrap}>
+                <Image
+                  src={serviceIcons[service.title] ?? "/services/loans-illustration.svg"}
+                  alt=""
+                  aria-hidden="true"
+                  width={24}
+                  height={24}
+                  className={styles.cardIcon}
+                />
+              </div>
+
+              <span className={styles.cardIndex}>{String(index + 1).padStart(2, "0")}</span>
+            </div>
+
             <h2>{service.title}</h2>
             <p>{service.description}</p>
             {service.subServices ? (
@@ -71,19 +115,42 @@ export default function ServicesPage() {
                 ))}
               </ul>
             )}
+
+            {service.href && (
+              <div className={styles.serviceAction}>
+                <Link href={service.href} className="button buttonOutline">
+                  <span>Learn More</span>
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="16" 
+                    height="16" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    className={styles.chevronIcon}
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </Link>
+              </div>
+            )}
           </ScrollReveal>
         ))}
       </section>
 
       <section className={styles.processShell}>
         <div className={styles.processHeader}>
-          <p className={styles.sectionEyebrow}>How We Engage</p>
-          <h2>From First Conversation To Ongoing Financial Momentum</h2>
+          <p className={styles.sectionEyebrow}>How We Work</p>
+          <h2>A Clear Advisory Process From Discovery To Delivery</h2>
         </div>
 
         <div className={styles.processGrid}>
           {processSteps.map((step, index) => (
-            <ScrollReveal key={step.title} className={styles.card} delay={index * 100}>
+            <ScrollReveal key={step.title} className={styles.processCard} delay={index * 90}>
+              <span className={styles.processIndex}>{String(index + 1).padStart(2, "0")}</span>
               <h3>{step.title}</h3>
               <p>{step.description}</p>
             </ScrollReveal>
@@ -92,11 +159,20 @@ export default function ServicesPage() {
       </section>
 
       <section className={styles.ctaBox}>
-        <h2>Need Help Choosing The Right Service?</h2>
-        <p>Tell us your current goal and we&apos;ll map the right loan, card, or market-learning path for you.</p>
-        <Link href="/contact" className="button buttonPrimary">
-          Book A Strategy Call
-        </Link>
+        <div className={styles.ctaCopy}>
+          <p className={styles.sectionEyebrow}>Next Step</p>
+          <h2>Need Help Choosing The Right Service?</h2>
+          <p>Tell us your current goal and we&apos;ll map the right loan, card, or market-learning path for you.</p>
+        </div>
+
+        <div className={styles.ctaActions}>
+          <Link href="/contact" className="button buttonPrimary">
+            Book A Strategy Call
+          </Link>
+          <Link href="/contact" className="button buttonGhost">
+            Speak To An Advisor
+          </Link>
+        </div>
       </section>
     </div>
   );

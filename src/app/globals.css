@@ -197,6 +197,21 @@ main {
   box-shadow: 0 22px 38px rgba(10, 59, 36, 0.28);
 }
 
+.buttonOutline {
+  background: transparent;
+  border-color: var(--emerald-600);
+  color: var(--emerald-900);
+  box-shadow: 0 4px 12px rgba(10, 59, 36, 0.05);
+}
+
+.buttonOutline:hover,
+.buttonOutline:focus-visible {
+  background: var(--emerald-900);
+  border-color: var(--emerald-900);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(10, 59, 36, 0.15);
+}
+
 .buttonGhost {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);

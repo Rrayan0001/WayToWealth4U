@@ -11,14 +11,14 @@ const money = new Intl.NumberFormat("en-IN", {
 });
 
 export function EmiCalculator() {
-  const [amount, setAmount] = useState(1500000);
-  const [rate, setRate] = useState(10.25);
-  const [years, setYears] = useState(5);
+  const [amount, setAmount] = useState<number | "">(1500000);
+  const [rate, setRate] = useState<number | "">(10.25);
+  const [years, setYears] = useState<number | "">(5);
 
   const result = useMemo(() => {
-    const principal = Number.isFinite(amount) ? amount : 0;
-    const annualRate = Number.isFinite(rate) ? rate : 0;
-    const durationYears = Number.isFinite(years) ? years : 0;
+    const principal = typeof amount === "number" && Number.isFinite(amount) ? amount : 0;
+    const annualRate = typeof rate === "number" && Number.isFinite(rate) ? rate : 0;
+    const durationYears = typeof years === "number" && Number.isFinite(years) ? years : 0;
 
     const months = Math.max(1, Math.round(durationYears * 12));
     const monthlyRate = annualRate / 12 / 100;
@@ -48,7 +48,7 @@ export function EmiCalculator() {
             type="number"
             min={10000}
             step={10000}
-            onChange={(event) => setAmount(Number(event.target.value))}
+            onChange={(event) => setAmount(event.target.value === "" ? "" : Number(event.target.value))}
           />
         </label>
 
@@ -60,7 +60,7 @@ export function EmiCalculator() {
             min={0}
             max={40}
             step={0.05}
-            onChange={(event) => setRate(Number(event.target.value))}
+            onChange={(event) => setRate(event.target.value === "" ? "" : Number(event.target.value))}
           />
         </label>
 
@@ -72,7 +72,7 @@ export function EmiCalculator() {
             min={1}
             max={30}
             step={1}
-            onChange={(event) => setYears(Number(event.target.value))}
+            onChange={(event) => setYears(event.target.value === "" ? "" : Number(event.target.value))}
           />
         </label>
       </div>
