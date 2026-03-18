@@ -1,5 +1,6 @@
 export type InquiryFormValues = {
   name: string;
+  mobile: string;
   email: string;
   service: string;
   amount: string;
@@ -16,6 +17,7 @@ export function getWhatsAppPhoneNumber(phone: string) {
 
 export function buildInquiryMessage(values: InquiryFormValues, source: string) {
   const name = compactValue(values.name);
+  const mobile = compactValue(values.mobile);
   const email = compactValue(values.email);
   const service = compactValue(values.service);
   const amount = compactValue(values.amount);
@@ -26,6 +28,7 @@ export function buildInquiryMessage(values: InquiryFormValues, source: string) {
     "",
     "*New Inquiry*",
     `*Name:* ${name}`,
+    `*Mobile:* ${mobile}`,
     `*Email:* ${email}`,
   ];
 

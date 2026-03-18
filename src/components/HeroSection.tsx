@@ -118,7 +118,7 @@ export function HeroSection() {
     const particleCount = reduceMotion ? 0 : 26;
 
     return (
-        <section className={styles.hero}>
+        <section id="home-hero" className={styles.hero}>
             {/* Dark background layer */}
             <div className={styles.bgLayer}>
                 <Image

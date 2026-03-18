@@ -76,7 +76,7 @@ export function Navbar() {
       {open ? <button type="button" className={styles.backdrop} onClick={closeMenu} aria-hidden /> : null}
 
       <div className={`${styles.inner} container`}>
-        <Link href="/" className={styles.brandLink} aria-label="WealthRise Capitals home">
+        <Link href="/#home-hero" className={styles.brandLink} aria-label="WealthRise Capitals home">
           <BrandMark compact className={styles.brandMark} />
         </Link>
 

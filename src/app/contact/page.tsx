@@ -49,7 +49,9 @@ export default function ContactPage() {
             </div>
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Location</span>
-              <p>{officeSnapshot.address}</p>
+              <a href={officeSnapshot.mapUrl} target="_blank" rel="noopener noreferrer">
+                {officeSnapshot.address}
+              </a>
             </div>
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Support</span>
@@ -64,12 +66,21 @@ export default function ContactPage() {
         </ScrollReveal>
       </section>
 
-      <section id="ai-assistant" className={styles.ctaBox}>
-        <h2>AI-Assisted Support</h2>
-        <p>
-          Use our floating AI action for guided query drafting and faster response routing from the advisory team.
-        </p>
+      <section id="channel-partner" className={styles.partnerSection}>
+        <ScrollReveal className={styles.card}>
+          <h2>Channel Partner Enquiry</h2>
+          <p>
+            Interested in partnering with WealthRise Capitals? Share your profile and our team will connect with you
+            on WhatsApp.
+          </p>
+          <InquiryForm
+            source="Channel Partner Enquiry"
+            submitLabel="Send Partner Enquiry"
+            mode="channel-partner"
+          />
+        </ScrollReveal>
       </section>
+
     </div>
   );
 }

@@ -1,6 +1,8 @@
 .brand {
   --brand-symbol-width: 5rem;
+  --brand-word-width: clamp(8rem, 12vw, 12rem);
   --brand-word-size: clamp(1rem, 1.25vw, 1.22rem);
+  --brand-word-offset: 0rem;
   align-items: center;
   display: inline-flex;
   gap: 0.78rem;
@@ -40,8 +42,9 @@
   display: block;
   height: auto;
   user-select: none;
-  width: clamp(8rem, 12vw, 12rem);
+  width: var(--brand-word-width);
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  transform: translateY(var(--brand-word-offset));
 }
 
 .iconOnly {

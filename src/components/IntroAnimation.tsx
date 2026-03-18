@@ -48,7 +48,6 @@ export function IntroAnimation() {
     if (phase === "hidden") return null;
 
     const cinematicEase = "cubic-bezier(0.76, 0, 0.24, 1)";
-    const isRevealed = phase === "reveal" || phase === "transition" || phase === "complete";
     const isTransitioning = phase === "transition" || phase === "complete";
 
     return (
@@ -64,11 +63,6 @@ export function IntroAnimation() {
             >
                 {/* Ambient golden glow in the background */}
                 <div className={styles.ambientGlow} />
-
-                {/* Decorative grid lines */}
-                <div className={`${styles.gridLine} ${styles.gridV1} ${isRevealed ? styles.gridAnimate : ""}`} />
-                <div className={`${styles.gridLine} ${styles.gridV2} ${isRevealed ? styles.gridAnimate : ""}`} />
-                <div className={`${styles.gridLine} ${styles.gridH1} ${isRevealed ? styles.gridAnimate : ""}`} />
             </div>
 
             {/* Logo centered on screen, transitions to navbar position */}
@@ -87,7 +81,7 @@ export function IntroAnimation() {
                         : {
                             top: "45%",
                             left: "50%",
-                            transform: `translate(-50%, -50%) scale(1.35)`,
+                            transform: `translate(-50%, -50%) scale(1.52)`,
                             opacity: 1,
                         }),
                 } as React.CSSProperties}
@@ -161,7 +155,7 @@ export function IntroAnimation() {
                         }}
                     >
                         <span className={styles.subtitleText}>
-                            GROWING WEALTH &nbsp;·&nbsp; CREATING FUTURES
+                            Growing Wealth, Creating Futures.
                         </span>
                     </div>
                 </div>

@@ -1,71 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useId, useState } from "react";
-
 import styles from "./FloatingActions.module.css";
 
 export function FloatingActions() {
-  const [isAgentOpen, setIsAgentOpen] = useState(false);
-  const popupId = useId();
-  const headingId = `${popupId}-title`;
-
-  useEffect(() => {
-    if (!isAgentOpen) {
-      return;
-    }
-
-    const handleKeydown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setIsAgentOpen(false);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeydown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeydown);
-    };
-  }, [isAgentOpen]);
-
   return (
     <>
-      {isAgentOpen ? (
-        <button type="button" className={styles.overlay} onClick={() => setIsAgentOpen(false)} aria-hidden />
-      ) : null}
-
-      {isAgentOpen ? (
-        <section id={popupId} className={styles.agentPopup} role="dialog" aria-modal="true" aria-labelledby={headingId}>
-          <div className={styles.agentHeader}>
-            <h2 id={headingId}>Growth Assistant</h2>
-            <button type="button" className={styles.closePopup} onClick={() => setIsAgentOpen(false)} aria-label="Close AI agent popup">
-              ×
-            </button>
-          </div>
-          <p>
-            Ask your question and get guided support for loans, cards, and growth planning through the WealthRise assistant.
-          </p>
-          <Link href="/contact#ai-assistant" className="button buttonPrimary" onClick={() => setIsAgentOpen(false)}>
-            Open Assistant
-          </Link>
-        </section>
-      ) : null}
-
       <div className={styles.stack} aria-label="Quick actions">
-        <button
-          type="button"
-          className={styles.ai}
-          aria-label="Open AI agent popup"
-          aria-haspopup="dialog"
-          aria-expanded={isAgentOpen}
-          aria-controls={popupId}
-          onClick={() => setIsAgentOpen((current) => !current)}
-        >
-          <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-            <path d="M12 2.5a1 1 0 0 1 .96.73l.7 2.3a3.2 3.2 0 0 0 2.1 2.1l2.31.7a1 1 0 0 1 0 1.92l-2.3.7a3.2 3.2 0 0 0-2.1 2.1l-.71 2.31a1 1 0 0 1-1.92 0l-.7-2.3a3.2 3.2 0 0 0-2.1-2.1l-2.31-.71a1 1 0 0 1 0-1.92l2.3-.7a3.2 3.2 0 0 0 2.1-2.1l.71-2.31a1 1 0 0 1 .96-.72Zm6.4 13.1a.8.8 0 0 1 .78.6l.37 1.2c.14.46.5.83.96.97l1.2.36a.8.8 0 0 1 0 1.54l-1.2.37a1.5 1.5 0 0 0-.97.96l-.36 1.2a.8.8 0 0 1-1.54 0l-.37-1.2a1.5 1.5 0 0 0-.96-.96l-1.2-.37a.8.8 0 0 1 0-1.54l1.2-.36a1.5 1.5 0 0 0 .96-.97l.37-1.2a.8.8 0 0 1 .76-.6Zm-12.8.6a.7.7 0 0 1 .68.5l.24.8c.1.34.37.6.7.7l.8.25a.7.7 0 0 1 0 1.34l-.8.24c-.34.1-.6.36-.7.7l-.24.8a.7.7 0 0 1-1.34 0l-.25-.8a1.1 1.1 0 0 0-.7-.7l-.8-.24a.7.7 0 0 1 0-1.34l.8-.25c.34-.1.6-.36.7-.7l.25-.8a.7.7 0 0 1 .66-.5Z" />
-          </svg>
-        </button>
-
         <a
           href="https://wa.me/919000000000"
           target="_blank"

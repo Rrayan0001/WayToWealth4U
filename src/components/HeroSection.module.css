@@ -3,6 +3,7 @@
     min-height: 100svh;
     overflow: hidden;
     position: relative;
+    scroll-margin-top: 88px;
 }
 
 /* ── Background ────────────────────────────── */

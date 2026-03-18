@@ -2,7 +2,7 @@ export type ServiceItem = {
   title: string;
   description: string;
   points: string[];
-  subServices?: { title: string; description: string }[];
+  subServices?: { title: string; description: string; href?: string }[];
   href?: string;
 };
 
@@ -25,23 +25,49 @@ export type HeroStatItem = {
 };
 
 export const heroStats: HeroStatItem[] = [
-  { value: "50+", label: "Banking Partners", color: "gold" },
-  { value: "200+", label: "Loan Processed", color: "white" },
-  { value: "40+", label: "Clients Guided", color: "white" },
+  { value: "100+", label: "Banking Partners", color: "gold" },
+  { value: "1000+", label: "Loan Processed", color: "white" },
+  { value: "1500+", label: "Clients Guided", color: "white" },
 ];
 
 export const serviceItems: ServiceItem[] = [
   {
     title: "Home Loan",
-    description: "Your dream home awaits. Explore our range of home loan products designed to help you purchase or build your ideal home with flexible repayment options.",
-    points: ["Purchase Plot", "Construction", "Renovation"],
+    description:
+      "Your dream home awaits. Explore home financing solutions for plot purchase, construction, renovation, and long-tenure repayment planning.",
+    points: ["Plot Purchase", "Construction", "Renovation"],
     href: "/services/home-loan",
+    subServices: [
+      {
+        title: "Plot Purchase Loan",
+        description: "Finance a residential plot before building, with structured support for land acquisition and future construction planning.",
+        href: "/services/home-loan/plot-purchase-loan",
+      },
+      {
+        title: "Home Construction Loan",
+        description: "Fund the construction of a new house on owned land with stage-wise disbursal and progress-based planning.",
+        href: "/services/home-loan/home-construction-loan",
+      },
+    ],
   },
   {
     title: "Loan Against Property",
-    description: "Unlock the value of your property with tailored loan solutions. Use your residential or commercial property as collateral to access funds.",
+    description:
+      "Unlock the value of your property with tailored funding options for business, personal, or consolidation needs using residential or commercial collateral.",
     points: ["Business Funds", "Personal Needs", "Lower Rates"],
     href: "/services/loan-against-property",
+    subServices: [
+      {
+        title: "LAP Loan",
+        description: "Raise capital against residential or commercial property while keeping repayment aligned to your cash flow.",
+        href: "/services/loan-against-property/lap",
+      },
+      {
+        title: "Mortgage Loan",
+        description: "Use property-backed financing for large-value requirements, refinancing, or working capital support.",
+        href: "/services/loan-against-property/mortgage-loan",
+      },
+    ],
   },
   {
     title: "Personal Loan",
@@ -51,9 +77,39 @@ export const serviceItems: ServiceItem[] = [
   },
   {
     title: "Business Loan",
-    description: "Boost your business growth with flexible financing options that support working capital, expansion, equipment purchases, and operations.",
-    points: ["Collateral Free", "Working Capital", "Equipment Finance"],
+    description:
+      "Boost your business growth with structured financing for working capital, expansion, machinery, project execution, and both secured and unsecured borrowing.",
+    points: ["Secured & Unsecured", "Working Capital", "Project Finance"],
     href: "/services/business-loan",
+    subServices: [
+      {
+        title: "Secured Business Loan",
+        description: "Borrow against collateral to unlock higher limits, lower rates, and longer repayment flexibility.",
+        href: "/services/business-loan/secured-business-loan",
+      },
+      {
+        title: "Unsecured Business Loan",
+        description: "Access business capital without collateral, ideal for operating expenses and growth initiatives.",
+        href: "/services/business-loan/unsecured-business-loan",
+      },
+      {
+        title: "Project Loan",
+        description: "Finance new projects, business launches, branch expansion, or capacity upgrades with structured drawdowns.",
+        href: "/services/business-loan/project-loan",
+      },
+      {
+        title: "Machinery Loan",
+        description: "Fund equipment and machinery purchases that improve efficiency, production, or service delivery.",
+        href: "/services/business-loan/machinery-loan",
+      },
+    ],
+  },
+  {
+    title: "MSME Loans",
+    description:
+      "Support micro, small, and medium enterprises with growth financing, working capital, and business development support.",
+    points: ["Small Business", "Working Capital", "Growth Funding"],
+    href: "/services/msme-loans",
   },
   {
     title: "Education Loan",
@@ -63,9 +119,22 @@ export const serviceItems: ServiceItem[] = [
   },
   {
     title: "Car Loan",
-    description: "Drive your dream car with quick and flexible car loan options that make purchasing a new or used vehicle easy and affordable.",
-    points: ["New Car", "Used Car", "Refinance"],
+    description:
+      "Drive your dream car with quick and flexible vehicle financing for fresh purchases and refinance requirements.",
+    points: ["New Car", "Refinance", "Flexible Tenure"],
     href: "/services/car-loan",
+    subServices: [
+      {
+        title: "New Car Purchase Loan",
+        description: "Finance a brand-new vehicle with competitive rates and repayment terms structured around your budget.",
+        href: "/services/car-loan/new-car-purchase-loan",
+      },
+      {
+        title: "Re-Finance Car Loan",
+        description: "Restructure an existing car loan to improve repayment comfort, tenure, or cash flow management.",
+        href: "/services/car-loan/refinance-car-loan",
+      },
+    ],
   },
   {
     title: "Gold Loan",
@@ -183,10 +252,11 @@ export const testimonialItems: TestimonialItem[] = [
 ];
 
 export const officeSnapshot = {
-  address: "WealthRise Capitals Advisory Desk, Financial District, India",
-  phone: "+91 90000 00000",
-  whatsapp: "+91 90000 00000",
-  email: "hello@way2wealth4u.com",
+  address: "1st Cross Road, Gayatri Nagar, Bengaluru, Karnataka 560021",
+  mapUrl: "https://maps.google.com/maps?q=12.9988695,77.5568147",
+  phone: "+91 95138 73555",
+  whatsapp: "+91 95138 73555",
+  email: "wealthrisecapitals@gmail.com",
   hours: [
     "Monday - Friday: 9:00 AM to 7:00 PM",
     "Saturday: 10:00 AM to 4:00 PM",

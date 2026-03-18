@@ -345,6 +345,10 @@
   max-width: 50ch;
 }
 
+.contactActions {
+  margin-top: 1rem;
+}
+
 .contactMethods {
   display: flex;
   flex-wrap: wrap;

@@ -70,7 +70,7 @@ export default function AboutPage() {
         <ScrollReveal className={styles.card} delay={120}>
           <h2>Our Goal</h2>
           <ul className={styles.list}>
-            <li>Empower 10,000+ clients with structured capital solutions by 2030</li>
+            <li>Empower 25,000+ clients with structured capital solutions by 2030</li>
             <li>Eliminate financial friction through technology and transparent advisory</li>
             <li>Build a legacy of educated, strategy-driven investors and homeowners</li>
           </ul>

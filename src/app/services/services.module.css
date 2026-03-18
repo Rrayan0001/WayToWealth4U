@@ -92,6 +92,10 @@
   text-wrap: balance;
 }
 
+.heroTitleLine {
+  display: block;
+}
+
 .heroLead {
   color: var(--text-muted);
   font-size: clamp(1rem, 1.75vw, 1.1rem);
@@ -263,7 +267,6 @@
   width: 1.5rem;
 }
 
-.cardIndex,
 .processIndex {
   color: var(--gold-700);
   font-family: var(--font-heading), "Segoe UI", sans-serif;
@@ -331,6 +334,22 @@
 
 .subServiceItem p {
   margin: 0;
+}
+
+.subServiceLink {
+  color: var(--emerald-700);
+  display: inline-flex;
+  font-size: 0.86rem;
+  font-weight: 800;
+  margin-top: 0.65rem;
+  text-decoration: none;
+  transition: transform 200ms ease, color 200ms ease;
+}
+
+.subServiceLink:hover,
+.subServiceLink:focus-visible {
+  color: var(--gold-700);
+  transform: translateX(3px);
 }
 
 .serviceAction {

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { EmiCalculator } from "@/components/EmiCalculator";
 import { FeatureTicker } from "@/components/FeatureTicker";
 import { HeroSection } from "@/components/HeroSection";
@@ -51,6 +52,11 @@ const serviceCardMeta = {
   "Business Loan": {
     imgSrc: "/services/business-loan.svg",
     imgAlt: "Business Loan",
+    variant: "gold" as const,
+  },
+  "MSME Loans": {
+    imgSrc: "/services/business-loan.svg",
+    imgAlt: "MSME Loans",
     variant: "gold" as const,
   },
   "Education Loan": {
@@ -150,6 +156,11 @@ export default function Home() {
               <p className={styles.contactDesc}>
                 Share your goals and we&apos;ll help you map the right loan, credit, or market-growth strategy.
               </p>
+              <div className={styles.contactActions}>
+                <Link href="/contact#channel-partner" className="button buttonOutline">
+                  Become a Channel Partner
+                </Link>
+              </div>
               <ul className={styles.contactMethods}>
                 <li>
                   <span className={styles.contactIcon}>
@@ -174,7 +185,9 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                   </span>
-                  <span>{officeSnapshot.address}</span>
+                  <a href={officeSnapshot.mapUrl} target="_blank" rel="noopener noreferrer">
+                    {officeSnapshot.address}
+                  </a>
                 </li>
               </ul>
             </div>

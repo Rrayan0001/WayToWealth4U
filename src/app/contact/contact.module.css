@@ -167,6 +167,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.partnerSection {
+  scroll-margin-top: 110px;
+}
+
 .card,
 .ctaBox {
   display: grid;

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 const serviceFocus = [
   "Retail Lending",
   "Business Finance",
+  "MSME Loans",
   "Credit Cards",
   "Education & Asset-Backed Loans",
 ];
@@ -24,6 +25,7 @@ const serviceIcons: Record<string, string> = {
   "Loan Against Property": "/services/lap.svg",
   "Personal Loan": "/services/personal-loan.svg",
   "Business Loan": "/services/business-loan.svg",
+  "MSME Loans": "/services/business-loan.svg",
   "Education Loan": "/services/education.svg",
   "Car Loan": "/services/car.svg",
   "Gold Loan": "/services/gold.svg",
@@ -37,7 +39,10 @@ export default function ServicesPage() {
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
             <p className={styles.heroEyebrow}>Services</p>
-            <h1>Premium Financial Services Under One Advisory Roof</h1>
+            <h1>
+              <span className={styles.heroTitleLine}>Premium Financial Services</span>
+              <span className={styles.heroTitleLine}>Under One Advisory Roof</span>
+            </h1>
             <p className={styles.heroLead}>
               From loan structuring to credit strategy and stock market learning, our services are designed to move you
               from short-term decisions to long-term prosperity.
@@ -93,28 +98,10 @@ export default function ServicesPage() {
                   className={styles.cardIcon}
                 />
               </div>
-
-              <span className={styles.cardIndex}>{String(index + 1).padStart(2, "0")}</span>
             </div>
 
             <h2>{service.title}</h2>
             <p>{service.description}</p>
-            {service.subServices ? (
-              <div className={styles.subServicesGrid}>
-                {service.subServices.map((sub) => (
-                  <div key={sub.title} className={styles.subServiceItem}>
-                    <h3>{sub.title}</h3>
-                    <p>{sub.description}</p>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <ul className={styles.pillList}>
-                {service.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            )}
 
             {service.href && (
               <div className={styles.serviceAction}>
