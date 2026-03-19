@@ -63,7 +63,7 @@ export default function ContactPage() {
 
         <ScrollReveal className={styles.card} delay={100}>
           <h2>Quick Inquiry</h2>
-          <InquiryForm source="Contact Page Quick Inquiry" submitLabel="Submit Request" />
+          <InquiryForm source="Contact Page Quick Inquiry" submitLabel="Submit Request" submissionType="user_inquiry" />
         </ScrollReveal>
       </section>
 
@@ -78,6 +78,7 @@ export default function ContactPage() {
             source="Channel Partner Enquiry"
             submitLabel="Send Partner Enquiry"
             mode="channel-partner"
+            submissionType="agent_inquiry"
           />
         </ScrollReveal>
       </section>

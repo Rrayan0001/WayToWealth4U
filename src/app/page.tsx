@@ -206,6 +206,7 @@ export default function Home() {
               source="Homepage Contact Section"
               submitLabel="Send Inquiry"
               buttonFullWidth
+              submissionType="user_inquiry"
             />
           </div>
         </div>

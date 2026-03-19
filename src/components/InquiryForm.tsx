@@ -4,6 +4,7 @@ import { type ChangeEvent, type FormEvent, useState } from "react";
 
 import { officeSnapshot } from "@/lib/siteData";
 import { buildWhatsAppInquiryUrl, type InquiryFormValues } from "@/lib/inquiry";
+import type { SubmissionType } from "@/lib/submissions";
 
 import styles from "./InquiryForm.module.css";
 
@@ -14,6 +15,7 @@ type InquiryFormProps = {
   buttonFullWidth?: boolean;
   initialService?: string;
   mode?: "default" | "channel-partner";
+  submissionType?: SubmissionType;
 };
 
 function getInitialValues(initialService: string): InquiryFormValues {
@@ -39,9 +41,11 @@ export function InquiryForm({
   buttonFullWidth = false,
   initialService = "",
   mode = "default",
+  submissionType = "user_inquiry",
 }: InquiryFormProps) {
   const [values, setValues] = useState(() => getInitialValues(initialService));
   const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const fieldPrefix = toFieldPrefix(source);
 
   function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -57,20 +61,46 @@ export function InquiryForm({
     }
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const whatsappUrl = buildWhatsAppInquiryUrl(officeSnapshot.whatsapp, values, source);
+    setError("");
+    setIsSubmitting(true);
 
-    if (!whatsappUrl) {
-      setError("WhatsApp contact is not configured yet.");
-      return;
-    }
+    try {
+      const response = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          submissionType,
+          source,
+          values,
+        }),
+      });
 
-    const openedWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      if (!response.ok) {
+        throw new Error("We could not save your inquiry right now. Please try again once.");
+      }
 
-    if (!openedWindow) {
-      window.location.href = whatsappUrl;
+      const whatsappUrl = buildWhatsAppInquiryUrl(officeSnapshot.whatsapp, values, source);
+
+      if (!whatsappUrl) {
+        throw new Error("WhatsApp contact is not configured yet.");
+      }
+
+      const openedWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+      if (!openedWindow) {
+        window.location.href = whatsappUrl;
+      }
+
+      setValues(getInitialValues(initialService));
+    } catch (submitError) {
+      setError(submitError instanceof Error ? submitError.message : "Unable to submit your inquiry right now.");
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -201,11 +231,11 @@ export function InquiryForm({
         </>
       )}
 
-      <button type="submit" className={buttonClassName}>
-        {submitLabel}
+      <button type="submit" className={buttonClassName} disabled={isSubmitting}>
+        {isSubmitting ? "Saving Inquiry..." : submitLabel}
       </button>
 
-      <p className={styles.helperText}>Submitting opens WhatsApp with your inquiry arranged in a ready-to-send format.</p>
+      <p className={styles.helperText}>Submitting saves your inquiry and opens WhatsApp with the same details ready to send.</p>
 
       {error ? (
         <p className={`${styles.helperText} ${styles.errorText}`} aria-live="polite">

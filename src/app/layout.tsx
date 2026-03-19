@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 
-import { FloatingActions } from "@/components/FloatingActions";
-import { Footer } from "@/components/Footer";
-import { IntroAnimation } from "@/components/IntroAnimation";
-import { Navbar } from "@/components/Navbar";
-import { SmoothScroll } from "@/components/SmoothScroll";
+import { SiteChrome } from "@/components/SiteChrome";
 
 import "./globals.css";
 
@@ -52,18 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <IntroAnimation />
-        <SmoothScroll>
-          <a href="#main-content" className="skipLink">
-            Skip to content
-          </a>
-          <div className="siteShell">
-            <Navbar />
-            <main id="main-content">{children}</main>
-            <Footer />
-          </div>
-          <FloatingActions />
-        </SmoothScroll>
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
