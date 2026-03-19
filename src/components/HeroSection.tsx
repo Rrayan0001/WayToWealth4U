@@ -180,7 +180,7 @@ export function HeroSection() {
                     {/* Trust row */}
                     <div className={styles.trustRow}>
                         <p className={styles.trustText}>
-                            Trusted by <strong>20k</strong> customers
+                            Trusted by <strong>25k</strong> customers
                         </p>
                         <div className={styles.ratingRow}>
                             <span className={styles.stars}>★★★★★</span>

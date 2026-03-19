@@ -26,8 +26,8 @@ export type HeroStatItem = {
 
 export const heroStats: HeroStatItem[] = [
   { value: "100+", label: "Banking Partners", color: "gold" },
-  { value: "1000+", label: "Loan Processed", color: "white" },
-  { value: "1500+", label: "Clients Guided", color: "white" },
+  { value: "25000+", label: "Loan Processed", color: "white" },
+  { value: "20000+", label: "Clients Guided", color: "white" },
 ];
 
 export const serviceItems: ServiceItem[] = [
