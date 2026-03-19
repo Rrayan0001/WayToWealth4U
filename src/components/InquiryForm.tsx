@@ -168,7 +168,7 @@ export function InquiryForm({
               id={`${fieldPrefix}-service`}
               name="service"
               type="text"
-              placeholder="Loan / Credit / Market Classes"
+              placeholder="Loan / Insurance / Real Estate / Stock Market Coaching / Investments"
               value={values.service}
               onChange={handleChange}
             />
