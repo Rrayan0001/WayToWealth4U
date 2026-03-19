@@ -42,7 +42,7 @@
 .heroGrid {
   display: grid;
   gap: 1.2rem;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.82fr);
+  grid-template-columns: minmax(0, 1fr);
   padding: clamp(1.4rem, 4vw, 2.5rem);
   position: relative;
   z-index: 1;
@@ -99,7 +99,6 @@
   max-width: 52ch;
 }
 
-.heroPanel,
 .card,
 .ctaBox {
   background:
@@ -113,7 +112,6 @@
   position: relative;
 }
 
-.heroPanel::before,
 .card::before,
 .ctaBox::before {
   background: linear-gradient(90deg, rgba(20, 122, 70, 0), rgba(20, 122, 70, 0.16), rgba(214, 169, 44, 0.16), rgba(214, 169, 44, 0));
@@ -125,33 +123,7 @@
   top: 0;
 }
 
-.heroPanel {
-  align-self: end;
-  display: grid;
-  gap: 0.8rem;
-  padding: 1.15rem 1.2rem;
-}
 
-.panelEyebrow {
-  color: var(--gold-800);
-  font-size: 0.74rem;
-}
-
-.snapshotTime {
-  background: linear-gradient(148deg, rgba(255, 249, 232, 0.96), rgba(245, 233, 181, 0.88));
-  border: 1px solid color-mix(in srgb, var(--gold-300) 62%, #ffffff 38%);
-  border-radius: 1rem;
-  color: var(--gold-900);
-  font-size: 0.96rem;
-  font-weight: 700;
-  line-height: 1.55;
-  padding: 0.82rem 0.9rem;
-}
-
-.snapshotText {
-  color: var(--text-body);
-  line-height: 1.68;
-}
 
 .sectionIntro {
   display: grid;
@@ -263,7 +235,6 @@
     font-size: 0.96rem;
   }
 
-  .snapshotTime,
   .outcome {
     font-size: 0.9rem;
     padding: 0.76rem 0.82rem;

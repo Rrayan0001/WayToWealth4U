@@ -11,15 +11,7 @@ export const metadata: Metadata = {
   description: "Review outcome-driven project highlights from WealthRise Capitals advisory clients.",
 };
 
-export const dynamic = "force-dynamic";
-
 export default function ProjectsPage() {
-  const generatedAt = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "long",
-    timeStyle: "short",
-    timeZone: "Asia/Kolkata",
-  }).format(new Date());
-
   return (
     <div className={`${styles.page} container`}>
       <section className={styles.hero}>
@@ -29,15 +21,6 @@ export default function ProjectsPage() {
             <h1>Real Client Outcomes, Measured In Financial Progress</h1>
             <p className={styles.heroLead}>
               Every engagement focuses on implementable strategy and measurable improvement, not generic advice.
-            </p>
-          </div>
-
-          <div className={styles.heroPanel}>
-            <p className={styles.panelEyebrow}>Live Advisory Snapshot</p>
-            <p className={styles.snapshotTime}>Server-rendered update: {generatedAt}</p>
-            <p className={styles.snapshotText}>
-              This page stays dynamic so current advisory context can be rendered live while the rest of the site stays
-              statically optimized for speed.
             </p>
           </div>
         </div>
