@@ -12,6 +12,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
+  { href: "/about#dsa-agent", label: "Loan DSA Agents" },
   { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
 ];

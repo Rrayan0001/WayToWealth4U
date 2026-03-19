@@ -42,6 +42,7 @@ export default function ContactPage() {
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Email</span>
               <a href={`mailto:${officeSnapshot.email}`}>{officeSnapshot.email}</a>
+              <a href={`mailto:${officeSnapshot.secondaryEmail}`}>{officeSnapshot.secondaryEmail}</a>
             </div>
             <div className={styles.contactItem}>
               <span className={styles.contactLabel}>Phone</span>
