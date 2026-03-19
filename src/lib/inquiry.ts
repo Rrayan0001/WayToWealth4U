@@ -2,6 +2,7 @@ export type InquiryFormValues = {
   name: string;
   mobile: string;
   email: string;
+  location: string;
   service: string;
   amount: string;
   message: string;
@@ -19,6 +20,7 @@ export function buildInquiryMessage(values: InquiryFormValues, source: string) {
   const name = compactValue(values.name);
   const mobile = compactValue(values.mobile);
   const email = compactValue(values.email);
+  const location = compactValue(values.location);
   const service = compactValue(values.service);
   const amount = compactValue(values.amount);
   const message = values.message.trim();
@@ -31,6 +33,10 @@ export function buildInquiryMessage(values: InquiryFormValues, source: string) {
     `*Mobile:* ${mobile}`,
     `*Email:* ${email}`,
   ];
+
+  if (location) {
+    lines.push(`*Location:* ${location}`);
+  }
 
   if (service) {
     lines.push(`*Service Needed:* ${service}`);

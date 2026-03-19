@@ -21,6 +21,7 @@ function getInitialValues(initialService: string): InquiryFormValues {
     name: "",
     mobile: "",
     email: "",
+    location: "",
     service: initialService,
     amount: "",
     message: "",
@@ -121,6 +122,18 @@ export function InquiryForm({
               required
             />
           </div>
+
+          <div className={styles.field}>
+            <label htmlFor={`${fieldPrefix}-location`}>Location</label>
+            <input
+              id={`${fieldPrefix}-location`}
+              name="location"
+              type="text"
+              placeholder="Your city / area"
+              value={values.location}
+              onChange={handleChange}
+            />
+          </div>
         </>
       ) : (
         <>
@@ -134,6 +147,18 @@ export function InquiryForm({
               value={values.email}
               onChange={handleChange}
               required
+            />
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor={`${fieldPrefix}-location`}>Location</label>
+            <input
+              id={`${fieldPrefix}-location`}
+              name="location"
+              type="text"
+              placeholder="Your city / area"
+              value={values.location}
+              onChange={handleChange}
             />
           </div>
 

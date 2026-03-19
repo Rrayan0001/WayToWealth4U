@@ -97,6 +97,40 @@ export default function AboutPage() {
         </ScrollReveal>
       </section>
 
+      <section className={styles.ctaBox} id="dsa-agent">
+        <p className={styles.sectionEyebrow}>Earn With Us</p>
+        <h2>Become a DSA Agent / Channel Partner</h2>
+        <p>
+          Join WealthRise Capitals as a Direct Selling Agent (DSA) or Channel Partner and build a rewarding career in
+          financial services. Earn attractive commissions by connecting clients with the right loan products — with full
+          advisory support from our team.
+        </p>
+        <Link href="/contact#channel-partner" className="button buttonPrimary">
+          Apply As Channel Partner
+        </Link>
+      </section>
+
+      <section className={styles.gridTwo}>
+        <ScrollReveal className={styles.card}>
+          <h3>Who Can Apply?</h3>
+          <ul className={styles.list}>
+            <li>Finance professionals, retired bankers, and insurance agents</li>
+            <li>Real estate brokers and property consultants</li>
+            <li>Self-employed individuals with a strong local network</li>
+            <li>Accountants, CAs, and financial advisors</li>
+          </ul>
+        </ScrollReveal>
+        <ScrollReveal className={styles.card} delay={120}>
+          <h3>What You Earn</h3>
+          <ul className={styles.list}>
+            <li>Competitive commissions on every disbursed loan</li>
+            <li>Monthly performance bonuses and incentive structures</li>
+            <li>Access to 100+ banking and NBFC partner products</li>
+            <li>Full training, marketing support, and free onboarding</li>
+          </ul>
+        </ScrollReveal>
+      </section>
+
       <section className={styles.ctaBox}>
         <h2>Start Your Wealth Upgrade</h2>
         <p>Schedule a strategy call and let us craft a premium roadmap tailored to your goals.</p>
