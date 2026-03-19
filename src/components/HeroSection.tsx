@@ -10,9 +10,11 @@ import { heroStats } from "@/lib/siteData";
 import styles from "./HeroSection.module.css";
 
 const expertiseAreas = [
-    "Home & Business Loans",
-    "Credit Card Strategy",
-    "Stock Market Classes",
+    "Loans",
+    "Insurance",
+    "Real Estate",
+    "Stock Market Coaching",
+    "Financial Related Investments",
 ];
 
 function Particles({ count = 40 }: { count?: number }) {
@@ -178,11 +180,11 @@ export function HeroSection() {
                     {/* Trust row */}
                     <div className={styles.trustRow}>
                         <p className={styles.trustText}>
-                            Trusted by <strong>40+</strong> growth-focused clients
+                            Trusted by <strong>20k</strong> customers
                         </p>
                         <div className={styles.ratingRow}>
                             <span className={styles.stars}>★★★★★</span>
-                            <span className={styles.ratingValue}>4.9 Rating</span>
+                            <span className={styles.ratingValue}>5 Rating</span>
                         </div>
 
                     </div>

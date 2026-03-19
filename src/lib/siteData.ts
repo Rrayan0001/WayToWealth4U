@@ -112,6 +112,20 @@ export const serviceItems: ServiceItem[] = [
     href: "/services/msme-loans",
   },
   {
+    title: "Doctor Loan",
+    description:
+      "Specialized financing for medical professionals to set up clinics, purchase medical equipment, expand hospitals, or meet personal financial goals.",
+    points: ["Clinic Setup", "Equipment Finance", "Practice Expansion"],
+    href: "/services/doctor-loan",
+  },
+  {
+    title: "Project Loan",
+    description:
+      "Finance new business launches, branch expansions, or large-scale projects with milestone-based funding aligned to your project's execution timeline.",
+    points: ["Milestone Funding", "Expansion Support", "Structured Disbursement"],
+    href: "/services/project-loan",
+  },
+  {
     title: "Education Loan",
     description: "Invest in your child’s future with specialized education loans designed to support higher education expenses including tuition and accommodation.",
     points: ["Domestic Studies", "International Education", "Living Expenses"],

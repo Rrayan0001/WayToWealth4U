@@ -899,3 +899,194 @@ export const refinanceCarLoanContent: ServiceDetailPageProps = {
   ctaTitle: "Thinking About Refinancing Your Car Loan?",
   ctaText: "Let's review your current car loan and calculate exactly how much you could save. The process is simpler than you think.",
 };
+
+export const doctorLoanContent: ServiceDetailPageProps = {
+  eyebrow: "Professional Finance",
+  title: "Doctor Loan",
+  lead: "Purpose-built financing for medical professionals — to set up your clinic, purchase equipment, expand your practice, or manage personal financial goals with ease.",
+  introTitle: "Financial support designed for the medical profession",
+  introText:
+    "Doctor loans are specialized products offered by banks and NBFCs exclusively to registered medical professionals — including MBBS, BDS, MDS, MD, MS, and other qualified practitioners. These loans recognize the high earning potential and stable income profile of doctors and offer preferential terms, higher amounts, and faster approvals compared to standard business or personal loans.",
+  heroPoints: [
+    "Exclusively for qualified medical professionals",
+    "Clinic setup, expansion, or renovation funding",
+    "Medical equipment financing",
+    "No collateral required up to certain limits",
+  ],
+  sections: [
+    {
+      title: "Who Is It For?",
+      description:
+        "Doctor loans are available to a wide range of registered medical and dental professionals looking to invest in their practice or personal goals.",
+      bullets: [
+        "MBBS, BDS, MDS, MD, MS, and other qualified doctors",
+        "Specialists setting up new clinics or polyclinics",
+        "Doctors expanding existing hospitals or diagnostic centres",
+        "Medical professionals investing in advanced diagnostic equipment",
+        "Doctors needing funds for overseas education or fellowship programs",
+      ],
+    },
+    {
+      title: "Eligibility Criteria",
+      description:
+        "Lenders typically have simplified and preferential eligibility norms for doctors compared to standard borrowers.",
+      bullets: [
+        "Valid medical registration certificate (MCI/State Medical Council)",
+        "Age: 22 to 65 years at the time of application",
+        "Minimum 1 year of practice post-qualification (some lenders allow fresh grads)",
+        "Collateral-free loans up to ₹50 lakhs at select lenders",
+        "CIBIL score: 700 or above preferred",
+        "Income proof: Bank statements, P&L, or clinic receipts",
+      ],
+    },
+    {
+      title: "Key Benefits",
+      description:
+        "Doctor loans come with preferential terms that recognize the stable, high-income nature of the medical profession.",
+      bullets: [
+        "Loan amounts from ₹1 lakh up to ₹5 crores depending on profile",
+        "Interest rates from 10% p.a. — lower than standard business loans",
+        "Collateral-free options available under specific schemes",
+        "Faster processing — decisions within 3 to 5 working days",
+        "Tenures from 1 to 7 years (up to 15 years with collateral)",
+        "Can be used for clinic setup, equipment, renovation, or personal needs",
+      ],
+    },
+    {
+      title: "What Can The Loan Be Used For?",
+      description:
+        "Doctor loans are versatile and cover a wide spectrum of professional and personal financial needs for medical practitioners.",
+      bullets: [
+        "Clinic or hospital setup — interiors, furniture, fixtures",
+        "Medical equipment purchase — X-ray, CT scan, ultrasound, OT equipment",
+        "Hospital or chamber expansion and renovation",
+        "Hiring staff and setting up support systems",
+        "Overseas medical education or fellowship funding",
+        "Personal financial goals such as home purchase or vehicle",
+      ],
+    },
+    {
+      title: "Documents Usually Required",
+      description:
+        "Documentation is straightforward compared to standard business loans, with the medical registration being the key additional requirement.",
+      bullets: [
+        "Medical registration certificate (MCI/State Council)",
+        "Educational qualification certificates (MBBS, MD, BDS, etc.)",
+        "KYC: Aadhaar, PAN, passport photographs",
+        "Bank statements: Last 6 to 12 months",
+        "Income proof: ITR or clinic P&L for last 1–2 years",
+        "Lease/ownership documents for clinic premises (if applicable)",
+      ],
+    },
+    {
+      title: "How We Support You",
+      description:
+        "We identify the best doctor loan product for your specialty, experience level, and funding requirement and manage the end-to-end process.",
+      bullets: [
+        "Eligibility check across 10+ doctor-loan lenders",
+        "Comparison of rates, collateral rules, and tenure options",
+        "Full document preparation and submission support",
+        "Application tracking and lender liaison",
+        "Post-disbursement support for equipment purchase coordination",
+      ],
+    },
+  ],
+  ctaTitle: "Ready To Take Your Practice To The Next Level?",
+  ctaText: "Our advisors will help you find the right doctor loan for your specialty and goals — whether it's a new clinic, advanced equipment, or personal financial ambitions.",
+};
+
+export const standaloneProjectLoanContent: ServiceDetailPageProps = {
+  eyebrow: "Project Finance",
+  title: "Project Loan",
+  lead: "Turn your vision into reality with a project loan that funds new business launches, branch expansions, infrastructure upgrades, or large-scale capital projects — structured around your timeline.",
+  introTitle: "Purpose-built funding for your next big business move",
+  introText:
+    "A project loan is a structured form of business financing where the capital is linked directly to a specific project — such as building a new facility, launching a new business vertical, or expanding your production capacity. Disbursement is typically milestone-based, and the loan structure is designed to reflect the project's execution roadmap, making it one of the most capital-efficient ways to fund a major business initiative.",
+  heroPoints: [
+    "Milestone-based disbursement aligned to your project",
+    "Moratorium available during setup phase",
+    "Covers civil, machinery, working capital, and tech investments",
+    "Suitable for both new ventures and expansion projects",
+  ],
+  sections: [
+    {
+      title: "Who Is It For?",
+      description:
+        "Project loans are built for entrepreneurs and business owners executing large, structured, capital-intensive business initiatives.",
+      bullets: [
+        "Entrepreneurs launching a new industry, hotel, or hospital",
+        "Manufacturers building new production lines or plants",
+        "Retailers opening new branches or expanding across locations",
+        "IT and tech companies expanding infrastructure or data centres",
+        "Agri-businesses investing in food processing or storage units",
+      ],
+    },
+    {
+      title: "Eligibility Criteria",
+      description:
+        "Lenders require a detailed project report along with a verified business or personal track record to sanction a project loan.",
+      bullets: [
+        "Established business with minimum 2–3 years of operations",
+        "Detailed Detailed Project Report (DPR) with cost estimates and projections",
+        "Promoter contribution (margin money) of 25–35% of total project cost",
+        "Clean repayment history with existing lenders",
+        "CIBIL score: 700 or above for all promoters",
+        "Collateral may be required depending on project scale",
+      ],
+    },
+    {
+      title: "Key Benefits",
+      description:
+        "Project loans ensure your expansion happens in a financially controlled way without disrupting ongoing business operations.",
+      bullets: [
+        "Funding aligned precisely to total project cost",
+        "Moratorium (interest-only period) during construction or setup",
+        "Repayment starts once the project becomes operational",
+        "Milestone-based disbursement prevents cost overruns",
+        "Covers civil work, machinery, equipment, and working capital components",
+        "Longer repayment tenures matched to project payback period",
+      ],
+    },
+    {
+      title: "Types of Projects Financed",
+      description:
+        "Project loans cover a wide variety of business and infrastructure initiatives across all sectors.",
+      bullets: [
+        "Manufacturing plants and industrial facilities",
+        "Hospitality projects: hotels, resorts, and serviced apartments",
+        "Healthcare: hospitals, nursing homes, diagnostics centres",
+        "Educational institutions: schools, colleges, training institutes",
+        "Retail chains and multi-location expansions",
+        "Renewable energy: solar, wind, and biogas plants",
+      ],
+    },
+    {
+      title: "Documents Usually Required",
+      description:
+        "A strong, well-prepared project report is the most important document. Combined with business financials, it forms the backbone of the application.",
+      bullets: [
+        "Detailed Project Report (DPR) with financial projections",
+        "Business financials: ITR, P&L, and balance sheet (last 3 years)",
+        "Bank statements: Last 12 months",
+        "KYC: Aadhaar, PAN, and photographs of all promoters",
+        "Quotations for civil work, machinery, and equipment",
+        "Land/property documents if collateral is part of the structure",
+      ],
+    },
+    {
+      title: "How We Support You",
+      description:
+        "We translate your business vision into a lender-ready project structure, covering the financial model, documentation, and presentation.",
+      bullets: [
+        "Project Report (DPR) review and viability framing",
+        "Eligibility assessment across project finance lenders",
+        "Document organization and file structuring for strong presentation",
+        "Application submission and progress monitoring",
+        "Coordination with lender's credit, legal, and technical teams",
+      ],
+    },
+  ],
+  ctaTitle: "Planning A Major Business Project?",
+  ctaText: "Let our advisors help you structure the right project loan — from DPR preparation to disbursement — so your vision becomes a funded reality.",
+};
+

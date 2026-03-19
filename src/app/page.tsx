@@ -59,6 +59,16 @@ const serviceCardMeta = {
     imgAlt: "MSME Loans",
     variant: "gold" as const,
   },
+  "Doctor Loan": {
+    imgSrc: "/services/personal-loan.svg",
+    imgAlt: "Doctor Loan",
+    variant: "ivory" as const,
+  },
+  "Project Loan": {
+    imgSrc: "/services/business-loan.svg",
+    imgAlt: "Project Loan",
+    variant: "blue" as const,
+  },
   "Education Loan": {
     imgSrc: "/services/education.svg",
     imgAlt: "Education Loan",
