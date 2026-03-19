@@ -273,7 +273,7 @@ export const officeSnapshot = {
   email: "wealthrisecapitals@gmail.com",
   secondaryEmail: "info@wealthrisecapitals.com",
   hours: [
-    "Monday - Friday: 9:00 AM to 7:00 PM",
+    "Monday - Friday: 10:00 AM to 7:00 PM",
     "Saturday: 10:00 AM to 4:00 PM",
     "Sunday: By prior appointment",
   ],
