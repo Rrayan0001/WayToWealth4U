@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="msme-base" x1="54" y1="118" x2="166" y2="161" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F5EA"/>
+      <stop offset="1" stop-color="#D5E8D9"/>
+    </linearGradient>
+    <linearGradient id="msme-shop" x1="77" y1="90" x2="144" y2="151" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22B763"/>
+      <stop offset="1" stop-color="#116C3D"/>
+    </linearGradient>
+    <linearGradient id="msme-awning" x1="73" y1="81" x2="149" y2="105" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD97D"/>
+      <stop offset="1" stop-color="#D6A92C"/>
+    </linearGradient>
+    <filter id="msme-shadow" x="42" y="58" width="140" height="128" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#0A3B24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="173" rx="58" ry="14" fill="#0D4A28" opacity="0.11"/>
+  <g filter="url(#msme-shadow)">
+    <path d="M58 128L110 102L162 128L110 154L58 128Z" fill="url(#msme-base)"/>
+    <path d="M58 128V140L110 166V154L58 128Z" fill="#C7DFCC"/>
+    <path d="M162 128V140L110 166V154L162 128Z" fill="#B8D1BD"/>
+    <path d="M75 96C75 90.477 79.477 86 85 86H135C140.523 86 145 90.477 145 96V140H75V96Z" fill="url(#msme-shop)"/>
+    <path d="M71 91H149L142 108H78L71 91Z" fill="url(#msme-awning)"/>
+    <path d="M85 91H94L89 108H80L85 91Z" fill="#FFF3CF" opacity="0.8"/>
+    <path d="M104 91H113L108 108H99L104 91Z" fill="#FFF3CF" opacity="0.8"/>
+    <path d="M123 91H132L127 108H118L123 91Z" fill="#FFF3CF" opacity="0.8"/>
+    <rect x="86" y="111" width="21" height="29" rx="5" fill="#E8F6EE"/>
+    <rect x="113" y="111" width="23" height="18" rx="5" fill="#CFF6FF"/>
+    <circle cx="149" cy="118" r="11" fill="#F7D26B"/>
+    <path d="M149 111V125" stroke="#D6A92C" stroke-width="5" stroke-linecap="round"/>
+    <path d="M142 118H156" stroke="#D6A92C" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <circle cx="160" cy="62" r="11" fill="#F2DE9E" opacity="0.86"/>
+  <circle cx="56" cy="70" r="7" fill="#71D596" opacity="0.32"/>
+</svg>

@@ -1,1 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#dcc66a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="business-base" x1="52" y1="120" x2="168" y2="162" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F6EA"/>
+      <stop offset="1" stop-color="#D2E8D9"/>
+    </linearGradient>
+    <linearGradient id="business-block-a" x1="76" y1="97" x2="104" y2="148" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#21B563"/>
+      <stop offset="1" stop-color="#11703F"/>
+    </linearGradient>
+    <linearGradient id="business-block-b" x1="102" y1="82" x2="131" y2="149" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#33C774"/>
+      <stop offset="1" stop-color="#0E6137"/>
+    </linearGradient>
+    <linearGradient id="business-block-c" x1="128" y1="68" x2="156" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD97D"/>
+      <stop offset="1" stop-color="#D6A92C"/>
+    </linearGradient>
+    <filter id="business-shadow" x="40" y="56" width="145" height="130" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#0A3B24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="173" rx="58" ry="14" fill="#0D4A28" opacity="0.11"/>
+  <g filter="url(#business-shadow)">
+    <path d="M58 128L110 102L162 128L110 154L58 128Z" fill="url(#business-base)"/>
+    <path d="M58 128V140L110 166V154L58 128Z" fill="#C7DFCC"/>
+    <path d="M162 128V140L110 166V154L162 128Z" fill="#B8D1BD"/>
+    <rect x="77" y="101" width="22" height="34" rx="7" fill="url(#business-block-a)"/>
+    <rect x="103" y="86" width="22" height="49" rx="7" fill="url(#business-block-b)"/>
+    <rect x="129" y="72" width="22" height="63" rx="7" fill="url(#business-block-c)"/>
+    <path d="M74 124L99 109L114 117L142 87L149 96L151 62L121 72L129 79L111 98L98 90L72 108L74 124Z" fill="#F7E6AF" opacity="0.95"/>
+  </g>
+  <circle cx="161" cy="62" r="11" fill="#F2DE9E" opacity="0.88"/>
+  <circle cx="58" cy="70" r="6.5" fill="#71D596" opacity="0.32"/>
+</svg>

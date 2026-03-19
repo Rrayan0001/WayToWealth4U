@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#dcc66a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M15.4 15.4c-1.8 1.8-4.9 1.8-6.8 0s-1.8-4.9 0-6.8c1.8-1.8 4.9-1.8 6.8 0s1.8 4.9 0 6.8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="gold-base" x1="52" y1="122" x2="168" y2="164" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDF7EC"/>
+      <stop offset="1" stop-color="#D6E9DB"/>
+    </linearGradient>
+    <linearGradient id="gold-bar" x1="74" y1="91" x2="147" y2="145" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE18C"/>
+      <stop offset="1" stop-color="#D6A92C"/>
+    </linearGradient>
+    <linearGradient id="gold-coin" x1="130" y1="76" x2="166" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0BA"/>
+      <stop offset="1" stop-color="#E0B43B"/>
+    </linearGradient>
+    <filter id="gold-shadow" x="40" y="58" width="145" height="128" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#0A3B24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="173" rx="58" ry="14" fill="#0D4A28" opacity="0.11"/>
+  <g filter="url(#gold-shadow)">
+    <path d="M58 129L110 103L162 129L110 155L58 129Z" fill="url(#gold-base)"/>
+    <path d="M58 129V140L110 166V155L58 129Z" fill="#C7DFCC"/>
+    <path d="M162 129V140L110 166V155L162 129Z" fill="#B8D1BD"/>
+    <path d="M76 113L112 95L143 110L107 128L76 113Z" fill="url(#gold-bar)"/>
+    <path d="M92 97L128 79L159 94L123 112L92 97Z" fill="#F6D064"/>
+    <circle cx="145" cy="98" r="18" fill="url(#gold-coin)"/>
+    <circle cx="145" cy="98" r="10" fill="#D6A92C" opacity="0.45"/>
+    <path d="M144 89V107" stroke="#FFF7D8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M138 95H152" stroke="#FFF7D8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <circle cx="161" cy="60" r="11" fill="#F7E4A8" opacity="0.86"/>
+  <circle cx="58" cy="70" r="6.5" fill="#71D596" opacity="0.32"/>
+</svg>

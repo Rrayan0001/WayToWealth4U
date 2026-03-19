@@ -8,18 +8,13 @@ type ServiceCardVariant = "gold" | "slate" | "ivory" | "blue";
 type ServiceCardProps = {
   title: string;
   description: string;
-  points: string[];
   href: string;
   imgSrc: string;
   imgAlt: string;
   variant: ServiceCardVariant;
 };
 
-function cleanPoint(point: string) {
-  return point.replace(/^[A-Za-z]\s*-\s*/, "").trim();
-}
-
-export function ServiceCard({ title, description, points, href, imgSrc, imgAlt, variant }: ServiceCardProps) {
+export function ServiceCard({ title, description, href, imgSrc, imgAlt, variant }: ServiceCardProps) {
   return (
     <article className={`${styles.card} ${styles[variant]}`}>
       <div className={styles.body}>
@@ -34,7 +29,7 @@ export function ServiceCard({ title, description, points, href, imgSrc, imgAlt, 
         </Link>
       </div>
 
-      <Image src={imgSrc} alt={imgAlt} width={56} height={56} className={styles.illustration} />
+      <Image src={imgSrc} alt={imgAlt} width={168} height={168} className={styles.illustration} />
     </article>
   );
 }

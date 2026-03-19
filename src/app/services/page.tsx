@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { heroStats, processSteps, serviceItems } from "@/lib/siteData";
+import { serviceIllustrations } from "@/lib/serviceVisuals";
 
 import styles from "./services.module.css";
 
@@ -19,18 +20,6 @@ const serviceFocus = [
   "Credit Cards",
   "Education & Asset-Backed Loans",
 ];
-
-const serviceIcons: Record<string, string> = {
-  "Home Loan": "/services/home-loan.svg",
-  "Loan Against Property": "/services/lap.svg",
-  "Personal Loan": "/services/personal-loan.svg",
-  "Business Loan": "/services/business-loan.svg",
-  "MSME Loans": "/services/business-loan.svg",
-  "Education Loan": "/services/education.svg",
-  "Car Loan": "/services/car.svg",
-  "Gold Loan": "/services/gold.svg",
-  "Credit Cards": "/services/credit-cards.svg",
-};
 
 export default function ServicesPage() {
   return (
@@ -87,17 +76,15 @@ export default function ServicesPage() {
       <section className={styles.servicesGrid}>
         {serviceItems.map((service, index) => (
           <ScrollReveal key={service.title} className={styles.card} delay={index * 100}>
-            <div className={styles.cardTop}>
-              <div className={styles.cardIconWrap}>
-                <Image
-                  src={serviceIcons[service.title] ?? "/services/loans-illustration.svg"}
-                  alt=""
-                  aria-hidden="true"
-                  width={24}
-                  height={24}
-                  className={styles.cardIcon}
-                />
-              </div>
+            <div className={styles.cardArt}>
+              <Image
+                src={serviceIllustrations[service.title] ?? "/services/loans-illustration.svg"}
+                alt=""
+                aria-hidden="true"
+                width={180}
+                height={180}
+                className={styles.cardIllustration}
+              />
             </div>
 
             <h2>{service.title}</h2>

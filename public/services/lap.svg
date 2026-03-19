@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#dcc66a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="lap-base" x1="52" y1="118" x2="170" y2="162" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F5EA"/>
+      <stop offset="1" stop-color="#D2E8D9"/>
+    </linearGradient>
+    <linearGradient id="lap-panel" x1="78" y1="86" x2="142" y2="154" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1FA85C"/>
+      <stop offset="1" stop-color="#0A6337"/>
+    </linearGradient>
+    <linearGradient id="lap-paper" x1="118" y1="88" x2="167" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8EA"/>
+      <stop offset="1" stop-color="#E8E1D1"/>
+    </linearGradient>
+    <filter id="lap-shadow" x="40" y="60" width="144" height="126" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#0A3B24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="173" rx="60" ry="14" fill="#0D4A28" opacity="0.11"/>
+  <g filter="url(#lap-shadow)">
+    <path d="M56 127L110 100L164 127L110 154L56 127Z" fill="url(#lap-base)"/>
+    <path d="M56 127V139L110 166V154L56 127Z" fill="#C4DDCB"/>
+    <path d="M164 127V139L110 166V154L164 127Z" fill="#B5D0BF"/>
+    <path d="M76 92C76 86.477 80.477 82 86 82H129C134.523 82 139 86.477 139 92V135C139 140.523 134.523 145 129 145H86C80.477 145 76 140.523 76 135V92Z" fill="url(#lap-panel)"/>
+    <rect x="89" y="96" width="38" height="35" rx="6" fill="#EAF8EF" opacity="0.92"/>
+    <path d="M121 92H157V136H121V92Z" fill="url(#lap-paper)"/>
+    <path d="M121 92L132 82H157V136H121V92Z" fill="#FFF9F0"/>
+    <path d="M129 102H149" stroke="#C4AD63" stroke-width="4" stroke-linecap="round"/>
+    <path d="M129 114H146" stroke="#C4AD63" stroke-width="4" stroke-linecap="round"/>
+    <path d="M127 127L136 136L156 114" stroke="#1C9C59" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="107.5" cy="113.5" r="10.5" fill="#F7D26B"/>
+    <path d="M107.5 124V137" stroke="#D6A92C" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <circle cx="56" cy="68" r="7" fill="#71D596" opacity="0.32"/>
+  <circle cx="162" cy="62" r="11" fill="#F4E1A2" opacity="0.88"/>
+</svg>

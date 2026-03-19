@@ -1,1 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#dcc66a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="home-base" x1="54" y1="108" x2="170" y2="164" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F6EA"/>
+      <stop offset="1" stop-color="#CFE6D5"/>
+    </linearGradient>
+    <linearGradient id="home-left" x1="76" y1="86" x2="111" y2="144" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2BC26B"/>
+      <stop offset="1" stop-color="#147A46"/>
+    </linearGradient>
+    <linearGradient id="home-right" x1="111" y1="86" x2="146" y2="152" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A9C57"/>
+      <stop offset="1" stop-color="#0C5B34"/>
+    </linearGradient>
+    <linearGradient id="home-roof" x1="63" y1="86" x2="157" y2="86" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD678"/>
+      <stop offset="1" stop-color="#D6A92C"/>
+    </linearGradient>
+    <filter id="home-shadow" x="42" y="52" width="138" height="132" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#0A3B24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="173" rx="58" ry="14" fill="#0D4A28" opacity="0.12"/>
+  <g filter="url(#home-shadow)">
+    <path d="M58 125L110 96L162 125L110 155L58 125Z" fill="url(#home-base)"/>
+    <path d="M58 125V138L110 168V155L58 125Z" fill="#C4DDCB"/>
+    <path d="M162 125V138L110 168V155L162 125Z" fill="#B5D0BF"/>
+    <path d="M76 88L111 68L146 88V135L111 155L76 135V88Z" fill="url(#home-left)"/>
+    <path d="M111 68L146 88V135L111 155V68Z" fill="url(#home-right)"/>
+    <path d="M63 88L111 60L157 88L109 116L63 88Z" fill="url(#home-roof)"/>
+    <path d="M101 115H121V149H101V115Z" fill="#F7F3E8"/>
+    <path d="M86 102H101V117H86V102Z" fill="#CFF6FF"/>
+    <path d="M121 100H136V115H121V100Z" fill="#CFF6FF"/>
+    <path d="M133 127L157 113L168 119L144 134L133 127Z" fill="#F7D26B"/>
+    <path d="M144 134V147" stroke="#D6A92C" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <circle cx="164" cy="62" r="12" fill="#F4E1A2" opacity="0.9"/>
+  <circle cx="53" cy="70" r="6" fill="#6CDA97" opacity="0.35"/>
+</svg>

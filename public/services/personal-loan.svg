@@ -1,1 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#dcc66a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="personal-base" x1="53" y1="120" x2="169" y2="163" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF6EC"/>
+      <stop offset="1" stop-color="#D5E8D9"/>
+    </linearGradient>
+    <linearGradient id="personal-wallet" x1="73" y1="91" x2="146" y2="154" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24B966"/>
+      <stop offset="1" stop-color="#116C3D"/>
+    </linearGradient>
+    <linearGradient id="personal-flap" x1="79" y1="84" x2="149" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD97D"/>
+      <stop offset="1" stop-color="#D6A92C"/>
+    </linearGradient>
+    <filter id="personal-shadow" x="40" y="62" width="146" height="124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#0A3B24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="173" rx="58" ry="14" fill="#0D4A28" opacity="0.11"/>
+  <g filter="url(#personal-shadow)">
+    <path d="M58 128L110 102L162 128L110 154L58 128Z" fill="url(#personal-base)"/>
+    <path d="M58 128V140L110 166V154L58 128Z" fill="#C7DFCC"/>
+    <path d="M162 128V140L110 166V154L162 128Z" fill="#B8D1BD"/>
+    <rect x="74" y="97" width="76" height="46" rx="12" fill="url(#personal-wallet)"/>
+    <path d="M82 89H144C149.523 89 154 93.477 154 99V112H92C86.477 112 82 107.523 82 102V89Z" fill="url(#personal-flap)"/>
+    <rect x="100" y="106" width="54" height="31" rx="10" fill="#0C5B34" opacity="0.92"/>
+    <circle cx="142" cy="121.5" r="6.5" fill="#F7D26B"/>
+    <path d="M72 104L98 84L133 84L107 104H72Z" fill="#F1F7F2" opacity="0.95"/>
+    <path d="M95 84V104" stroke="#C9D9CC" stroke-width="4"/>
+  </g>
+  <circle cx="160" cy="61" r="11" fill="#F2DE9E" opacity="0.86"/>
+  <circle cx="59" cy="73" r="7" fill="#71D596" opacity="0.3"/>
+</svg>

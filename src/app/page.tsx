@@ -8,6 +8,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { WorkedWith } from "@/components/WorkedWith";
 import { officeSnapshot, serviceItems, testimonialItems } from "@/lib/siteData";
+import { serviceIllustrations } from "@/lib/serviceVisuals";
 
 import styles from "./page.module.css";
 
@@ -35,57 +36,57 @@ const secondaryTickerItems = [
 
 const serviceCardMeta = {
   "Home Loan": {
-    imgSrc: "/services/home-loan.svg",
+    imgSrc: serviceIllustrations["Home Loan"],
     imgAlt: "Home Loan",
     variant: "ivory" as const,
   },
   "Loan Against Property": {
-    imgSrc: "/services/lap.svg",
+    imgSrc: serviceIllustrations["Loan Against Property"],
     imgAlt: "Loan Against Property",
     variant: "blue" as const,
   },
   "Personal Loan": {
-    imgSrc: "/services/personal-loan.svg",
+    imgSrc: serviceIllustrations["Personal Loan"],
     imgAlt: "Personal Loan",
     variant: "slate" as const,
   },
   "Business Loan": {
-    imgSrc: "/services/business-loan.svg",
+    imgSrc: serviceIllustrations["Business Loan"],
     imgAlt: "Business Loan",
     variant: "gold" as const,
   },
   "MSME Loans": {
-    imgSrc: "/services/business-loan.svg",
+    imgSrc: serviceIllustrations["MSME Loans"],
     imgAlt: "MSME Loans",
     variant: "gold" as const,
   },
   "Doctor Loan": {
-    imgSrc: "/services/personal-loan.svg",
+    imgSrc: serviceIllustrations["Doctor Loan"],
     imgAlt: "Doctor Loan",
     variant: "ivory" as const,
   },
   "Project Loan": {
-    imgSrc: "/services/business-loan.svg",
+    imgSrc: serviceIllustrations["Project Loan"],
     imgAlt: "Project Loan",
     variant: "blue" as const,
   },
   "Education Loan": {
-    imgSrc: "/services/education.svg",
+    imgSrc: serviceIllustrations["Education Loan"],
     imgAlt: "Education Loan",
     variant: "blue" as const,
   },
   "Car Loan": {
-    imgSrc: "/services/car.svg",
+    imgSrc: serviceIllustrations["Car Loan"],
     imgAlt: "Car Loan",
     variant: "slate" as const,
   },
   "Gold Loan": {
-    imgSrc: "/services/gold.svg",
+    imgSrc: serviceIllustrations["Gold Loan"],
     imgAlt: "Gold Loan",
     variant: "gold" as const,
   },
   "Credit Cards": {
-    imgSrc: "/services/credit-cards.svg",
+    imgSrc: serviceIllustrations["Credit Cards"],
     imgAlt: "Credit Cards",
     variant: "ivory" as const,
   },
@@ -132,7 +133,6 @@ export default function Home() {
                 <ServiceCard
                   title={service.title}
                   description={service.description}
-                  points={service.points}
                   href={service.href ?? "/services"}
                   imgSrc={
                     serviceCardMeta[service.title as keyof typeof serviceCardMeta]?.imgSrc ??

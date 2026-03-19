@@ -1,1 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#dcc66a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4-8 4-8-4Z"/><path d="m18 8.4-1.8 1.1"/><path d="M6 10.4V16a6 6 0 0 0 12 0v-5.6"/><path d="M21 6.5v8.3c0 .8-.5 1.5-1.2 1.8l-1.3.6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="edu-base" x1="54" y1="120" x2="168" y2="162" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F6EB"/>
+      <stop offset="1" stop-color="#D5E8D9"/>
+    </linearGradient>
+    <linearGradient id="edu-book" x1="75" y1="91" x2="144" y2="149" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22B562"/>
+      <stop offset="1" stop-color="#116E3F"/>
+    </linearGradient>
+    <linearGradient id="edu-cap" x1="85" y1="78" x2="151" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD97D"/>
+      <stop offset="1" stop-color="#D6A92C"/>
+    </linearGradient>
+    <filter id="edu-shadow" x="40" y="58" width="145" height="128" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="10" flood-color="#0A3B24" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <ellipse cx="110" cy="173" rx="58" ry="14" fill="#0D4A28" opacity="0.11"/>
+  <g filter="url(#edu-shadow)">
+    <path d="M58 128L110 102L162 128L110 154L58 128Z" fill="url(#edu-base)"/>
+    <path d="M58 128V140L110 166V154L58 128Z" fill="#C7DFCC"/>
+    <path d="M162 128V140L110 166V154L162 128Z" fill="#B8D1BD"/>
+    <path d="M78 96C78 90.477 82.477 86 88 86H136V138C136 143.523 131.523 148 126 148H88C82.477 148 78 143.523 78 138V96Z" fill="url(#edu-book)"/>
+    <path d="M136 86H114C119.523 86 124 90.477 124 96V148H146V96C146 90.477 141.523 86 136 86Z" fill="#0B5D34"/>
+    <path d="M80 93L118 76L156 93L118 109L80 93Z" fill="url(#edu-cap)"/>
+    <path d="M146 98V124" stroke="#D6A92C" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="146" cy="127" r="5" fill="#F7D26B"/>
+    <path d="M91 103H110" stroke="#EAF8EF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M91 114H118" stroke="#EAF8EF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M91 125H106" stroke="#EAF8EF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <circle cx="160" cy="61" r="11" fill="#F2DE9E" opacity="0.86"/>
+  <circle cx="57" cy="70" r="6.5" fill="#71D596" opacity="0.32"/>
+</svg>
