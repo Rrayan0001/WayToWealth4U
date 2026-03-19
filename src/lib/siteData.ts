@@ -268,8 +268,8 @@ export const testimonialItems: TestimonialItem[] = [
 export const officeSnapshot = {
   address: "Gayatri Nagar Behind Kavi Kuvempu Metro station, Rajaji Nagar Bangalore",
   mapUrl: "https://maps.google.com/maps?q=12.9988695,77.5568147",
-  phone: "+91 95138 73555",
-  whatsapp: "+91 95138 73555",
+  phone: "+91 63613 35025",
+  whatsapp: "+91 63613 35025",
   email: "wealthrisecapitals@gmail.com",
   secondaryEmail: "info@wealthrisecapitals.com",
   hours: [
