@@ -1,7 +1,5 @@
 "use client";
 
-import React, { type SVGProps } from "react";
-
 import { LogoCarousel } from "@/components/ui/logo-carousel";
 
 import styles from "./WorkedWith.module.css";

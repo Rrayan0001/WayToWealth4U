@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import styles from "./IntroAnimation.module.css";
@@ -10,9 +10,7 @@ type Phase = "loading" | "init" | "reveal" | "transition" | "complete" | "hidden
 export function IntroAnimation() {
     const [phase, setPhase] = useState<Phase>("init");
 
-    const startAnimation = useCallback(() => {
-        setPhase("init");
-
+    const startAnimation = () => {
         // Prevent scrolling during animation
         document.documentElement.style.overflow = "hidden";
         document.body.style.overflow = "hidden";
@@ -37,12 +35,12 @@ export function IntroAnimation() {
             document.documentElement.style.overflow = "";
             document.body.style.overflow = "";
         };
-    }, []);
+    };
 
     useEffect(() => {
         const cleanup = startAnimation();
         return cleanup;
-    }, [startAnimation]);
+    }, []);
 
     // Don't render anything if hidden
     if (phase === "hidden") return null;

@@ -2,92 +2,49 @@ import type { MetadataRoute } from "next";
 
 const baseUrl = "https://way2wealth4u.com";
 
+const pages = [
+  { path: "/", frequency: "weekly" as const, priority: 1 },
+  { path: "/about", frequency: "monthly" as const, priority: 0.8 },
+  { path: "/services", frequency: "weekly" as const, priority: 0.9 },
+  { path: "/projects", frequency: "weekly" as const, priority: 0.8 },
+  { path: "/contact", frequency: "monthly" as const, priority: 0.9 },
+];
+
+const servicePages = [
+  "/services/home-loan",
+  "/services/home-loan/plot-purchase-loan",
+  "/services/home-loan/home-construction-loan",
+  "/services/loan-against-property",
+  "/services/loan-against-property/lap",
+  "/services/loan-against-property/mortgage-loan",
+  "/services/business-loan",
+  "/services/business-loan/secured-business-loan",
+  "/services/business-loan/unsecured-business-loan",
+  "/services/business-loan/project-loan",
+  "/services/business-loan/machinery-loan",
+  "/services/msme-loans",
+  "/services/project-loan",
+  "/services/personal-loan",
+  "/services/doctor-loan",
+  "/services/education-loan",
+  "/services/car-loan",
+  "/services/car-loan/new-car-purchase-loan",
+  "/services/car-loan/refinance-car-loan",
+  "/services/gold-loan",
+  "/services/credit-cards",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: `${baseUrl}/`,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/home-loan/plot-purchase-loan`,
-      changeFrequency: "monthly",
+    ...pages.map(({ path, frequency, priority }) => ({
+      url: `${baseUrl}${path}`,
+      changeFrequency: frequency,
+      priority,
+    })),
+    ...servicePages.map((path) => ({
+      url: `${baseUrl}${path}`,
+      changeFrequency: "monthly" as const,
       priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/home-loan/home-construction-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/loan-against-property/lap`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/loan-against-property/mortgage-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/business-loan/secured-business-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/business-loan/unsecured-business-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/business-loan/project-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/business-loan/machinery-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/msme-loans`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/car-loan/new-car-purchase-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services/car-loan/refinance-car-loan`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/projects`,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/my-office`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+    })),
   ];
 }
