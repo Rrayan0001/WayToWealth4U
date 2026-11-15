@@ -325,6 +325,7 @@
 .featureCard .highlight {
   background: linear-gradient(142deg, rgba(255, 251, 236, 0.98), rgba(250, 234, 160, 0.92));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 34px rgba(214, 169, 44, 0.16);
+  color: var(--navy-950);
   margin-top: 0.25rem;
   position: relative;
   z-index: 1;
