@@ -104,10 +104,10 @@ export function IntroAnimation() {
                         }}
                     >
                         <Image
-                            src="/logo-icon.svg"
+                            src="/logo.png"
                             alt=""
-                            width={512}
-                            height={512}
+                            width={1312}
+                            height={1199}
                             className={styles.logoIcon}
                             priority
                             unoptimized

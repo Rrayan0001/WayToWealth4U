@@ -16,11 +16,11 @@ export function BrandMark({ className = "", compact = false, iconOnly = false }:
     >
       <span className={styles.symbol} aria-hidden="true">
         <Image
-          src="/logo-icon.svg"
+          src="/logo.png"
           alt=""
           className={styles.symbolImage}
-          width={512}
-          height={512}
+          width={1312}
+          height={1199}
         />
       </span>
 

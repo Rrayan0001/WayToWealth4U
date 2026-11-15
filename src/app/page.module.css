@@ -81,7 +81,7 @@
 }
 
 .showcaseLeft h1 {
-  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-700) 52%, var(--gold-700) 100%);
+  background: linear-gradient(135deg, var(--silver-100) 0%, var(--silver-200) 52%, var(--gold-300) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

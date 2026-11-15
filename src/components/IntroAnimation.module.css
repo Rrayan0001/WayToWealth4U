@@ -75,6 +75,26 @@
     letter-spacing: 0.28em;
 }
 
+@media (max-width: 720px) {
+    .logoInner {
+        gap: 0.5rem;
+    }
+
+    .logoIcon {
+        width: clamp(56px, 14vw, 84px);
+    }
+
+    .logoWordWealth {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        letter-spacing: 0.06em;
+    }
+
+    .logoWordRise {
+        font-size: clamp(0.7rem, 2.2vw, 1rem);
+        letter-spacing: 0.18em;
+    }
+}
+
 /* ===== SUBTITLE ===== */
 .subtitleWrapper {
     left: 0;

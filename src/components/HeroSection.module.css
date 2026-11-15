@@ -478,6 +478,11 @@
 }
 
 @media (max-width: 720px) {
+    .headingLine1,
+    .headingLine2 {
+        white-space: normal;
+    }
+
     .heroInner {
         align-content: end;
         gap: 1.35rem;
