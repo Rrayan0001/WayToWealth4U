@@ -1,39 +1,41 @@
 :root {
-  --font-heading: "Avenir Next", "Trebuchet MS", sans-serif;
-  --font-body: "Avenir", "Segoe UI", Tahoma, sans-serif;
-  --surface-plain: #f7fbf4;
-  --surface-alt: #eef6ec;
-  --surface-card: rgba(255, 255, 255, 0.78);
-  --surface-card-strong: rgba(255, 255, 255, 0.94);
+  --font-heading: var(--font-cinzel), Georgia, serif;
+  --font-body: var(--font-manrope), "Segoe UI", Tahoma, sans-serif;
 
-  --emerald-950: #062617;
-  --emerald-900: #0a3b24;
-  --emerald-800: #0f5c36;
-  --emerald-700: #147a46;
-  --emerald-600: #1f9959;
-  --emerald-500: #33b86f;
-  --emerald-300: #9fddb2;
-  --emerald-200: #d2eed8;
+  --surface-plain: #0a1226;
+  --surface-alt: #0d1b36;
+  --surface-card: rgba(255, 255, 255, 0.05);
+  --surface-card-strong: rgba(16, 30, 61, 0.88);
 
-  --gold-900: #6b4b05;
-  --gold-800: #90680a;
-  --gold-700: #b88713;
-  --gold-600: #d6a92c;
-  --gold-500: #eece68;
-  --gold-300: #f8e8ae;
+  --navy-950: #060f24;
+  --navy-900: #0a1a3c;
+  --navy-800: #0d1f45;
+  --navy-700: #142a5c;
+  --navy-600: #1d3a78;
+  --navy-500: #2c4e96;
+  --navy-300: #7e96c4;
+  --navy-200: #b9c8e2;
 
-  --silver-300: #bfd3c1;
-  --silver-200: #dbe7d8;
-  --silver-100: #f6fbf5;
+  --gold-900: #5c4306;
+  --gold-800: #7a5806;
+  --gold-700: #a67a0b;
+  --gold-600: #d69e0a;
+  --gold-500: #f7b500;
+  --gold-300: #ffd34d;
 
-  --wood-500: #627060;
-  --wood-300: #d5e1d2;
+  --silver-300: #c9d3e0;
+  --silver-200: #e9eef5;
+  --silver-100: #f7f9fc;
 
-  --text-body: #0d2418;
-  --text-muted: #486252;
+  --wood-500: #5a6b85;
+  --wood-300: #31405f;
 
-  --shadow-soft: 0 18px 42px rgba(6, 39, 24, 0.1);
-  --shadow-large: 0 28px 62px rgba(6, 39, 24, 0.16);
+  --ink: #f7f9fc;
+  --text-body: #e9eef5;
+  --text-muted: #9fb0cc;
+
+  --shadow-soft: 0 18px 42px rgba(3, 8, 20, 0.45);
+  --shadow-large: 0 28px 62px rgba(3, 8, 20, 0.55);
 }
 
 * {
@@ -55,10 +57,10 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 8% 10%, rgba(31, 153, 89, 0.18), transparent 28%),
-    radial-gradient(circle at 88% 14%, rgba(214, 169, 44, 0.2), transparent 30%),
-    radial-gradient(circle at 50% 100%, rgba(20, 122, 70, 0.08), transparent 42%),
-    linear-gradient(180deg, #fbfdf9 0%, var(--surface-plain) 24%, var(--surface-alt) 100%);
+    radial-gradient(circle at 8% 10%, rgba(44, 78, 150, 0.22), transparent 28%),
+    radial-gradient(circle at 88% 14%, rgba(247, 181, 0, 0.1), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgba(20, 42, 92, 0.2), transparent 42%),
+    linear-gradient(180deg, #0d1f45 0%, var(--surface-plain) 24%, #060f24 100%);
   color: var(--text-body);
   font-family: var(--font-body), "Segoe UI", Tahoma, sans-serif;
   min-height: 100vh;
@@ -78,14 +80,14 @@ body::after {
 
 body::before {
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.44), transparent 35%),
-    linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.28) 100%);
+    linear-gradient(115deg, rgba(255, 255, 255, 0.04), transparent 35%),
+    linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.03) 100%);
 }
 
 body::after {
   background-image:
-    linear-gradient(rgba(13, 36, 24, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13, 36, 24, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(201, 211, 224, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 211, 224, 0.035) 1px, transparent 1px);
   background-position: center;
   background-size: 32px 32px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 72%);
@@ -113,10 +115,11 @@ main {
 }
 
 .skipLink {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 66%, #ffffff 34%);
+  background: rgba(13, 31, 69, 0.96);
+  border: 1px solid color-mix(in srgb, var(--gold-500) 55%, transparent);
   border-radius: 0.8rem;
   box-shadow: var(--shadow-soft);
+  color: var(--silver-100);
   left: 1rem;
   padding: 0.55rem 0.75rem;
   position: fixed;
@@ -138,14 +141,14 @@ main {
 
 .sectionHeader h2,
 .sectionTitle {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.5rem, 4vw, 2.4rem);
   line-height: 1.18;
 }
 
 .eyebrow {
-  color: var(--emerald-700);
+  color: var(--gold-500);
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -153,7 +156,7 @@ main {
 }
 
 .sectionLead {
-  color: color-mix(in srgb, var(--text-body) 90%, #ffffff 10%);
+  color: var(--text-muted);
   line-height: 1.72;
   margin-top: 0.6rem;
   max-width: 62ch;
@@ -187,43 +190,43 @@ main {
 }
 
 .buttonPrimary {
-  background: linear-gradient(135deg, var(--emerald-900), var(--emerald-700));
-  border-color: color-mix(in srgb, var(--gold-600) 36%, var(--emerald-900) 64%);
-  box-shadow: 0 18px 30px rgba(10, 59, 36, 0.22);
-  color: #f8fff9;
+  background: linear-gradient(135deg, #ffc20e, var(--gold-600));
+  border-color: color-mix(in srgb, var(--gold-300) 45%, var(--gold-600) 55%);
+  box-shadow: 0 18px 30px rgba(214, 158, 10, 0.24);
+  color: var(--navy-950);
 }
 
 .buttonPrimary:hover,
 .buttonPrimary:focus-visible {
-  box-shadow: 0 22px 38px rgba(10, 59, 36, 0.28);
+  box-shadow: 0 22px 38px rgba(214, 158, 10, 0.32);
 }
 
 .buttonOutline {
   background: transparent;
-  border-color: var(--emerald-600);
-  color: var(--emerald-900);
-  box-shadow: 0 4px 12px rgba(10, 59, 36, 0.05);
+  border-color: var(--gold-500);
+  color: var(--gold-300);
+  box-shadow: 0 4px 12px rgba(3, 8, 20, 0.3);
 }
 
 .buttonOutline:hover,
 .buttonOutline:focus-visible {
-  background: var(--emerald-900);
-  border-color: var(--emerald-900);
-  color: #ffffff;
-  box-shadow: 0 12px 24px rgba(10, 59, 36, 0.15);
+  background: var(--gold-500);
+  border-color: var(--gold-500);
+  color: var(--navy-950);
+  box-shadow: 0 12px 24px rgba(214, 158, 10, 0.24);
 }
 
 .buttonGhost {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.74);
-  border-color: color-mix(in srgb, var(--emerald-200) 68%, #ffffff 32%);
-  color: var(--emerald-900);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: color-mix(in srgb, var(--navy-300) 45%, transparent);
+  color: var(--silver-100);
 }
 
 .panelCard {
-  background: linear-gradient(152deg, rgba(255, 255, 255, 0.96), rgba(240, 248, 241, 0.9));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 66%, #ffffff 34%);
+  background: linear-gradient(152deg, rgba(255, 255, 255, 0.07), rgba(13, 31, 69, 0.55));
+  border: 1px solid color-mix(in srgb, var(--navy-300) 38%, transparent);
   border-radius: 1.15rem;
   box-shadow: var(--shadow-soft);
   min-height: 100%;
@@ -231,7 +234,7 @@ main {
 }
 
 .panelCard h3 {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-family: var(--font-heading), Georgia, serif;
   font-size: 1.2rem;
   margin-bottom: 0.35rem;
@@ -257,8 +260,8 @@ main {
 
 .formGrid input,
 .formGrid textarea {
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid color-mix(in srgb, var(--navy-300) 42%, transparent);
   border-radius: 0.82rem;
   color: var(--text-body);
   font: inherit;
@@ -266,11 +269,16 @@ main {
   transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
 }
 
+.formGrid input::placeholder,
+.formGrid textarea::placeholder {
+  color: var(--text-muted);
+}
+
 .formGrid input:focus-visible,
 .formGrid textarea:focus-visible {
-  background: rgba(255, 255, 255, 0.94);
-  border-color: var(--emerald-600);
-  box-shadow: 0 0 0 3px rgba(214, 169, 44, 0.18);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(247, 181, 0, 0.22);
   outline: none;
 }
 

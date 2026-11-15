@@ -1,5 +1,5 @@
 .hero {
-    background: #050e08;
+    background: #060f24;
     min-height: 100svh;
     overflow: hidden;
     position: relative;
@@ -21,8 +21,8 @@
 
 .bgOverlay {
     background:
-        linear-gradient(90deg, rgba(5, 14, 8, 0.92) 0%, rgba(5, 14, 8, 0.55) 50%, transparent 100%),
-        linear-gradient(180deg, transparent 60%, rgba(5, 14, 8, 0.85) 100%);
+        linear-gradient(90deg, rgba(5, 14, 32, 0.92) 0%, rgba(5, 14, 32, 0.55) 50%, transparent 100%),
+        linear-gradient(180deg, transparent 60%, rgba(5, 14, 32, 0.85) 100%);
     inset: 0;
     position: absolute;
 }
@@ -50,7 +50,7 @@
 
 .glowOrb1 {
     animation: float1 8s ease-in-out infinite;
-    background: radial-gradient(circle, rgba(20, 122, 70, 0.3), transparent 70%);
+    background: radial-gradient(circle, rgba(29, 58, 120, 0.3), transparent 70%);
     height: 300px;
     left: 5%;
     top: 15%;
@@ -68,7 +68,7 @@
 
 .glowOrb3 {
     animation: float3 12s ease-in-out infinite;
-    background: radial-gradient(circle, rgba(56, 199, 115, 0.2), transparent 70%);
+    background: radial-gradient(circle, rgba(247, 181, 0, 0.2), transparent 70%);
     bottom: 10%;
     height: 200px;
     left: 30%;
@@ -136,7 +136,7 @@
 /* ── Eyebrow ──────────────────────────────── */
 .heroEyebrow {
     align-items: center;
-    color: rgba(195, 244, 210, 0.9);
+    color: rgba(201, 211, 224, 0.9);
     display: inline-flex;
     font-size: 0.76rem;
     font-weight: 700;
@@ -146,7 +146,7 @@
 }
 
 .heroEyebrow::before {
-    background: linear-gradient(90deg, rgba(56, 199, 115, 0.95), rgba(214, 169, 44, 0.9));
+    background: linear-gradient(90deg, rgba(247, 181, 0, 0.95), rgba(214, 169, 44, 0.9));
     border-radius: 999px;
     content: "";
     display: inline-block;
@@ -169,7 +169,7 @@
 }
 
 .headingLine1 {
-    background: linear-gradient(180deg, #ffffff 0%, #b3ead0 60%, #46d683 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #e9eef5 60%, #f7b500 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -214,7 +214,7 @@
 
 .expertiseItem {
     align-items: center;
-    color: rgba(241, 248, 244, 0.88);
+    color: rgba(233, 238, 245, 0.88);
     display: inline-flex;
     font-size: 0.94rem;
     font-weight: 600;
@@ -223,7 +223,7 @@
 }
 
 .expertiseItem::before {
-    background: linear-gradient(180deg, #45d67e, #efcd65);
+    background: linear-gradient(180deg, #f7b500, #ffd34d);
     border-radius: 999px;
     box-shadow: 0 0 14px rgba(69, 214, 126, 0.28);
     content: "";
@@ -254,10 +254,10 @@
 }
 
 .ctaPrimary {
-    background: rgba(5, 14, 8, 0.6);
-    border: 1px solid rgba(56, 199, 115, 0.8);
+    background: rgba(5, 14, 32, 0.6);
+    border: 1px solid rgba(247, 181, 0, 0.8);
     border-radius: 999px;
-    box-shadow: inset 0 0 12px rgba(56, 199, 115, 0.4), 0 0 12px rgba(56, 199, 115, 0.2);
+    box-shadow: inset 0 0 12px rgba(247, 181, 0, 0.4), 0 0 12px rgba(247, 181, 0, 0.2);
     color: #ffffff;
     font-size: 0.95rem;
     font-weight: 700;
@@ -267,7 +267,7 @@
 }
 
 .ctaPrimary:hover {
-    box-shadow: inset 0 0 18px rgba(56, 199, 115, 0.6), 0 0 18px rgba(56, 199, 115, 0.4);
+    box-shadow: inset 0 0 18px rgba(247, 181, 0, 0.6), 0 0 18px rgba(247, 181, 0, 0.4);
     transform: translateY(-2px);
 }
 
@@ -336,7 +336,7 @@
 }
 
 .ratingValue {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.06);
     font-size: 0.85rem;
     font-weight: 700;
 }
@@ -356,7 +356,7 @@
     background: linear-gradient(90deg,
             rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, 0.12) 18%,
-            rgba(56, 199, 115, 0.18) 52%,
+            rgba(247, 181, 0, 0.18) 52%,
             rgba(255, 255, 255, 0) 100%);
     bottom: 0;
     content: "";
@@ -388,14 +388,14 @@
     left: 0;
     width: 78%;
     height: 2px;
-    background: linear-gradient(90deg, rgba(56, 199, 115, 0.92), rgba(56, 199, 115, 0));
-    box-shadow: 0 0 16px rgba(56, 199, 115, 0.6);
+    background: linear-gradient(90deg, rgba(247, 181, 0, 0.92), rgba(247, 181, 0, 0));
+    box-shadow: 0 0 16px rgba(247, 181, 0, 0.6);
 }
 
 .statCard::after {
-    background: rgba(56, 199, 115, 0.95);
+    background: rgba(247, 181, 0, 0.95);
     border-radius: 999px;
-    box-shadow: 0 0 16px rgba(56, 199, 115, 0.8);
+    box-shadow: 0 0 16px rgba(247, 181, 0, 0.8);
     content: "";
     height: 0.48rem;
     left: 0;
@@ -445,7 +445,7 @@
 }
 
 .statArrow {
-    color: #38c773;
+    color: #f7b500;
     height: 18px;
     margin-top: 0.1rem;
     width: 18px;

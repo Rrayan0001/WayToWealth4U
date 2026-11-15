@@ -16,25 +16,18 @@ export function BrandMark({ className = "", compact = false, iconOnly = false }:
     >
       <span className={styles.symbol} aria-hidden="true">
         <Image
-          src="/logo-icon-transparent.png"
+          src="/logo-icon.svg"
           alt=""
           className={styles.symbolImage}
-          width={617}
-          height={404}
-          unoptimized
+          width={512}
+          height={512}
         />
       </span>
 
       {!iconOnly ? (
         <span className={styles.wordmark}>
-          <Image
-            src="/logo-text-transparent.png"
-            alt="WealthRise Capitals"
-            className={styles.wordmarkImage}
-            width={1433}
-            height={174}
-            unoptimized
-          />
+          <span className={styles.wordWealth}>WEALTH</span>
+          <span className={styles.wordRise}>RISE CAPITALS</span>
         </span>
       ) : null}
     </span>

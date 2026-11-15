@@ -7,10 +7,10 @@
 
 .hero {
   background:
-    radial-gradient(circle at 14% 18%, rgba(31, 153, 89, 0.22), transparent 28%),
+    radial-gradient(circle at 14% 18%, rgba(44, 78, 150, 0.22), transparent 28%),
     radial-gradient(circle at 82% 18%, rgba(214, 169, 44, 0.24), transparent 30%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(239, 247, 238, 0.92));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+    linear-gradient(135deg, rgba(16, 30, 61, 0.95), rgba(16, 30, 61, 0.92));
+  border: 1px solid color-mix(in srgb, var(--navy-200) 70%, #ffffff 30%);
   border-radius: 1.7rem;
   box-shadow: var(--shadow-large);
   overflow: hidden;
@@ -27,16 +27,16 @@
 
 .hero::before {
   background:
-    linear-gradient(rgba(10, 59, 36, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(10, 59, 36, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(6, 15, 36, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 15, 36, 0.04) 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.36), transparent 82%);
 }
 
 .hero::after {
   background:
-    radial-gradient(circle at 76% 34%, rgba(255, 255, 255, 0.68), transparent 28%),
-    radial-gradient(circle at 88% 74%, rgba(20, 122, 70, 0.1), transparent 18%);
+    radial-gradient(circle at 76% 34%, rgba(255, 255, 255, 0.06), transparent 28%),
+    radial-gradient(circle at 88% 74%, rgba(29, 58, 120, 0.1), transparent 18%);
 }
 
 .heroGrid {
@@ -56,7 +56,7 @@
 .heroEyebrow,
 .panelEyebrow {
   align-items: center;
-  color: var(--emerald-700);
+  color: var(--gold-500);
   display: inline-flex;
   font-size: 0.8rem;
   font-weight: 800;
@@ -67,7 +67,7 @@
 
 .heroEyebrow::before,
 .panelEyebrow::before {
-  background: linear-gradient(90deg, var(--emerald-600), var(--gold-600));
+  background: linear-gradient(90deg, var(--navy-600), var(--gold-600));
   border-radius: 999px;
   content: "";
   display: inline-block;
@@ -76,7 +76,7 @@
 }
 
 .hero h1 {
-  background: linear-gradient(135deg, var(--emerald-950) 0%, var(--emerald-700) 54%, var(--gold-700) 100%);
+  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-700) 54%, var(--gold-700) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -101,10 +101,10 @@
 .card,
 .ctaBox {
   background:
-    radial-gradient(circle at 16% 22%, rgba(20, 122, 70, 0.08), transparent 28%),
+    radial-gradient(circle at 16% 22%, rgba(29, 58, 120, 0.08), transparent 28%),
     radial-gradient(circle at 88% 18%, rgba(214, 169, 44, 0.12), transparent 26%),
-    linear-gradient(152deg, rgba(255, 255, 255, 0.96), rgba(240, 248, 241, 0.9));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 68%, #ffffff 32%);
+    linear-gradient(152deg, rgba(16, 30, 61, 0.95), rgba(16, 30, 61, 0.9));
+  border: 1px solid color-mix(in srgb, var(--navy-200) 68%, #ffffff 32%);
   border-radius: 1.25rem;
   box-shadow: var(--shadow-soft);
   overflow: hidden;
@@ -114,7 +114,7 @@
 .heroPanel::before,
 .card::before,
 .ctaBox::before {
-  background: linear-gradient(90deg, rgba(20, 122, 70, 0), rgba(20, 122, 70, 0.16), rgba(214, 169, 44, 0.16), rgba(214, 169, 44, 0));
+  background: linear-gradient(90deg, rgba(29, 58, 120, 0), rgba(29, 58, 120, 0.16), rgba(214, 169, 44, 0.16), rgba(214, 169, 44, 0));
   content: "";
   height: 1px;
   left: 1rem;
@@ -131,7 +131,7 @@
 }
 
 .panelEyebrow {
-  color: var(--gold-800);
+  color: var(--gold-500);
   font-size: 0.74rem;
 }
 
@@ -150,9 +150,9 @@
 }
 
 .hoursList li::before {
-  background: linear-gradient(180deg, var(--emerald-600), var(--gold-600));
+  background: linear-gradient(180deg, var(--navy-600), var(--gold-600));
   border-radius: 999px;
-  box-shadow: 0 0 12px rgba(20, 122, 70, 0.18);
+  box-shadow: 0 0 12px rgba(29, 58, 120, 0.18);
   content: "";
   flex: 0 0 auto;
   height: 0.48rem;
@@ -180,7 +180,7 @@
 
 .card h2,
 .ctaBox h2 {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.4rem, 2.8vw, 1.9rem);
   letter-spacing: -0.03em;
@@ -192,8 +192,8 @@
 }
 
 .contactItem {
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  background: rgba(16, 30, 61, 0.82);
+  border: 1px solid color-mix(in srgb, var(--navy-200) 70%, #ffffff 30%);
   border-radius: 1rem;
   display: grid;
   gap: 0.25rem;
@@ -201,7 +201,7 @@
 }
 
 .contactLabel {
-  color: var(--gold-800);
+  color: var(--gold-500);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.12em;

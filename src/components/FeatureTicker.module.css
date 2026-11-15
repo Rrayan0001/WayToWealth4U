@@ -4,8 +4,8 @@
 }
 
 .viewport {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.88) 0%, rgba(239, 247, 238, 0.96) 52%, rgba(255, 251, 239, 0.88) 100%);
-  border-block: 1px solid color-mix(in srgb, var(--emerald-200) 66%, #ffffff 34%);
+  background: linear-gradient(90deg, rgba(16, 30, 61, 0.85) 0%, rgba(16, 30, 61, 0.96) 52%, rgba(16, 30, 61, 0.88) 100%);
+  border-block: 1px solid color-mix(in srgb, var(--navy-200) 66%, #ffffff 34%);
   overflow: hidden;
   position: relative;
 }
@@ -21,12 +21,12 @@
 }
 
 .viewport::before {
-  background: linear-gradient(90deg, rgba(247, 251, 244, 0.98) 0%, rgba(247, 251, 244, 0));
+  background: linear-gradient(90deg, rgba(10, 18, 38, 0.98) 0%, rgba(10, 18, 38, 0));
   left: 0;
 }
 
 .viewport::after {
-  background: linear-gradient(270deg, rgba(255, 250, 237, 0.98) 0%, rgba(255, 250, 237, 0));
+  background: linear-gradient(270deg, rgba(10, 18, 38, 0.98) 0%, rgba(10, 18, 38, 0));
   right: 0;
 }
 
@@ -53,7 +53,7 @@
 
 .item {
   align-items: center;
-  color: var(--emerald-950);
+  color: var(--ink);
   display: inline-flex;
   font-size: clamp(0.95rem, 1.24vw, 1.08rem);
   font-weight: 800;

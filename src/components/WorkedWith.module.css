@@ -1,8 +1,8 @@
 .section {
   background:
-    linear-gradient(180deg, rgba(4, 10, 7, 0.95) 0%, rgba(4, 10, 7, 0.4) 40%, rgba(4, 10, 7, 0.8) 100%),
+    linear-gradient(180deg, rgba(4, 10, 24, 0.95) 0%, rgba(4, 10, 24, 0.4) 40%, rgba(4, 10, 24, 0.8) 100%),
     url("/services-bg.jpg") center/cover no-repeat;
-  border-block: 1px solid rgba(56, 199, 115, 0.1);
+  border-block: 1px solid rgba(247, 181, 0, 0.1);
   overflow: hidden;
   position: relative;
 }

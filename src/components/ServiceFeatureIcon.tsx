@@ -30,10 +30,10 @@ type ServiceFeatureIconProps = {
   title?: string;
 };
 
-const frameFill = "rgba(31, 153, 89, 0.07)";
-const deepGreen = "#0A3B24";
-const emerald = "#147A46";
-const gold = "#D6A92C";
+const frameFill = "rgba(126, 150, 196, 0.09)";
+const deepGreen = "#C9D3E0";
+const emerald = "#7E96C4";
+const gold = "#F7B500";
 const paleGold = "rgba(214, 169, 44, 0.18)";
 
 const strokeProps = {
@@ -63,7 +63,7 @@ function IconFrame({ children, title }: { children: ReactNode; title?: string })
       style={{
         color: deepGreen,
         display: "block",
-        filter: "drop-shadow(0 12px 18px rgba(10, 59, 36, 0.12))",
+        filter: "drop-shadow(0 12px 18px rgba(6, 15, 36, 0.35))",
         height: "100%",
         width: "100%",
       }}

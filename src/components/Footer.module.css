@@ -1,12 +1,12 @@
 .footer {
-  background: linear-gradient(180deg, rgba(4, 10, 7, 0.8), rgba(2, 6, 4, 1));
-  border-top: 1px solid rgba(56, 199, 115, 0.1);
+  background: linear-gradient(180deg, rgba(4, 10, 24, 0.8), rgba(3, 8, 20, 1));
+  border-top: 1px solid rgba(247, 181, 0, 0.1);
   margin-top: 4rem;
   position: relative;
 }
 
 .footer::before {
-  background: linear-gradient(90deg, rgba(20, 122, 70, 0), rgba(56, 199, 115, 0.2), rgba(214, 169, 44, 0.2), rgba(214, 169, 44, 0));
+  background: linear-gradient(90deg, rgba(29, 58, 120, 0), rgba(247, 181, 0, 0.2), rgba(214, 169, 44, 0.2), rgba(214, 169, 44, 0));
   content: "";
   height: 1px;
   left: 0;
@@ -52,7 +52,7 @@
 }
 
 .brandTextBlock {
-  color: rgba(220, 230, 225, 0.75);
+  color: rgba(201, 211, 224, 0.75);
   line-height: 1.72;
   margin-top: 1.25rem;
   max-width: 34ch;
@@ -80,7 +80,7 @@
 
 .column a,
 .column p {
-  color: rgba(220, 230, 225, 0.8);
+  color: rgba(201, 211, 224, 0.8);
   line-height: 1.62;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .addressText {
-  color: rgba(240, 246, 242, 0.94);
+  color: rgba(233, 238, 245, 0.94);
   font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.6;
@@ -132,7 +132,7 @@
 
 .mapContainer {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(56, 199, 115, 0.2);
+  border: 1px solid rgba(247, 181, 0, 0.2);
   border-radius: 0.75rem;
   height: 150px;
   margin-bottom: 0.2rem;
@@ -164,7 +164,7 @@
 }
 
 .iconLink svg {
-  color: rgba(56, 199, 115, 0.85);
+  color: rgba(247, 181, 0, 0.85);
   transition: transform 250ms ease, color 250ms ease;
 }
 
@@ -179,7 +179,7 @@
 
 .bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  color: rgba(220, 230, 225, 0.5);
+  color: rgba(201, 211, 224, 0.5);
   font-size: 0.9rem;
   padding: 1.5rem 0;
   text-align: center;

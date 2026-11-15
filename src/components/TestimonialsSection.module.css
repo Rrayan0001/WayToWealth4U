@@ -1,9 +1,9 @@
 .section {
   background:
-    radial-gradient(circle at 14% 18%, rgba(20, 122, 70, 0.12), transparent 24%),
+    radial-gradient(circle at 14% 18%, rgba(29, 58, 120, 0.12), transparent 24%),
     radial-gradient(circle at 86% 82%, rgba(214, 169, 44, 0.14), transparent 28%),
-    linear-gradient(156deg, rgba(255, 255, 255, 0.97), rgba(239, 247, 238, 0.94));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
+    linear-gradient(156deg, rgba(16, 30, 61, 0.95), rgba(16, 30, 61, 0.94));
+  border: 1px solid color-mix(in srgb, var(--navy-200) 72%, #ffffff 28%);
   border-radius: 1.2rem;
   overflow: hidden;
   padding: clamp(1rem, 2.4vw, 1.5rem);
@@ -12,7 +12,7 @@
 
 .section::before,
 .section::after {
-  background: linear-gradient(145deg, rgba(20, 122, 70, 0.1), rgba(214, 169, 44, 0.14));
+  background: linear-gradient(145deg, rgba(29, 58, 120, 0.1), rgba(214, 169, 44, 0.14));
   clip-path: polygon(25% 6%, 75% 6%, 96% 50%, 75% 94%, 25% 94%, 4% 50%);
   content: "";
   position: absolute;
@@ -42,7 +42,7 @@
 }
 
 .heading h2 {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   line-height: 1.14;
@@ -56,7 +56,7 @@
 }
 
 .columnsWrap {
-  border-top: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  border-top: 1px solid color-mix(in srgb, var(--navy-200) 70%, #ffffff 30%);
   display: flex;
   gap: 0.85rem;
   margin-top: 1rem;
@@ -81,10 +81,10 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
+  background: rgba(16, 30, 61, 0.85);
+  border: 1px solid color-mix(in srgb, var(--navy-200) 72%, #ffffff 28%);
   border-radius: 1rem;
-  box-shadow: 0 12px 28px rgba(6, 39, 24, 0.07);
+  box-shadow: 0 12px 28px rgba(3, 8, 20, 0.07);
   display: grid;
   gap: 0.85rem;
   padding: 1rem;
@@ -103,8 +103,8 @@
 }
 
 .avatar {
-  background: linear-gradient(145deg, rgba(20, 122, 70, 0.08), rgba(214, 169, 44, 0.14));
-  border: 1px solid color-mix(in srgb, var(--gold-300) 48%, var(--emerald-200) 52%);
+  background: linear-gradient(145deg, rgba(29, 58, 120, 0.08), rgba(214, 169, 44, 0.14));
+  border: 1px solid color-mix(in srgb, var(--gold-300) 48%, var(--navy-200) 52%);
   border-radius: 50%;
   flex-shrink: 0;
   height: 44px;
@@ -112,7 +112,7 @@
 }
 
 .name {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.01em;

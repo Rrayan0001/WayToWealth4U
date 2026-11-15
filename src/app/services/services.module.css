@@ -7,10 +7,10 @@
 
 .hero {
   background:
-    radial-gradient(circle at 14% 18%, rgba(31, 153, 89, 0.18), transparent 28%),
+    radial-gradient(circle at 14% 18%, rgba(44, 78, 150, 0.18), transparent 28%),
     radial-gradient(circle at 82% 18%, rgba(214, 169, 44, 0.2), transparent 30%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(239, 247, 238, 0.92));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 72%, #ffffff 28%);
+    linear-gradient(135deg, rgba(16, 30, 61, 0.95), rgba(16, 30, 61, 0.92));
+  border: 1px solid color-mix(in srgb, var(--navy-200) 72%, #ffffff 28%);
   border-radius: 1.8rem;
   box-shadow: var(--shadow-large);
   overflow: hidden;
@@ -27,16 +27,16 @@
 
 .hero::before {
   background:
-    linear-gradient(rgba(10, 59, 36, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(10, 59, 36, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(6, 15, 36, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 15, 36, 0.04) 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.34), transparent 82%);
 }
 
 .hero::after {
   background:
-    radial-gradient(circle at 72% 24%, rgba(255, 255, 255, 0.7), transparent 26%),
-    radial-gradient(circle at 86% 70%, rgba(20, 122, 70, 0.08), transparent 18%);
+    radial-gradient(circle at 72% 24%, rgba(255, 255, 255, 0.06), transparent 26%),
+    radial-gradient(circle at 86% 70%, rgba(29, 58, 120, 0.08), transparent 18%);
 }
 
 .heroGrid {
@@ -58,7 +58,7 @@
 .sectionEyebrow,
 .panelEyebrow {
   align-items: center;
-  color: var(--emerald-700);
+  color: var(--gold-500);
   display: inline-flex;
   font-size: 0.8rem;
   font-weight: 800;
@@ -70,7 +70,7 @@
 .heroEyebrow::before,
 .sectionEyebrow::before,
 .panelEyebrow::before {
-  background: linear-gradient(90deg, var(--emerald-600), var(--gold-600));
+  background: linear-gradient(90deg, var(--navy-600), var(--gold-600));
   border-radius: 999px;
   content: "";
   display: inline-block;
@@ -79,7 +79,7 @@
 }
 
 .hero h1 {
-  background: linear-gradient(135deg, var(--emerald-950) 0%, var(--emerald-800) 52%, var(--gold-700) 100%);
+  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-800) 52%, var(--gold-700) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -113,10 +113,10 @@
 }
 
 .focusChip {
-  background: rgba(255, 255, 255, 0.64);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 68%, #ffffff 32%);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid color-mix(in srgb, var(--navy-200) 68%, #ffffff 32%);
   border-radius: 999px;
-  color: var(--emerald-900);
+  color: var(--ink);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -127,8 +127,8 @@
 .heroPanel {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 66%, #ffffff 34%);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid color-mix(in srgb, var(--navy-200) 66%, #ffffff 34%);
   border-radius: 1.3rem;
   box-shadow: var(--shadow-soft);
   display: grid;
@@ -137,7 +137,7 @@
 }
 
 .panelEyebrow {
-  color: var(--gold-800);
+  color: var(--gold-500);
   font-size: 0.74rem;
 }
 
@@ -148,8 +148,8 @@
 }
 
 .metricCard {
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.86), rgba(241, 248, 241, 0.9));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  background: linear-gradient(150deg, rgba(16, 30, 61, 0.88), rgba(16, 30, 61, 0.9));
+  border: 1px solid color-mix(in srgb, var(--navy-200) 70%, #ffffff 30%);
   border-radius: 1rem;
   display: grid;
   gap: 0.22rem;
@@ -158,7 +158,7 @@
 }
 
 .metricCard strong {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-family: var(--font-heading), "Segoe UI", sans-serif;
   font-size: clamp(1.3rem, 2vw, 1.8rem);
   letter-spacing: -0.04em;
@@ -188,7 +188,7 @@
 .sectionIntro h2,
 .processHeader h2,
 .ctaCopy h2 {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-family: var(--font-heading), "Segoe UI", sans-serif;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   letter-spacing: -0.04em;
@@ -213,10 +213,10 @@
 .processShell,
 .ctaBox {
   background:
-    radial-gradient(circle at 16% 22%, rgba(20, 122, 70, 0.08), transparent 28%),
+    radial-gradient(circle at 16% 22%, rgba(29, 58, 120, 0.08), transparent 28%),
     radial-gradient(circle at 88% 18%, rgba(214, 169, 44, 0.12), transparent 26%),
-    linear-gradient(152deg, rgba(255, 255, 255, 0.97), rgba(240, 248, 241, 0.92));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 68%, #ffffff 32%);
+    linear-gradient(152deg, rgba(16, 30, 61, 0.95), rgba(16, 30, 61, 0.92));
+  border: 1px solid color-mix(in srgb, var(--navy-200) 68%, #ffffff 32%);
   border-radius: 1.3rem;
   box-shadow: var(--shadow-soft);
   overflow: hidden;
@@ -226,7 +226,7 @@
 .card::before,
 .processShell::before,
 .ctaBox::before {
-  background: linear-gradient(90deg, rgba(20, 122, 70, 0), rgba(20, 122, 70, 0.16), rgba(214, 169, 44, 0.16), rgba(214, 169, 44, 0));
+  background: linear-gradient(90deg, rgba(29, 58, 120, 0), rgba(29, 58, 120, 0.16), rgba(214, 169, 44, 0.16), rgba(214, 169, 44, 0));
   content: "";
   height: 1px;
   left: 1rem;
@@ -246,14 +246,14 @@
 .cardArt {
   align-items: center;
   background:
-    radial-gradient(circle at 20% 20%, rgba(20, 122, 70, 0.14), transparent 34%),
+    radial-gradient(circle at 20% 20%, rgba(29, 58, 120, 0.14), transparent 34%),
     radial-gradient(circle at 84% 18%, rgba(214, 169, 44, 0.14), transparent 34%),
-    linear-gradient(160deg, rgba(255, 255, 255, 0.88), rgba(238, 247, 239, 0.92));
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 65%, #ffffff 35%);
+    linear-gradient(160deg, rgba(16, 30, 61, 0.85), rgba(13, 27, 54, 0.92));
+  border: 1px solid color-mix(in srgb, var(--navy-200) 65%, #ffffff 35%);
   border-radius: 1.1rem;
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.42),
-    0 14px 30px rgba(10, 59, 36, 0.08);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 14px 30px rgba(6, 15, 36, 0.08);
   display: flex;
   height: 190px;
   justify-content: center;
@@ -262,7 +262,7 @@
 }
 
 .cardIllustration {
-  filter: drop-shadow(0 18px 22px rgba(10, 59, 36, 0.16));
+  filter: drop-shadow(0 18px 22px rgba(6, 15, 36, 0.16));
   height: auto;
   max-height: 160px;
   object-fit: contain;
@@ -270,7 +270,7 @@
 }
 
 .processIndex {
-  color: var(--gold-700);
+  color: var(--gold-500);
   font-family: var(--font-heading), "Segoe UI", sans-serif;
   font-size: 0.84rem;
   font-weight: 800;
@@ -280,7 +280,7 @@
 .card h2,
 .card h3,
 .processCard h3 {
-  color: var(--emerald-950);
+  color: var(--ink);
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.2rem, 1.7vw, 1.5rem);
   letter-spacing: -0.03em;
@@ -304,10 +304,10 @@
 }
 
 .pillList li {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 68%, #ffffff 32%);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid color-mix(in srgb, var(--navy-200) 68%, #ffffff 32%);
   border-radius: 999px;
-  color: var(--emerald-900);
+  color: var(--ink);
   font-size: 0.77rem;
   font-weight: 700;
   line-height: 1.1;
@@ -321,14 +321,14 @@
 }
 
 .subServiceItem {
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  background: rgba(16, 30, 61, 0.85);
+  border: 1px solid color-mix(in srgb, var(--navy-200) 70%, #ffffff 30%);
   border-radius: 1rem;
   padding: 0.92rem;
 }
 
 .subServiceItem h3 {
-  color: var(--emerald-700);
+  color: var(--gold-500);
   font-family: var(--font-heading), Georgia, serif;
   font-size: 1.02rem;
   margin-bottom: 0.28rem;
@@ -339,7 +339,7 @@
 }
 
 .subServiceLink {
-  color: var(--emerald-700);
+  color: var(--gold-500);
   display: inline-flex;
   font-size: 0.86rem;
   font-weight: 800;
@@ -350,13 +350,13 @@
 
 .subServiceLink:hover,
 .subServiceLink:focus-visible {
-  color: var(--gold-700);
+  color: var(--gold-500);
   transform: translateX(3px);
 }
 
 .serviceAction {
   align-items: center;
-  border-top: 1px solid color-mix(in srgb, var(--emerald-200) 40%, transparent 60%);
+  border-top: 1px solid color-mix(in srgb, var(--navy-200) 40%, transparent 60%);
   display: flex;
   margin-top: auto;
   padding-top: 1rem;
@@ -388,8 +388,8 @@
 }
 
 .processCard {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid color-mix(in srgb, var(--emerald-200) 70%, #ffffff 30%);
+  background: rgba(16, 30, 61, 0.82);
+  border: 1px solid color-mix(in srgb, var(--navy-200) 70%, #ffffff 30%);
   border-radius: 1.05rem;
   display: grid;
   gap: 0.55rem;

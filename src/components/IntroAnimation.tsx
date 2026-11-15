@@ -104,23 +104,22 @@ export function IntroAnimation() {
                         }}
                     >
                         <Image
-                            src="/logo-icon-transparent.png"
+                            src="/logo-icon.svg"
                             alt=""
-                            width={617}
-                            height={404}
+                            width={512}
+                            height={512}
                             className={styles.logoIcon}
                             priority
                             unoptimized
                         />
-                        <Image
-                            src="/logo-text-transparent.png"
-                            alt="WealthRise Capitals"
-                            width={1433}
-                            height={174}
-                            className={styles.logoText}
-                            priority
-                            unoptimized
-                        />
+                        <div className={styles.logoWordmark} aria-label="WealthRise Capitals">
+                            <span className={styles.logoWordWealth} aria-hidden="true">
+                                WEALTH
+                            </span>
+                            <span className={styles.logoWordRise} aria-hidden="true">
+                                RISE CAPITALS
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,7 +152,7 @@ export function IntroAnimation() {
                         }}
                     >
                         <span className={styles.subtitleText}>
-                            Growing Wealth, Creating Futures.
+                            Grow With Wisdom, Rise With Wealth.
                         </span>
                     </div>
                 </div>

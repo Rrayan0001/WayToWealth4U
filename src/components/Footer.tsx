@@ -17,7 +17,7 @@ export function Footer() {
               <BrandMark className={styles.brandMark} />
             </div>
             <p className={styles.tagline}>
-              Growing Wealth, Creating Futures.
+              Grow With Wisdom, Rise With Wealth.
             </p>
           </Link>
 

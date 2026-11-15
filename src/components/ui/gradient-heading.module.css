@@ -4,7 +4,7 @@
 }
 
 .primary {
-  background: linear-gradient(135deg, var(--emerald-950) 0%, var(--emerald-700) 56%, var(--gold-700) 100%);
+  background: linear-gradient(135deg, var(--gold-300) 0%, var(--gold-500) 56%, var(--gold-700) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -14,7 +14,7 @@
 }
 
 .secondary {
-  color: var(--emerald-700);
+  color: var(--gold-500);
   font-family: var(--font-body), "Segoe UI", sans-serif;
   font-weight: 800;
   letter-spacing: 0.12em;

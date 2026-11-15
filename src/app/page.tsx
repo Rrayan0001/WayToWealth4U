@@ -154,7 +154,7 @@ export default function Home() {
       <TestimonialsSection testimonials={testimonialItems} />
 
       <div className="container">
-        <hr style={{ border: "none", borderTop: "1px solid color-mix(in srgb, var(--emerald-200) 38%, transparent)" }} />
+        <hr style={{ border: "none", borderTop: "1px solid color-mix(in srgb, var(--navy-200) 38%, transparent)" }} />
       </div>
 
       <section id="contact-cta" className="sectionBlock">

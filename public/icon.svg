@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WealthRise Capitals">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD34D"/>
+      <stop offset="45%" stop-color="#F7B500"/>
+      <stop offset="100%" stop-color="#B87E08"/>
+    </linearGradient>
+    <linearGradient id="goldArrow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B87E08"/>
+      <stop offset="40%" stop-color="#F7B500"/>
+      <stop offset="100%" stop-color="#FFD34D"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#DCE4EF"/>
+      <stop offset="100%" stop-color="#A9B7CB"/>
+    </linearGradient>
+    <linearGradient id="silverArc" x1="0%" y1="100%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#E9EEF5"/>
+      <stop offset="100%" stop-color="#9FB0CC"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M 355 99 A 170 170 0 1 0 400 354" fill="none" stroke="url(#gold)" stroke-width="40" stroke-linecap="round"/>
+
+  <path d="M 416 384 A 170 170 0 0 1 300 424" fill="none" stroke="url(#silverArc)" stroke-width="26" stroke-linecap="round"/>
+
+  <g>
+    <rect x="192" y="312" width="40" height="72" rx="4" fill="url(#silver)"/>
+    <rect x="250" y="266" width="40" height="118" rx="4" fill="url(#goldArrow)"/>
+    <rect x="308" y="218" width="40" height="166" rx="4" fill="url(#silver)"/>
+    <rect x="366" y="170" width="40" height="214" rx="4" fill="url(#silver)"/>
+  </g>
+
+  <path d="M 150 340 Q 260 240 380 132" fill="none" stroke="url(#goldArrow)" stroke-width="30" stroke-linecap="round"/>
+
+  <path d="M 330 118 L 398 96 L 380 164 Z" fill="url(#goldArrow)" stroke="url(#goldArrow)" stroke-width="18" stroke-linejoin="round"/>
+</svg>

@@ -1,6 +1,5 @@
 .brand {
   --brand-symbol-width: 5rem;
-  --brand-word-width: clamp(8rem, 12vw, 12rem);
   --brand-word-size: clamp(1rem, 1.25vw, 1.22rem);
   --brand-word-offset: 0rem;
   align-items: center;
@@ -24,7 +23,7 @@
 
 .symbolImage {
   display: block;
-  filter: drop-shadow(0 8px 18px rgba(6, 39, 24, 0.12));
+  filter: drop-shadow(0 8px 18px rgba(3, 8, 20, 0.45));
   height: auto;
   user-select: none;
   width: 100%;
@@ -32,19 +31,30 @@
 
 .wordmark {
   display: inline-flex;
-  flex-wrap: nowrap;
-  gap: 0.22rem;
+  flex-direction: column;
+  gap: 0.18em;
   line-height: 1;
+  transform: translateY(var(--brand-word-offset));
   white-space: nowrap;
 }
 
-.wordmarkImage {
-  display: block;
-  height: auto;
-  user-select: none;
-  width: var(--brand-word-width);
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
-  transform: translateY(var(--brand-word-offset));
+.wordWealth {
+  background: linear-gradient(180deg, #ffffff 0%, #e9eef5 45%, #a9b7cb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: calc(var(--brand-word-size) * 1.32);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.wordRise {
+  color: var(--gold-500);
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  font-size: calc(var(--brand-word-size) * 0.92);
+  font-weight: 800;
+  letter-spacing: 0.24em;
 }
 
 .iconOnly {
